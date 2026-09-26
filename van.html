@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyên Đề Ngữ Văn - Cứu Nguy Từ 4 Lên 7.5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" style="background: linear-gradient(135deg, #831843 0%, #db2777 100%);">
+    <div class="header-container">
+      <div class="logo-area">
+        <h1>📖 CHIẾN DỊCH CỨU NGUY MÔN VĂN (4.0 ➔ 7.5)</h1>
+        <p>Học Văn theo Công thức Toán học & Barem Điểm của Sở GD&ĐT Vĩnh Phúc</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn">🏠 Tổng Quan</a>
+        <a href="toan.html" class="nav-btn">📐 Môn Toán</a>
+        <a href="van.html" class="nav-btn active">📖 Môn Văn</a>
+        <a href="anh.html" class="nav-btn">🇬🇧 Môn Tiếng Anh</a>
+        <a href="luyende.html" class="nav-btn">🎯 Phòng Luyện Đề</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Banner chiến dịch -->
+    <div class="card" style="background: #fdf2f8; border-color: #fbcfe8; margin-bottom: 1.5rem;">
+      <div class="card-header">
+        <span class="card-title" style="color: #9d174d;">🎯 BÍ QUYẾT TĂNG ĐIỂM DÀNH CHO CON TRAI SỢ VĂN</span>
+      </div>
+      <p style="font-size: 0.95rem; color: #475569;">
+        Đề thi vào 10 không đòi hỏi con phải viết văn hoa mỹ, bay bổng. Người chấm thi chấm theo <strong>Ý VÀ TỪ KHÓA TRONG BAREM</strong>. Chỉ cần con nắm chắc <strong>Công thức 3 vế Đọc hiểu</strong> và <strong>Khung 5 bước đoạn văn NLXH</strong>, con đã chắc chắn cầm trong tay từ <strong>5.0 - 5.5 điểm</strong> trước khi bước vào bài văn nghị luận!
+      </p>
+    </div>
+
+    <!-- CÔNG CỤ TẠO ĐOẠN VĂN NGHỊ LUẬN XÃ HỘI TỰ ĐỘNG THEO CÔNG THỨC 5 BƯỚC -->
+    <div class="card" style="margin-bottom: 1.5rem; border: 2px solid #f43f5e;">
+      <div class="card-header" style="background: #fff1f2; margin: -1.5rem -1.5rem 1rem -1.5rem; padding: 1rem 1.5rem;">
+        <span class="card-title" style="color: #e11d48;">⚡ CÔNG CỤ LẮP GHÉP ĐOẠN VĂN NLXH 200 CHỮ (CÔNG THỨC 5 BƯỚC)</span>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
+        Nhập vấn đề nghị luận và tấm gương thực tế để công cụ tự động sinh ra đoạn văn chuẩn cấu trúc barem 200 chữ:
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Vấn đề / Phẩm chất cần bàn luận:</label>
+          <input type="text" id="nlxhTopic" class="form-control" placeholder="Ví dụ: lòng kiên trì, tính tự lập, lòng biết ơn..." value="lòng kiên trì">
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Tấm gương dẫn chứng thực tế:</label>
+          <input type="text" id="nlxhExample" class="form-control" placeholder="Ví dụ: Thầy giáo Nguyễn Ngọc Ký, VĐV Ánh Viên..." value="Thầy giáo Nguyễn Ngọc Ký">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="generateNLXH()" style="background: #e11d48; margin-bottom: 1rem;">
+        ✨ Tự Động Lắp Ghép Đoạn Văn 200 Chữ Chuẩn Barem
+      </button>
+
+      <div>
+        <label style="font-size: 0.85rem; font-weight: 600;">Kết quả đoạn văn mẫu hoàn chỉnh để con học thuộc khung logic:</label>
+        <textarea id="nlxhResult" class="form-control" rows="7" style="line-height: 1.6; font-size: 0.95rem; background: #fffafb;" readonly placeholder="Bấm nút trên để tạo đoạn văn..."></textarea>
+      </div>
+    </div>
+
+    <!-- 3 Trụ Cột Công Thức Môn Văn -->
+    <div class="grid-3">
+
+      <!-- Trụ cột 1: Đọc - Hiểu 3 vế -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title" style="font-size: 1rem;">1. Công Thức Đọc - Hiểu</span>
+        </div>
+        <div style="font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <p><strong>Công thức 3 vế trả lời BPTT:</strong></p>
+          <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px;">
+            <code>Tác dụng = Tên BPTT + Tác dụng hình ảnh + Tác dụng cảm xúc tác giả</code>
+          </div>
+          <p><strong>Công thức Thông điệp:</strong></p>
+          <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 6px;">
+            <code>Thông điệp là X + Vì sao X quan trọng + Bản thân em cần làm gì</code>
+          </div>
+          <p style="color: var(--success); font-weight: 600;">➔ Trả lời ngắn gọn, gạch đầu dòng, không viết lan man!</p>
+        </div>
+      </div>
+
+      <!-- Trụ cột 2: Quy tắc 5 bước NLXH -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title" style="font-size: 1rem;">2. 5 Bước Đoạn Văn NLXH</span>
+        </div>
+        <ol style="padding-left: 1.25rem; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.35rem;">
+          <li><strong>Mở đoạn:</strong> Nêu trực tiếp vấn đề X (1-2 câu).</li>
+          <li><strong>Giải thích:</strong> Vấn đề X là gì? (1-2 câu).</li>
+          <li><strong>Bàn luận:</strong> Vì sao cần có X? (4-5 câu).</li>
+          <li><strong>Dẫn chứng:</strong> 1 tấm gương cụ thể (2-3 câu).</li>
+          <li><strong>Phản đề & Bài học:</strong> Phê phán lối sống lười biếng + Liên hệ bản thân lớp 9 (2-3 câu).</li>
+        </ol>
+        <p style="color: var(--danger); font-size: 0.8rem; margin-top: 0.5rem; font-weight: 600;">⚠️ Tuyệt đối không xuống dòng trong đoạn văn!</p>
+      </div>
+
+      <!-- Trụ cột 3: NLVH Sơ đồ PEEL -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title" style="font-size: 1rem;">3. Nghị Luận Văn Học (PEEL)</span>
+        </div>
+        <div style="font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <p>Không tóm tắt truyện! Mỗi đoạn thân bài viết đúng 4 bước:</p>
+          <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.25rem;">
+            <li><strong>P (Point):</strong> Câu chủ đề nêu phẩm chất.</li>
+            <li><strong>E (Evidence):</strong> Trích dẫn câu thơ, chi tiết.</li>
+            <li><strong>E (Explain):</strong> Phân tích từ ngữ, nghệ thuật.</li>
+            <li><strong>L (Link):</strong> Nhận xét và chốt ý nghĩa.</li>
+          </ul>
+          <p style="color: var(--primary); font-weight: 600;">➔ Học theo gạch đầu dòng luận điểm, không học văn mẫu dài!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tự kiểm tra trắc nghiệm Đọc - Hiểu -->
+    <div class="card" style="margin-top: 1.5rem;">
+      <div class="card-header">
+        <span class="card-title">⚡ LUYỆN TẬP PHẢN XẠ NHẬN BIẾT TIẾNG VIỆT</span>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-question">Câu 1: Câu văn *"Chao ôi, bắt gặp một con người như anh ta là một cơ hội hãn hữu cho sáng tác"* chứa thành phần biệt lập nào?</div>
+        <div class="quiz-options">
+          <button class="quiz-option-btn" data-correct="true" onclick="handleQuizClick(this, true, 'exp_v1')">A. Thành phần cảm thán ("Chao ôi")</button>
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v1')">B. Thành phần tình thái</button>
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v1')">C. Thành phần phụ chú</button>
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v1')">D. Thành phần gọi - đáp</button>
+        </div>
+        <div class="quiz-explanation" id="exp_v1">
+          💡 <strong>Giải thích:</strong> Từ *"Chao ôi"* dùng để bộc lộ cảm xúc của người nói $\rightarrow$ Thuộc thành phần cảm thán.
+        </div>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-question">Câu 2: Hai câu văn: *"Trường học của chúng ta là trường học của nhân dân. Các em là chủ nhân tương lai của đất nước"* liên kết với nhau bằng phép liên kết nào?</div>
+        <div class="quiz-options">
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v2')">A. Phép nối</button>
+          <button class="quiz-option-btn" data-correct="true" onclick="handleQuizClick(this, true, 'exp_v2')">B. Phép thế ("Các em" thay thế cho học sinh trong "Trường học")</button>
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v2')">C. Phép lặp từ ngữ</button>
+          <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_v2')">D. Phép đồng nghĩa</button>
+        </div>
+        <div class="quiz-explanation" id="exp_v2">
+          💡 <strong>Giải thích:</strong> Đại từ *"Các em"* ở câu 2 thay thế cho đối tượng học sinh được ngầm hiểu ở câu 1 $\rightarrow$ Sử dụng phép thế.
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Chuyên Đề Cứu Nguy Môn Văn Vào 10 • THPT Trần Phú (Vĩnh Yên) • Dạy Văn Bằng Tư Duy Logic 2026-2027</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

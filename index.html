@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiến Lược Ôn Thi Vào 10 - THPT Trần Phú (Vĩnh Yên)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-area">
+        <h1>🚀 CHINH PHỤC VÀO 10 THPT TRẦN PHÚ</h1>
+        <p>Lộ trình thực chiến 2026 - 2027 dành cho học sinh lớp 9 (Phú Thọ - Vĩnh Phúc)</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn active">🏠 Tổng Quan</a>
+        <a href="toan.html" class="nav-btn">📐 Môn Toán (8.5+)</a>
+        <a href="van.html" class="nav-btn">📖 Môn Văn (Cứu nguy 7.5)</a>
+        <a href="anh.html" class="nav-btn">🇬🇧 Môn Tiếng Anh (8.5+)</a>
+        <a href="luyende.html" class="nav-btn">🎯 Phòng Luyện Đề</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Target Banner -->
+    <div class="target-banner">
+      <div class="target-info">
+        <h2>🎯 MỤC TIÊU: TRƯỜNG THPT TRẦN PHÚ (VĨNH YÊN)</h2>
+        <p>Điểm khảo sát: <strong>Toán 7.0 | Anh 7.0 | Văn 4.0</strong> (Tổng: 18.0) ➔ <strong>Mục tiêu: ≥ 24.5 Điểm</strong></p>
+      </div>
+      <div class="target-badges">
+        <span class="badge">Toán: 8.5 - 9.0</span>
+        <span class="badge" style="background: #f43f5e;">Văn: 7.0 - 7.5 (Cứu nguy)</span>
+        <span class="badge">Anh: 8.0 - 8.5</span>
+      </div>
+    </div>
+
+    <!-- Grid 1: Pomodoro & Tiến độ tuần -->
+    <div class="grid-2">
+      <!-- Pomodoro Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">⏱️ ĐỒNG HỒ POMODORO (CHỐNG LƯỜI)</span>
+          <span class="badge" style="color: var(--primary); background: var(--primary-light);" id="pomoLabel">🎯 CA HỌC TẬP TRUNG</span>
+        </div>
+        <div class="pomodoro-box">
+          <div class="timer-display" id="pomoDisplay">25:00</div>
+          <div class="timer-controls">
+            <button class="btn btn-primary" id="btnStartPomo" onclick="startPomodoro()">▶ Bắt đầu</button>
+            <button class="btn btn-outline" id="btnPausePomo" onclick="pausePomodoro()" disabled>⏸ Tạm dừng</button>
+            <button class="btn btn-outline" onclick="resetPomodoro(25)">↺ 25 Phút</button>
+            <button class="btn btn-outline" onclick="resetPomodoro(50)">↺ 50 Phút</button>
+          </div>
+          <div class="pomo-stats">
+            Đã hoàn thành hôm nay: <strong id="pomoCount" style="color: var(--primary); font-size: 1.2rem;">0</strong> ca tập trung
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Tips Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">📜 QUY TẮC "BẢO TOÀN NĂNG LƯỢNG"</span>
+        </div>
+        <ul style="padding-left: 1.25rem; font-size: 0.95rem; color: #334155; display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><strong>Điện thoại:</strong> Gửi bố mẹ giữ trước khi ngồi vào bàn học (19h45).</li>
+          <li><strong>Nguyên tắc Kaizen:</strong> Giải quyết bài dễ trước để lấy cảm giác "chiến thắng".</li>
+          <li><strong>Môn Văn:</strong> Không học vẹt văn mẫu, áp dụng <em>Công thức 5 bước</em> gãy gọn.</li>
+          <li><strong>Sổ lỗi sai:</strong> Bài nào sai là ghi lại ngay, không để mất điểm 2 lần cùng một lỗi.</li>
+          <li><strong>Ngủ đủ giấc:</strong> Tuyệt đối không thức quá 22h30 để não bộ nạp lại năng lượng.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Checklist 21 ca học trong tuần -->
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-header">
+        <span class="card-title">📅 BẢNG THEO DÕI 21 CA HỌC TRONG TUẦN</span>
+        <span class="badge" style="background: var(--success); color: white;" id="progressText">0/21 ca (0%)</span>
+      </div>
+      <div style="background: #e2e8f0; border-radius: 10px; height: 10px; margin-bottom: 1rem; overflow: hidden;">
+        <div id="progressBar" style="background: var(--success); height: 100%; width: 0%; transition: width 0.3s;"></div>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Thứ</th>
+              <th>Ca 1 (19h45 - 20h40)</th>
+              <th>Ca 2 (20h55 - 21h45)</th>
+              <th>Ca phụ (21h50 - 22h15)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Thứ 2</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t2_c1"> 📖 <strong>Văn:</strong> Đề Đọc - Hiểu</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t2_c2"> 📐 <strong>Toán:</strong> Căn thức & Rút gọn</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t2_c3"> 🇬🇧 10 Từ vựng Anh</label></td>
+            </tr>
+            <tr>
+              <td><strong>Thứ 3</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t3_c1"> 🇬🇧 <strong>Anh:</strong> 30 câu trắc nghiệm</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t3_c2"> 📐 <strong>Toán:</strong> Giải bài toán lập PT</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t3_c3"> 📖 Đọc hiểu văn bản</label></td>
+            </tr>
+            <tr>
+              <td><strong>Thứ 4</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t4_c1"> 📖 <strong>Văn:</strong> Đoạn NLXH 200 chữ</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t4_c2"> 🇬🇧 <strong>Anh:</strong> Viết lại câu</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t4_c3"> 📐 Xem lại bài Toán</label></td>
+            </tr>
+            <tr>
+              <td><strong>Thứ 5</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t5_c1"> 📐 <strong>Toán:</strong> Hình học tứ giác nội tiếp</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t5_c2"> 📖 <strong>Văn:</strong> Lập dàn ý NLVH</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t5_c3"> 🇬🇧 10 Phrasal verbs</label></td>
+            </tr>
+            <tr>
+              <td><strong>Thứ 6</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t6_c1"> 🇬🇧 <strong>Anh:</strong> Đọc hiểu điền từ</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t6_c2"> 📐 <strong>Toán:</strong> Đồ thị & Hệ thức Vi-ét</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t6_c3"> 📝 Cập nhật Sổ lỗi sai</label></td>
+            </tr>
+            <tr>
+              <td><strong>Thứ 7</strong></td>
+              <td colspan="2"><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t7_chieu"> 🎯 <strong>Chiều:</strong> Đề Tiếng Anh (60p) + 5 bài Toán hình + Thể thao</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="t7_toi"> Chữa đề chi tiết</label></td>
+            </tr>
+            <tr>
+              <td><strong>Chủ Nhật</strong></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="cn_sang"> 📐 <strong>Sáng:</strong> Đề Toán Vĩnh Phúc (120p)</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="cn_chieu"> 📖 <strong>Chiều:</strong> Đề Văn Vĩnh Phúc (120p)</label></td>
+              <td><label><input type="checkbox" class="checkbox-custom checklist-box" data-id="cn_toi"> Tổng kết tuần</label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sổ tay lỗi sai tương tác -->
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-header">
+        <span class="card-title">📖 SỔ TAY LỖI SAI (BÍ QUYẾT TĂNG TỪ 7 LÊN 8.5+)</span>
+      </div>
+      
+      <form id="mistakeForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Môn học:</label>
+          <select id="logSubject" class="form-control" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);">
+            <option value="Toan">📐 Toán học</option>
+            <option value="Van">📖 Ngữ văn</option>
+            <option value="Anh">🇬🇧 Tiếng Anh</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Dạng bài / Câu hỏi:</label>
+          <input type="text" id="logTopic" placeholder="Ví dụ: Câu 3b - Hệ thức Vi-et tìm m" class="form-control" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);" required>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Lỗi sai con đã mắc:</label>
+          <input type="text" id="logMistake" placeholder="Quên điều kiện Delta >= 0 để có 2 nghiệm" class="form-control" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);" required>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Nguyên nhân:</label>
+          <input type="text" id="logReason" placeholder="Làm vội vàng, ẩu" class="form-control" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);">
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label style="font-size: 0.85rem; font-weight: 600;">Cách giải đúng & Bài học rút ra:</label>
+          <input type="text" id="logFix" placeholder="Bước 1 phải tìm điều kiện Delta >= 0 trước, giải ra nghiệm phải đối chiếu điều kiện!" class="form-control" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);" required>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <button type="submit" class="btn btn-primary" style="width: 100%;">➕ Lưu Lỗi Sai Vào Sổ Tay</button>
+        </div>
+      </form>
+
+      <div id="mistakesList"></div>
+    </div>
+
+    <!-- Đồng bộ & Sao lưu miễn phí -->
+    <div class="card sync-section">
+      <div class="card-header">
+        <span class="card-title">🔄 ĐỒNG BỘ DỮ LIỆU MIỄN PHÍ GIỮA ĐIỆN THOẠI & MÁY TÍNH</span>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+        Dữ liệu được lưu trực tiếp trên thiết bị (LocalStorage). Để chuyển dữ liệu giữa máy của con và bố mẹ (hoặc giữa máy tính và điện thoại), chỉ cần dùng <strong>Mã Sao Lưu</strong> dưới đây:
+      </p>
+      <textarea id="syncCodeBox" class="form-control" rows="3" placeholder="Nhấn 'Xuất Mã Sao Lưu' hoặc dán mã vào đây để đồng bộ..."></textarea>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="exportBackup()">📤 Xuất Mã Sao Lưu (Copy)</button>
+        <button class="btn btn-success" onclick="importBackup()">📥 Đồng Bộ Dữ Liệu Vào Máy Này</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Hệ thống hỗ trợ ôn thi vào 10 THPT Trần Phú - Năm học 2026-2027 • Thiết kế tối ưu theo chuẩn GDPT mới</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

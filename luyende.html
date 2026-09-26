@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phòng Luyện Đề Thực Chiến - Vào 10 THPT Trần Phú</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tab-buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: white;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .exam-timer-box {
+      background: #0f172a;
+      color: #38bdf8;
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .exam-timer-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" style="background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);">
+    <div class="header-container">
+      <div class="logo-area">
+        <h1>🎯 PHÒNG THI THỬ THỰC CHIẾN (CHUẨN VĨNH PHÚC)</h1>
+        <p>Bấm giờ nghiêm túc 120 phút (Toán, Văn) & 60 phút (Anh) • Tự chấm điểm theo Barem</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn">🏠 Tổng Quan</a>
+        <a href="toan.html" class="nav-btn">📐 Môn Toán</a>
+        <a href="van.html" class="nav-btn">📖 Môn Văn</a>
+        <a href="anh.html" class="nav-btn">🇬🇧 Môn Tiếng Anh</a>
+        <a href="luyende.html" class="nav-btn active">🎯 Phòng Luyện Đề</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Đồng hồ bấm giờ thi thử -->
+    <div class="exam-timer-box">
+      <div>
+        <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">Đồng Hồ Bấm Giờ Phòng Thi</div>
+        <div class="exam-timer-num" id="examClock">120:00</div>
+      </div>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="startExamTimer(120)">⏱ Bắt đầu 120 Phút (Toán/Văn)</button>
+        <button class="btn btn-success" onclick="startExamTimer(60)">⏱ Bắt đầu 60 Phút (Tiếng Anh)</button>
+        <button class="btn btn-outline" style="color: white; border-color: #475569;" onclick="pauseExamTimer()">⏸ Tạm dừng</button>
+        <button class="btn btn-danger" onclick="resetExamTimer()">↺ Đặt lại</button>
+      </div>
+    </div>
+
+    <!-- Tabs chọn môn thi -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchExamTab('toanTab', this)">📐 Đề Số 01: Môn Toán (120p)</button>
+      <button class="tab-btn" onclick="switchExamTab('vanTab', this)">📖 Đề Số 01: Môn Ngữ Văn (120p)</button>
+      <button class="tab-btn" onclick="switchExamTab('anhTab', this)">🇬🇧 Đề Số 01: Môn Tiếng Anh (60p)</button>
+    </div>
+
+    <!-- TAB 1: MÔN TOÁN -->
+    <div id="toanTab" class="tab-content active">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <span class="card-title">📐 ĐỀ THI THỬ MÔN TOÁN SỐ 01 (SỞ GD&ĐT VĨNH PHÚC)</span>
+          <a href="De_Thi_Thuc_Chien_Tuan_1_Vinh_Phuc.md" class="btn btn-outline" style="font-size: 0.8rem;" download>📄 Tải Bản In (Markdown)</a>
+        </div>
+
+        <div style="font-size: 0.95rem; line-height: 1.7;">
+          <h4 style="color: var(--primary); margin: 1rem 0 0.5rem 0;">PHẦN I: TRẮC NGHIỆM (2.0 ĐIỂM)</h4>
+          <p><strong>Câu 1:</strong> Căn bậc hai số học của 81 là: <br><em>A. 9 &nbsp;&nbsp;&nbsp;&nbsp; B. -9 &nbsp;&nbsp;&nbsp;&nbsp; C. ±9 &nbsp;&nbsp;&nbsp;&nbsp; D. 6561</em></p>
+          <p><strong>Câu 2:</strong> Biểu thức $\sqrt{\frac{1}{x-3}}$ xác định khi: <br><em>A. $x \ge 3$ &nbsp;&nbsp;&nbsp;&nbsp; B. $x > 3$ &nbsp;&nbsp;&nbsp;&nbsp; C. $x < 3$ &nbsp;&nbsp;&nbsp;&nbsp; D. $x \neq 3$</em></p>
+          <p><strong>Câu 3:</strong> Phương trình $x^2 - 6x + 2 = 0$ có 2 nghiệm $x_1, x_2$. Giá trị của $x_1 + x_2$ là: <br><em>A. -6 &nbsp;&nbsp;&nbsp;&nbsp; B. 6 &nbsp;&nbsp;&nbsp;&nbsp; C. 2 &nbsp;&nbsp;&nbsp;&nbsp; D. -2</em></p>
+          <p><strong>Câu 4:</strong> Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$, biết $BH = 4\text{cm}, CH = 9\text{cm}$. Độ dài $AH$ là: <br><em>A. 6cm &nbsp;&nbsp;&nbsp;&nbsp; B. 13cm &nbsp;&nbsp;&nbsp;&nbsp; C. 36cm &nbsp;&nbsp;&nbsp;&nbsp; D. $\sqrt{13}\text{cm}$</em></p>
+
+          <h4 style="color: var(--primary); margin: 1.5rem 0 0.5rem 0;">PHẦN II: TỰ LUẬN (8.0 ĐIỂM)</h4>
+          <p><strong>Câu 1 (1.5đ):</strong> Rút gọn biểu thức $A = \frac{\sqrt{x}+4}{\sqrt{x}-1}$ và $B = \frac{3\sqrt{x}+1}{x-1} - \frac{2}{\sqrt{x}+1}$. Tính $A$ khi $x = 9$ và tìm $x$ để $\frac{B}{A} < \frac{1}{3}$.</p>
+          <p><strong>Câu 2 (1.5đ):</strong> Cho $(P): y = x^2$ và $(d): y = 2x + m - 1$. Tìm $m$ để $(d)$ cắt $(P)$ tại 2 điểm phân biệt thỏa mãn $x_1^2 + x_2^2 - 3x_1x_2 = 13$.</p>
+          <p><strong>Câu 3 (1.5đ - Toán thực tế):</strong> Đội xe chở 120 tấn hàng, khi khởi hành bổ sung thêm 2 xe nên mỗi xe chở ít hơn 2 tấn. Tính số xe ban đầu.</p>
+          <p><strong>Câu 4 (3.0đ - Hình học):</strong> Từ $M$ ngoài đường tròn $(O)$, kẻ 2 tiếp tuyến $MA, MB$. Kẻ đường kính $AC$. Chứng minh $M,A,O,B$ cùng thuộc đường tròn và $MO \perp AB$. Chứng minh $MA^2 = MD \cdot MC$.</p>
+        </div>
+
+        <button class="btn btn-primary" onclick="toggleAnswer('ans_toan')" style="margin-top: 1rem;">
+          👁️ Bấm Xem Đáp Án & Thang Điểm Chi Tiết Môn Toán
+        </button>
+
+        <div id="ans_toan" style="display: none; margin-top: 1rem; padding: 1rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;">
+          <h4 style="color: var(--success);">ĐÁP ÁN BAREM:</h4>
+          <p><strong>Trắc nghiệm:</strong> 1-A | 2-B | 3-B | 4-A.</p>
+          <p><strong>Tự luận:</strong><br>
+          - Câu 1.1: $A = \frac{7}{2}$ (0.5đ). Câu 1.2: $B = \frac{\sqrt{x}+3}{x-1}$ (0.5đ).<br>
+          - Câu 2.1: $x = 2, y = 3$ (0.75đ). Câu 2.2: $m = \frac{14}{5}$ (thỏa mãn $m > 0$) (0.75đ).<br>
+          - Câu 3 (Toán thực tế): PT $\frac{120}{x} - \frac{120}{x+2} = 2 \Rightarrow x = 10$ xe (1.5đ).<br>
+          - Câu 4: Chứng minh tứ giác nội tiếp và tam giác đồng dạng (3.0đ).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: MÔN NGỮ VĂN -->
+    <div id="vanTab" class="tab-content">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <span class="card-title" style="color: #9d174d;">📖 ĐỀ THI THỬ MÔN NGỮ VĂN SỐ 01 (NGỮ LIỆU NGOÀI SGK)</span>
+        </div>
+
+        <div style="font-size: 0.95rem; line-height: 1.7;">
+          <h4 style="color: #be185d;">I. ĐỌC - HIỂU VĂN BẢN (4.0 ĐIỂM)</h4>
+          <blockquote style="border-left: 4px solid #db2777; padding-left: 1rem; margin: 1rem 0; color: #475569; font-style: italic;">
+            "Có người bảo: 'Đời người như một mũi tên, đã bắn đi là không quay trở lại'. Quả thực thời gian một đi không trở lại, tuổi trẻ ngắn ngủi như một giấc mơ... Đừng sợ thất bại. Thất bại lớn nhất của một con người không phải là ngã ngựa trước thử thách, mà là không bao giờ dám bước lên lưng ngựa vì sợ ngã..."
+          </blockquote>
+          <p><strong>Câu 1 (0.5đ):</strong> Phương thức biểu đạt chính là gì?</p>
+          <p><strong>Câu 2 (0.5đ):</strong> "Hồng tâm của cuộc đời" theo tác giả là gì?</p>
+          <p><strong>Câu 3 (1.5đ):</strong> Phân tích tác dụng biện pháp tu từ so sánh trong câu: <em>"Hãy sống như một cây xanh kiên cường giữa giông bão..."</em> (áp dụng công thức 3 vế).</p>
+
+          <h4 style="color: #be185d; margin-top: 1.5rem;">II. LÀM VĂN (6.0 ĐIỂM)</h4>
+          <p><strong>Câu 1 (2.0đ):</strong> Viết đoạn văn khoảng 200 chữ trình bày suy nghĩ về <em>ý nghĩa của lòng dũng cảm vượt qua nỗi sợ hãi</em> đối với thế hệ trẻ hôm nay (áp dụng công thức 5 bước).</p>
+          <p><strong>Câu 2 (4.0đ):</strong> Cảm nhận vẻ đẹp tinh thần trách nhiệm của nhân vật anh thanh niên trong <em>Lặng lẽ Sa Pa</em>.</p>
+        </div>
+
+        <button class="btn btn-primary" onclick="toggleAnswer('ans_van')" style="margin-top: 1rem; background: #be185d;">
+          👁️ Bấm Xem Gợi Ý Barem Chấm Điểm Môn Văn
+        </button>
+
+        <div id="ans_van" style="display: none; margin-top: 1rem; padding: 1rem; background: #fffafb; border: 1px solid #fbcfe8; border-radius: 8px;">
+          <h4 style="color: #9d174d;">GỢI Ý CHẤM ĐIỂM BAREM:</h4>
+          <p><strong>Câu 1:</strong> Phương thức biểu đạt chính: Nghị luận (0.5đ).</p>
+          <p><strong>Câu 2:</strong> Hồng tâm là mục tiêu, ước mơ, lý tưởng kiên trì theo đuổi (0.5đ).</p>
+          <p><strong>Câu 3:</strong> BPTT So sánh. Tác dụng 3 vế: Hình ảnh cây xanh dẻo dai làm nổi bật bản lĩnh kiên cường của con người trước bão tố cuộc đời; bộc lộ niềm tin yêu, khích lệ của tác giả (1.5đ).</p>
+          <p><strong>NLXH 200 chữ:</strong> Đủ 5 bước: Mở trực tiếp $\rightarrow$ Giải thích $\rightarrow$ Bàn luận vai trò $\rightarrow$ Dẫn chứng cụ thể $\rightarrow$ Phản đề & liên hệ học sinh lớp 9 (2.0đ).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: MÔN TIẾNG ANH -->
+    <div id="anhTab" class="tab-content">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <span class="card-title" style="color: #065f46;">🇬🇧 ĐỀ THI THỬ MÔN TIẾNG ANH SỐ 01 (TRẮC NGHIỆM TƯƠNG TÁC)</span>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-question">1. Choose the word whose underlined part is pronounced differently:</div>
+          <div class="quiz-options">
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e1')">A. work<u>ed</u></button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e1')">B. stopp<u>ed</u></button>
+            <button class="quiz-option-btn" data-correct="true" onclick="handleQuizClick(this, true, 'exp_e1')">C. want<u>ed</u></button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e1')">D. laugh<u>ed</u></button>
+          </div>
+          <div class="quiz-explanation" id="exp_e1">💡 Đáp án C: "wanted" phát âm đuôi là /ɪd/, các từ còn lại phát âm là /t/.</div>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-question">2. If Nam ________ harder, he would pass the exam into Tran Phu high school.</div>
+          <div class="quiz-options">
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e2')">A. study</button>
+            <button class="quiz-option-btn" data-correct="true" onclick="handleQuizClick(this, true, 'exp_e2')">B. studied</button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e2')">C. will study</button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e2')">D. studies</button>
+          </div>
+          <div class="quiz-explanation" id="exp_e2">💡 Đáp án B: Vế sau là "would + V" (Câu điều kiện loại 2) ➔ Vế If chia quá khứ đơn (studied).</div>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-question">3. "The last time I met my grandfather was two years ago." means:</div>
+          <div class="quiz-options">
+            <button class="quiz-option-btn" data-correct="true" onclick="handleQuizClick(this, true, 'exp_e3')">A. I haven't met my grandfather for two years.</button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e3')">B. I didn't meet my grandfather two years ago.</button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e3')">C. I have met my grandfather since two years.</button>
+            <button class="quiz-option-btn" onclick="handleQuizClick(this, false, 'exp_e3')">D. I met my grandfather for two years.</button>
+          </div>
+          <div class="quiz-explanation" id="exp_e3">💡 Đáp án A: Chuyển đổi "The last time was [X] ago" ➔ "haven't + V3/ed + for [X]".</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Phòng Luyện Đề Chuẩn Cấu Trúc Vĩnh Phúc 2026-2027 • THPT Trần Phú (Vĩnh Yên)</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Tab switching logic
+    function switchExamTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId)?.classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Toggle answer
+    function toggleAnswer(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Exam Countdown Timer
+    let examRemaining = 120 * 60;
+    let examInterval = null;
+    let isExamRunning = false;
+
+    function updateExamClock() {
+      const clock = document.getElementById('examClock');
+      if (!clock) return;
+      const m = Math.floor(examRemaining / 60);
+      const s = examRemaining % 60;
+      clock.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function startExamTimer(minutes) {
+      if (isExamRunning) clearInterval(examInterval);
+      examRemaining = minutes * 60;
+      isExamRunning = true;
+      updateExamClock();
+      
+      examInterval = setInterval(() => {
+        if (examRemaining > 0) {
+          examRemaining--;
+          updateExamClock();
+        } else {
+          clearInterval(examInterval);
+          isExamRunning = false;
+          playBeep('success');
+          alert('⏰ Hết giờ làm bài thi! Hãy dừng bút và bấm nút xem đáp án để tự chấm điểm nhé.');
+        }
+      }, 1000);
+    }
+
+    function pauseExamTimer() {
+      if (!isExamRunning) return;
+      clearInterval(examInterval);
+      isExamRunning = false;
+    }
+
+    function resetExamTimer() {
+      pauseExamTimer();
+      examRemaining = 120 * 60;
+      updateExamClock();
+    }
+  </script>
+</body>
+</html>
