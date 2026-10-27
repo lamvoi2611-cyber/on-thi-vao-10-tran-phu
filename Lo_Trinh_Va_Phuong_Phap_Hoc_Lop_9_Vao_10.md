@@ -7,7 +7,7 @@
 Ở lứa tuổi 14 - 15 (học sinh lớp 9), biểu hiện **"lười học"** đa phần xuất phát từ 3 nguyên nhân cốt lõi:
 1. **Bị hổng kiến thức căn bản:** Khi ngồi vào bàn học mà không hiểu bài, con sẽ có cảm giác bất lực, chán nản và sinh ra phản xạ trốn tránh (lướt điện thoại, chơi game, ngủ gục).
 2. **Mục tiêu mơ hồ, thiếu động lực tự thân:** Con chưa thấy được việc đỗ vào trường cấp 3 mong muốn có ý nghĩa gì đối với bản thân ngoài việc "bố mẹ muốn thế".
-3. **Cám dỗ của dopamine ngắn hạn:** Game, mạng xã hội (TikTok, Facebook, Youtube) đem lại sự thỏa mãn tức thì, trong khi việc học cần sự kiên trì và kỷ luật.
+3. **Cám dỗ của dopamine ngắn hạn:** Game, mạng xã hội (TikTok, Facebook, YouTube) đem lại sự thỏa mãn tức thì, trong khi việc học cần sự kiên trì và kỷ luật.
 
 > [!IMPORTANT]
 > **Nguyên tắc vàng:** Muốn con hết lười, cha mẹ cần chuyển vai trò từ **"Người giám sát/Cảnh sát"** sang **"Huấn luyện viên/Người đồng hành"**. Không dùng đòn roi hay cằn nhằn liên tục (sẽ gây phản ứng chống đối ngầm), thay vào đó dùng **Quy tắc thỏa thuận rõ ràng - Chia nhỏ mục tiêu - Khen thưởng thành quả ngay khi có tiến bộ nhỏ**.
@@ -78,47 +78,47 @@ mindmap
 
 #### 1. Mức độ Cơ bản (Mục tiêu: Đạt 5.0 - 6.5 điểm - Nắm chắc để không mất gốc)
 - **Căn bậc hai, căn bậc ba:**
-  - Điều kiện xác định của biểu thức chứa căn.
+  - Điều kiện xác định của biểu thức chứa căn: Biểu thức dưới căn A ≥ 0.
   - Các phép biến đổi đơn giản: Khai phương, đưa thừa số ra/vào dấu căn, trục căn thức ở mẫu.
-  - Bài toán rút gọn biểu thức chứa biến và tính giá trị của biểu thức tại $x = x_0$.
+  - Bài toán rút gọn biểu thức chứa biến và tính giá trị của biểu thức tại x = x₀.
 - **Hệ phương trình bậc nhất hai ẩn:**
   - Giải hệ bằng phương pháp thế và phương pháp cộng đại số.
   - Giải bài toán bằng cách lập hệ phương trình (dạng toán cơ bản: tìm số, tính toán đơn giản).
 - **Phương trình bậc hai một ẩn:**
-  - Công thức nghiệm và công thức nghiệm thu gọn ($\Delta$ và $\Delta'$).
-  - Định lý Vi-ét: Tính tổng $S = x_1 + x_2 = -\frac{b}{a}$ và tích $P = x_1 x_2 = \frac{c}{a}$.
-  - Nhẩm nghiệm theo trường hợp đặc biệt: $a + b + c = 0$ hoặc $a - b + c = 0$.
+  - Công thức nghiệm và công thức nghiệm thu gọn (Δ và Δ′).
+  - Định lý Vi-ét: Tính tổng S = x₁ + x₂ = −b/a và tích P = x₁x₂ = c/a.
+  - Nhẩm nghiệm theo trường hợp đặc biệt: a + b + c = 0 hoặc a − b + c = 0.
 - **Hàm số và đồ thị:**
-  - Hàm số bậc nhất $y = ax + b$: Vẽ đồ thị, tính đồng biến/nghịch biến, vị trí tương đối của hai đường thẳng (song song, cắt nhau, trùng nhau).
-  - Đồ thị Parabol $y = ax^2$ ($a \neq 0$).
+  - Hàm số bậc nhất y = ax + b: Vẽ đồ thị, tính đồng biến/nghịch biến, vị trí tương đối của hai đường thẳng (song song, cắt nhau, trùng nhau).
+  - Đồ thị Parabol y = ax² (với a ≠ 0).
 - **Hình học cơ bản:**
   - Hệ thức lượng trong tam giác vuông (tính cạnh, góc, đường cao, hình chiếu).
-  - Tỉ số lượng giác: $\sin, \cos, \tan, \cot$.
+  - Tỉ số lượng giác: sin, cos, tan, cot.
   - Tính chất tiếp tuyến của đường tròn.
   - Công thức diện tích xung quanh, thể tích các khối hình học không gian thực tế (Hình trụ, Hình nón, Hình cầu).
 
 #### 2. Mức độ Khá (Mục tiêu: Đạt 7.0 - 8.5 điểm - Trọng tâm thi đỗ công lập top đầu)
 - **Rút gọn biểu thức nâng cao & câu hỏi phụ:**
-  - Tìm giá trị của $x$ để biểu thức đạt giá trị nguyên ($P \in \mathbb{Z}$).
-  - Tìm $x$ để $P > m$, $P < m$, so sánh $P$ với $\sqrt{P}$ hoặc $|P|$.
+  - Tìm giá trị của x để biểu thức đạt giá trị nguyên (P ∈ ℤ).
+  - Tìm x để P > m, P < m, so sánh P với √P hoặc |P|.
 - **Phương trình bậc hai & Ứng dụng Vi-ét có điều kiện:**
-  - Tìm tham số $m$ để phương trình có 2 nghiệm phân biệt thỏa mãn điều kiện đối xứng: $x_1^2 + x_2^2 = k$, $\frac{1}{x_1} + \frac{1}{x_2} = k$, $|x_1 - x_2| = k$.
-  - Điều kiện không đối xứng: $x_1 = 2x_2$, $x_1^2 + 2x_2 = k$.
-  - Tương giao giữa Parabol $(P): y = ax^2$ và đường thẳng $(d): y = mx + n$.
-- **Giải bài toán bằng cách lập phương trình/hệ phương trình dạng thực tế:**
-  - Toán chuyển động (ngược dòng/xuôi dòng, cùng chiều/ngược chiều).
+  - Tìm tham số m để phương trình có 2 nghiệm phân biệt thỏa mãn điều kiện đối xứng: x₁² + x₂² = k, 1/x₁ + 1/x₂ = k, |x₁ − x₂| = k.
+  - Điều kiện không đối xứng: x₁ = 2x₂, x₁² + 2x₂ = k.
+  - Tương giao giữa Parabol (P): y = ax² và đường thẳng (d): y = mx + n.
+- **Giải bài toán bằng cách lập phương trình / hệ phương trình dạng thực tế:**
+  - Toán chuyển động (ngược dòng / xuôi dòng, cùng chiều / ngược chiều).
   - Toán năng suất (làm chung, làm riêng, vượt năng suất).
-  - Toán kinh tế/phần trăm (lãi suất ngân hàng, giảm giá khuyến mãi, pha trộn dung dịch).
+  - Toán kinh tế / phần trăm (lãi suất ngân hàng, giảm giá khuyến mãi, pha trộn dung dịch).
 - **Hình học chứng minh:**
-  - Chứng minh tứ giác nội tiếp đường tròn (4 phương pháp: tổng hai góc đối bằng $180^\circ$, hai đỉnh kề cùng nhìn một cạnh, góc ngoài bằng góc đối trong, cách đều một điểm).
-  - Chứng minh hệ thức hình học ($AB \cdot AC = AD \cdot AE$) bằng tam giác đồng dạng.
+  - Chứng minh tứ giác nội tiếp đường tròn (4 phương pháp: tổng hai góc đối diện bằng 180°, hai đỉnh kề cùng nhìn một cạnh, góc ngoài bằng góc đối trong, cách đều một điểm).
+  - Chứng minh hệ thức hình học (AB · AC = AD · AE) bằng tam giác đồng dạng.
   - Chứng minh tiếp tuyến, đường thẳng vuông góc, song song, đồng quy hoặc thẳng hàng.
 
 #### 3. Mức độ Nâng cao (Mục tiêu: Chinh phục điểm 9.0 - 10.0)
 - **Bất đẳng thức & Cực trị:**
   - Bất đẳng thức Cauchy (AM-GM), Bunhiacopxki, Cauchy-Schwarz dạng phân thức (Bất đẳng thức Schwarz).
   - Kỹ thuật chọn điểm rơi, thêm bớt hạng tử, đổi biến số.
-- **Hình học phân loại câu cuối (Câu c, d):**
+- **Hình học phân loại câu cuối:**
   - Cực trị hình học (tìm vị trí điểm để đoạn thẳng/diện tích lớn nhất, nhỏ nhất).
   - Điểm cố định khi một yếu tố thay đổi.
 - **Phương trình vô tỉ:** Phương pháp đặt ẩn phụ, nhân liên hợp, đánh giá hai vế.
@@ -139,7 +139,7 @@ mindmap
   - Kiến thức Tiếng Việt: Khởi ngữ, các thành phần biệt lập (tình thái, cảm thán, gọi - đáp, phụ chú), các phép liên kết câu (lặp, thế, nối, đồng nghĩa - trái nghĩa).
 - **Kỹ năng trả lời câu hỏi đọc hiểu:**
   - Trả lời ngắn gọn, đúng trọng tâm, đi thẳng vào câu hỏi, tránh lan man.
-  - Luôn trình bày theo cấu trúc: Chỉ ra từ ngữ/chi tiết $\rightarrow$ Nêu tác dụng nội dung $\rightarrow$ Nêu tác dụng nghệ thuật/cảm xúc.
+  - Luôn trình bày theo cấu trúc: Chỉ ra từ ngữ/chi tiết ➔ Nêu tác dụng nội dung ➔ Nêu tác dụng nghệ thuật/cảm xúc.
 
 #### 2. Mức độ Khá (Lập luận chắc chắn, cảm xúc: 7.0 - 8.0 điểm)
 - **Viết đoạn văn Nghị luận xã hội (khoảng 200 chữ / 2/3 trang giấy thi):**
@@ -150,7 +150,7 @@ mindmap
     2. *Giải thích:* Khái niệm/vấn đề đó nghĩa là gì? (1 - 2 câu).
     3. *Bàn luận & Phân tích:* Tại sao lại như vậy? Ý nghĩa/tác hại là gì? (4 - 5 câu).
     4. *Dẫn chứng thực tế:* Nêu 1 dẫn chứng tiêu biểu, xác thực, truyền cảm hứng (tránh dẫn chứng chung chung, bịa đặt).
-    5. *Phản đề & Bài học hành động:* Lên án biểu hiện tiêu cực trái ngược $\rightarrow$ Rút ra bài học cho bản thân học sinh (2 - 3 câu).
+    5. *Phản đề & Bài học hành động:* Lên án biểu hiện tiêu cực trái ngược ➔ Rút ra bài học cho bản thân học sinh (2 - 3 câu).
 - **Kỹ năng viết bài văn Nghị luận văn học cơ bản:**
   - Bố cục 3 phần rõ ràng: Mở bài (giới thiệu tác giả, tác phẩm, vấn đề nghị luận), Thân bài (các luận điểm phân tích), Kết bài (đánh giá tổng kết và cảm nghĩ).
   - Thuộc dẫn chứng, thơ, chi tiết đắt giá của tác phẩm để trích dẫn.
@@ -174,14 +174,14 @@ mindmap
   - Tương lai đơn (Future Simple) & Tương lai gần (Be going to).
   - Hiện tại hoàn thành (Present Perfect - đặc biệt chú ý dấu hiệu *since, for, already, yet, ever, never*).
 - **Ngữ pháp trọng điểm thường xuất hiện trong đề thi:**
-  - **Câu bị động (Passive Voice):** Bị động các thì cơ bản và Modal verbs ($S + be + V_{pp}$).
-  - **Câu điều kiện (Conditionals):** Loại 1 ($If + V_{s/es}, S + will + V_0$) và Loại 2 ($If + V_{ed}/were, S + would + V_0$).
+  - **Câu bị động (Passive Voice):** Bị động các thì cơ bản và Modal verbs (S + be + V_pp).
+  - **Câu điều kiện (Conditionals):** Loại 1 (If + V_s/es, S + will + V_0) và Loại 2 (If + V_ed/were, S + would + V_0).
   - **Câu tường thuật (Reported Speech):** Quy tắc lùi thì, đổi ngôi đại từ, đổi trạng từ chỉ nơi chốn/thời gian.
   - **So sánh tính từ & trạng từ:** So sánh bằng, so sánh hơn, so sánh nhất.
   - **Mệnh đề quan hệ (Relative Clauses):** Cách dùng *Who, Whom, Which, That, Whose, Where, When*.
 - **Ngữ âm (Phonetics):**
-  - Quy tắc phát âm đuôi `-s / -es` (phương pháp nhớ thần chú: *thời phong kiến phương tây*...).
-  - Quy tắc phát âm đuôi `-ed` (nhớ: *t, d* phát âm là /ɪd/, *chính phủ pháp k...* phát âm là /t/).
+  - Quy tắc phát âm đuôi -s / -es (phương pháp nhớ thần chú: *thời phong kiến phương tây*...).
+  - Quy tắc phát âm đuôi -ed (nhớ: *t, d* phát âm là /ɪd/, *chính phủ pháp k...* phát âm là /t/).
   - Trọng âm từ 2 âm tiết (danh từ/tính từ thường nhấn âm 1, động từ thường nhấn âm 2).
 
 #### 2. Mức độ Khá (Vững vàng đạt 7.5 - 8.5 điểm)
@@ -195,7 +195,7 @@ mindmap
 - **Cụm động từ (Phrasal Verbs thông dụng):**
   - *Look for, look after, look up, turn on/off, give up, take off, put on, find out, set up, break down...*
 - **Cấu trúc câu viết lại (Sentence Transformation):**
-  - Chuyển đổi giữa thì Quá khứ đơn $\leftrightarrow$ Hiện tại hoàn thành (*The last time I saw him was 2 years ago $\rightarrow$ I haven't seen him for 2 years*).
+  - Chuyển đổi giữa thì Quá khứ đơn ➔ Hiện tại hoàn thành (*The last time I saw him was 2 years ago ➔ I haven't seen him for 2 years*).
   - Chuyển đổi giữa *Because / Because of*, *Although / In spite of*.
   - Cấu trúc *So... that... / Such... that... / Too... to... / Enough to...*
   - Cấu trúc gợi ý: *Suggest + V-ing / Suggest that S + (should) + V_0*.
@@ -236,7 +236,7 @@ gantt
 ### Giai đoạn 2: Tăng tốc chuyên đề & Nâng cao kỹ năng (Tháng 1 - Tháng 3)
 - **Mục tiêu:** Hoàn thành sớm chương trình Sách giáo khoa học kỳ 2 (vào khoảng cuối tháng 2 hoặc đầu tháng 3) và bắt đầu ôn tập theo từng chuyên đề chuyên sâu.
 - **Hành động cụ thể:**
-  - *Toán:* Ôn chuyên đề Phương trình bậc 2 & Hệ thức Vi-ét có chứa tham số $m$; Chuyên đề Toán thực tế; Chuyên đề Tứ giác nội tiếp và các bổ đề hình học hay gặp.
+  - *Toán:* Ôn chuyên đề Phương trình bậc 2 & Hệ thức Vi-ét có chứa tham số m; Chuyên đề Toán thực tế; Chuyên đề Tứ giác nội tiếp và các bổ đề hình học hay gặp.
   - *Văn:* Luyện viết đều đặn 1 đoạn văn nghị luận xã hội và 1 bài văn nghị luận tác phẩm mỗi tuần; nhờ thầy cô chấm và sửa chi tiết.
   - *Tiếng Anh:* Luyện chuyên đề viết lại câu, đọc hiểu điền từ và phân tích ngữ âm, trọng âm để không bị mất điểm oan ở các câu nhận biết.
 
@@ -263,7 +263,7 @@ gantt
 - **Tổng thời lượng:** 2 tiếng 15 phút (Khoảng từ **19h45 đến 22h15**)
 - **Mô hình học:** 2 ca học tập trung (mỗi ca 50 phút), giải lao giữa ca 15 phút.
 
-| Thứ | Ca 1 (19h45 - 20h35) | Giải lao (20h35 - 20h50) | Ca 2 (20h50 - 21h40) | Ca phụ nhẹ (21h45 - 22h15) |
+| Thứ | Ca 1 (19h45 - 20h35) | Giải lao (20h35 - 20h50) | Ca 2 (20h50 - 21h40) | Ca phụ nhẹ (21h50 - 22h15) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Thứ 2** | **TOÁN (Đại số):** Rút gọn, PT/HPT, lý thuyết mới | Uống nước, vận động nhẹ, không lướt điện thoại | **TIẾNG ANH:** Học 1 chuyên đề ngữ pháp + 10 câu trắc nghiệm | Học 10 từ vựng Anh qua Flashcard/sổ tay |
 | **Thứ 3** | **NGỮ VĂN:** Đọc hiểu văn bản + Ôn tiếng Việt | Thư giãn, nghe 1 bản nhạc nhẹ | **TOÁN (Hình học):** Vẽ hình, chứng minh 2 câu đầu | Đọc 1 bài văn mẫu hoặc bài báo hay |
@@ -310,7 +310,7 @@ Cuối tuần là thời điểm vàng để **bù đắp kiến thức còn y�
 | :--- | :--- |
 | **Khen ngợi nỗ lực cụ thể:** *"Bố thấy hôm nay con ngồi tập trung được đúng 50 phút mà không ngó điện thoại, rất đáng khen!"* | **Chê bai khái quát:** *"Mày lười như hủi, suốt ngày cắm mặt vào điện thoại thì thi thố cái gì!"* |
 | **Tạo góc học tập yên tĩnh:** Bàn học gọn gàng, đủ ánh sáng, bố mẹ không xem tivi bật tiếng quá to ngay cạnh bàn học của con. | **So sánh với "con nhà người ta":** So sánh chỉ khiến con thêm tự ti, ghen tị và bất cần. |
-| **Thỏa thuận thưởng - phạt rõ ràng:** Đạt mục tiêu tuần $\rightarrow$ Thưởng một buổi đi xem phim, mua món đồ con thích hoặc tăng thời gian chơi game cuối tuần. | **Kiểm soát nghẹt thở:** Cứ 5 phút lại bước vào phòng xem con đang làm gì, tạo cảm giác bị ngờ vực. |
+| **Thỏa thuận thưởng - phạt rõ ràng:** Đạt mục tiêu tuần ➔ Thưởng một buổi đi xem phim, mua món đồ con thích hoặc tăng thời gian chơi game cuối tuần. | **Kiểm soát nghẹt thở:** Cứ 5 phút lại bước vào phòng xem con đang làm gì, tạo cảm giác bị ngờ vực. |
 | **Liên hệ chặt chẽ với thầy cô:** Nắm được điểm mạnh, điểm yếu thực sự của con trên lớp để có hướng hỗ trợ kịp thời. | **Khoán trắng cho con hoặc cho trung tâm:** Không ai có thể thay thế sự động viên tinh thần của cha mẹ. |
 
 ---

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tự Động Tạo Đề Thi Vào 10 - THPT Trần Phú (Toán & Văn)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);">
+    <div class="header-container">
+      <div class="logo-area">
+        <h1>⚡ PHÒNG TẠO ĐỀ THI THỬ TỰ ĐỘNG VÀO 10</h1>
+        <p>Hệ thống tự động sinh đề thi ngẫu nhiên Toán & Ngữ văn theo chuẩn Bộ GD&ĐT 2026 - 2027</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn">🏠 Tổng Quan</a>
+        <a href="taode.html" class="nav-btn active">⚡ Tạo Đề Tự Động</a>
+        <a href="toan.html" class="nav-btn">📐 Môn Toán</a>
+        <a href="van.html" class="nav-btn">📖 Môn Văn</a>
+        <a href="anh.html" class="nav-btn">Môn Tiếng Anh</a>
+        <a href="luyende.html" class="nav-btn">🎯 Đề Chuẩn Sở</a>
+        <a href="tintuc.html" class="nav-btn">📢 Tin Tuyển Sinh</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- KPI Dashboard Summary (Phong cách exam.ktv3mien.com) -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon" style="background: #eff6ff; color: #2563eb;">📝</div>
+        <div>
+          <div class="kpi-val" id="statTotalTests">0</div>
+          <div class="kpi-label">Số đề đã thi</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon" style="background: #ecfdf5; color: #10b981;">🎯</div>
+        <div>
+          <div class="kpi-val" id="statAvgScore">0.0</div>
+          <div class="kpi-label">Điểm trung bình</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon" style="background: #fffbeb; color: #f59e0b;">📊</div>
+        <div>
+          <div class="kpi-val" id="statAccuracy">0%</div>
+          <div class="kpi-label">Tỷ lệ chính xác</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon" style="background: #fdf2f8; color: #db2777;">🏆</div>
+        <div>
+          <div class="kpi-val" style="font-size: 1.25rem;" id="statLevelBadge">Khởi động</div>
+          <div class="kpi-label">Năng lực hiện tại</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generator Panel -->
+    <div id="examGeneratorPanel">
+      <div class="generator-box">
+        <div class="generator-header">
+          <div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🤖 BỘ TẠO ĐỀ THI TỰ ĐỘNG THÔNG MINH</span>
+              <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #0284c7;">2026-2027</span>
+            </h3>
+            <p style="font-size: 0.875rem; opacity: 0.85; margin-top: 0.25rem;">
+              Hệ thống sẽ tự động quét ngân hàng câu hỏi chuẩn GDPT mới, xáo trộn ngẫu nhiên và sinh đề thi có bấm giờ & tự chấm điểm.
+            </p>
+          </div>
+        </div>
+
+        <div class="generator-grid">
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
+              1. CHỌN MÔN THI TRỌNG TÂM:
+            </label>
+            <select id="examSubjectSelect" class="gen-select">
+              <option value="toan">📐 Môn Toán 9 (Đại số, Hình học, Toán thực tế)</option>
+              <option value="van">📖 Môn Ngữ văn 9 (Đọc hiểu, Tiếng Việt, NLXH)</option>
+              <option value="tonghop">⚡ Đề Tổng Hợp Toán + Văn (Bộ GD&ĐT 2027)</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
+              2. CHỌN CẤP ĐỘ PHÂN HÓA:
+            </label>
+            <select id="examLevelSelect" class="gen-select">
+              <option value="tatca">🎲 Ngẫu nhiên toàn diện (Bám sát đề thi)</option>
+              <option value="coban">🟢 Cơ bản (Mục tiêu 5.0 - 6.5đ - Lấy gốc)</option>
+              <option value="nangcao">🔵 Khá & Nâng cao (Mục tiêu 7.0 - 8.5đ)</option>
+              <option value="tranphu">🔥 Chiến lược Trần Phú (Mục tiêu 8.5 - 10đ)</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
+              3. SỐ LƯỢNG CÂU & THỜI LƯỢNG:
+            </label>
+            <select id="examCountSelect" class="gen-select">
+              <option value="10">⏱️ 10 Câu hỏi (Khởi động - 15 phút)</option>
+              <option value="20" selected>⏱️ 20 Câu hỏi (Luyện chuẩn - 30 phút)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid #334155; padding-top: 1.25rem;">
+          <div style="font-size: 0.85rem; color: #94a3b8;">
+            💡 <em>Mẹo: Con nên tạo 1 đề 10 câu khởi động vào đầu mỗi buổi tối trước khi làm bài tập trên lớp!</em>
+          </div>
+          <button class="btn-generate" onclick="generateAutoExam()">
+            <span>⚡ Bắt Đầu Tạo Đề & Vào Phòng Thi Ngay</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lịch sử các lần thi gần nhất -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <span class="card-title">📜 LỊCH SỬ THI THỬ & TIẾN TRÌNH TĂNG TRƯỞNG NĂNG LỰC</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Lưu trữ tự động trên thiết bị</span>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Môn thi</th>
+                <th>Số câu đúng</th>
+                <th>Điểm số</th>
+                <th>Độ chính xác</th>
+              </tr>
+            </thead>
+            <tbody id="examHistoryTable">
+              <!-- Render động từ JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Exam Mode Panel (Xuất hiện khi người dùng bấm tạo đề) -->
+    <div id="examLivePanel" style="display: none;">
+      <div class="live-exam-container">
+        
+        <!-- Left: Question Stream -->
+        <div id="liveQuestionsList">
+          <!-- Render câu hỏi từ JS -->
+        </div>
+
+        <!-- Right: Sticky Sidebar -->
+        <div class="exam-sidebar">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
+            THỜI GIAN CÒN LẠI
+          </div>
+          <div class="sidebar-timer" id="liveExamClock">15:00</div>
+
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">
+            DANH SÁCH CÂU HỎI
+          </div>
+          <div class="question-palette" id="livePaletteList">
+            <!-- Palette numbers -->
+          </div>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 0.5rem;">
+            <button class="btn btn-success" style="width: 100%; justify-content: center; padding: 0.85rem;" onclick="if(confirm('Con có chắc chắn muốn nộp bài thi ngay bây giờ?')) submitLiveExam()">
+              ✓ Nộp Bài Thi & Chấm Điểm
+            </button>
+            <button class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 0.5rem; font-size: 0.8rem;" onclick="if(confirm('Hủy bài thi này và quay lại bảng điều khiển?')) location.reload()">
+              ✕ Hủy Bài Thi
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Hệ thống tự động tạo đề thi vào 10 THPT Trần Phú (Vĩnh Yên) • Chuẩn hóa theo mô hình exam.ktv3mien.com • Năm học 2026-2027</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

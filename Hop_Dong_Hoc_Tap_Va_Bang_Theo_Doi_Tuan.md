@@ -18,7 +18,7 @@
 - **Thực hiện đúng phần thưởng đã hứa:** Không nuốt lời khi con đã nỗ lực hoàn thành mục tiêu.
 
 ### 3. Quy chế Khen thưởng & Kỷ luật cuối tuần:
-* **Nếu hoàn thành $\ge 90\%$ mục tiêu tuần (tích đủ dấu):**
+* **Nếu hoàn thành ≥ 90% mục tiêu tuần (tích đủ dấu):**
   - Chiều Thứ Bảy được tự do chơi thể thao thoải mái.
   - Tối Thứ Bảy hoặc Chủ Nhật được chơi game/sử dụng điện thoại 1.5 - 2 tiếng.
   - Bố mẹ thưởng 1 bữa ăn con thích vào cuối tuần (hoặc 1 món quà nhỏ đã thỏa thuận).
@@ -56,21 +56,21 @@ Chuẩn bị 3 cuốn vở học sinh 72 trang (mỗi môn 1 cuốn). Khi chữa
 +-------------------------------------------------------------------------------+
 | NGÀY: 26/09/2026                      MÔN: TOÁN (ĐỀ SỐ 1 - VĨNH PHÚC)        |
 +-------------------------------------------------------------------------------+
-| CÂU SỐ / DẠNG BÀI: Câu 3b - Phương trình bậc 2 tìm m để x1^2 + x2^2 = 10      |
+| CÂU SỐ / DẠNG BÀI: Câu 3b - Phương trình bậc hai tìm m để x₁² + x₂² = 10      |
 +-------------------------------------------------------------------------------+
 | LỜI GIẢI SAI CỦA CON:                                                         |
-| - Con tính đúng delta và áp dụng Vi-et S = 2, P = m - 1.                       |
-| - Con biến đổi x1^2 + x2^2 = S^2 - 2P = 4 - 2(m-1) = 10 ==> m = -2.          |
-| - Con vội vàng kết luận m = -2 luôn mà KHÔNG ĐỐI CHIẾU VỚI ĐIỀU KIỆN DELTA!    |
+| - Con tính đúng biệt thức Δ và áp dụng Vi-et S = 2, P = m - 1.                |
+| - Con biến đổi x₁² + x₂² = S² - 2P = 4 - 2(m - 1) = 10 ==> m = -2.           |
+| - Con vội vàng kết luận m = -2 luôn mà KHÔNG ĐỐI CHIẾU VỚI ĐIỀU KIỆN DELTA!   |
 +-------------------------------------------------------------------------------+
 | NGUYÊN NHÂN SAI:                                                              |
-| [X] Quên điều kiện tồn tại nghiệm (Delta >= 0).                               |
+| [X] Quên điều kiện tồn tại nghiệm (Δ ≥ 0).                                    |
 | [ ] Nhầm dấu công thức.                                                       |
 | [ ] Đọc thiếu đề bài.                                                         |
 +-------------------------------------------------------------------------------+
 | BÀI HỌC RÚT RA & LỜI GIẢI ĐÚNG:                                               |
-| - Luôn phải tìm điều kiện để PT có 2 nghiệm (Delta >= 0 ==> m <= 2) trước.    |
-| - Sau khi ra m = -2, phải so sánh với điều kiện m <= 2 ==> Thỏa mãn.         |
+| - Luôn phải tìm điều kiện để PT có 2 nghiệm (Δ ≥ 0 ==> m ≤ 2) trước.          |
+| - Sau khi ra m = -2, phải so sánh với điều kiện m ≤ 2 ==> Thỏa mãn.           |
 | - Bài học: Đề bài có chữ "tìm m để PT CÓ HAI NGHIỆM" là PHẢI CÓ BƯỚC ĐIỀU KIỆN!|
 +-------------------------------------------------------------------------------+
 ```

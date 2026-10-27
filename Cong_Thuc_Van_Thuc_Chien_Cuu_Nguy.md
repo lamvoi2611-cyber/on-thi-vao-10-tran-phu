@@ -14,20 +14,20 @@ Phần này là nơi con có thể lấy trọn vẹn điểm số dễ nhất n
 
 ### Công thức 1: Nhận diện Phương thức biểu đạt (PTBĐ)
 Khi đề bài hỏi: *"Xác định phương thức biểu đạt chính/các phương thức biểu đạt..."*:
-- Nếu có **cốt truyện, nhân vật, diễn biến sự việc** $\rightarrow$ **Tự sự**.
-- Nếu có **tả cảnh vật, chân dung, đường nét, màu sắc** $\rightarrow$ **Miêu tả**.
-- Nếu bộc lộ **tình cảm, cảm xúc cá nhân, thơ ca** $\rightarrow$ **Biểu cảm**.
-- Nếu đưa ra **ý kiến, lập luận, lý lẽ, dẫn chứng để thuyết phục** $\rightarrow$ **Nghị luận**.
-- Nếu giới thiệu **tri thức, số liệu, tính chất sự vật khoa học** $\rightarrow$ **Thuyết minh**.
-- *Mẹo làm bài:* Nếu đề hỏi phương thức biểu đạt **chính** $\rightarrow$ Chỉ được ghi duy nhất 1 phương thức. Nếu đề hỏi "các phương thức" $\rightarrow$ Ghi 2 - 3 phương thức.
+- Nếu có **cốt truyện, nhân vật, diễn biến sự việc** ➔ **Tự sự**.
+- Nếu có **tả cảnh vật, chân dung, đường nét, màu sắc** ➔ **Miêu tả**.
+- Nếu bộc lộ **tình cảm, cảm xúc cá nhân, thơ ca** ➔ **Biểu cảm**.
+- Nếu đưa ra **ý kiến, lập luận, lý lẽ, dẫn chứng để thuyết phục** ➔ **Nghị luận**.
+- Nếu giới thiệu **tri thức, số liệu, tính chất sự vật khoa học** ➔ **Thuyết minh**.
+- *Mẹo làm bài:* Nếu đề hỏi phương thức biểu đạt **chính** ➔ Chỉ được ghi duy nhất 1 phương thức. Nếu đề hỏi "các phương thức" ➔ Ghi 2 - 3 phương thức.
 
 ---
 
 ### Công thức 2: Trả lời tác dụng của Biện pháp tu từ (BPTT)
-Đây là câu hỏi chiếm từ $0.75 - 1.0$ điểm trong đề thi. **Tuyệt đối không trả lời cộc lốc!**
+Đây là câu hỏi chiếm từ 0.75 đến 1.0 điểm trong đề thi. **Tuyệt đối không trả lời cộc lốc!**
 Áp dụng chuẩn công thức **3 vế bắt buộc**:
 
-$$\text{CÂU TRẢ LỜI} = \text{Tên BPTT + Chỉ rõ từ ngữ} + \text{Tác dụng hình ảnh/nội dung} + \text{Tác dụng cảm xúc/thái độ}$$
+> **[CÂU TRẢ LỜI] = [Tên BPTT + Chỉ rõ từ ngữ] + [Tác dụng hình ảnh/nội dung] + [Tác dụng cảm xúc/thái độ]**
 
 * **Vế 1 (Chỉ điểm):** Biện pháp tu từ [So sánh / Ẩn dụ / Điệp từ...] được thể hiện qua từ ngữ/hình ảnh: *"..."*.
 * **Vế 2 (Nội dung):** Biện pháp giúp câu văn tăng sức gợi hình, gợi cảm; làm nổi bật hình ảnh [Nêu rõ sự vật/hiện tượng được nói đến].
@@ -57,7 +57,7 @@ $$\text{CÂU TRẢ LỜI} = \text{Tên BPTT + Chỉ rõ từ ngữ} + \text{Tác
 # PHẦN 2: CÔNG THỨC 5 BƯỚC VIẾT ĐOẠN VĂN NGHỊ LUẬN XÃ HỘI (2.0 ĐIỂM)
 
 > [!IMPORTANT]
-> **Yêu cầu kỹ thuật:** Viết 01 đoạn văn khoảng 200 chữ (tương đương 20 - 25 dòng giấy thi). **Tuyệt đối không xuống dòng tách thành nhiều đoạn** (xuống dòng sẽ bị trừ $0.5$ điểm cấu trúc đoạn).
+> **Yêu cầu kỹ thuật:** Viết 01 đoạn văn khoảng 200 chữ (tương đương 20 - 25 dòng giấy thi). **Tuyệt đối không xuống dòng tách thành nhiều đoạn** (xuống dòng sẽ bị trừ 0.5 điểm cấu trúc đoạn).
 
 ```mermaid
 flowchart TD

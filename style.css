@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  /* Phông chữ chính theo chuẩn Thể thức văn bản Việt Nam (Nghị định 30/2020/NĐ-CP - TCVN 6909:2001) */
+  --font-standard: "Times New Roman", Times, "Tinos", "Cambria Math", serif;
+  --font-math: "Times New Roman", "Cambria Math", Times, serif;
+
+  --primary: #1e3a8a;
+  --primary-hover: #172554;
   --primary-light: #eff6ff;
-  --success: #10b981;
-  --success-light: #ecfdf5;
-  --warning: #f59e0b;
+  --success: #15803d;
+  --success-light: #f0fdf4;
+  --warning: #b45309;
   --warning-light: #fffbeb;
-  --danger: #ef4444;
+  --danger: #b91c1c;
   --danger-light: #fef2f2;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
+  --text-main: #0f172a;
+  --text-muted: #475569;
   --bg-main: #f8fafc;
   --card-bg: #ffffff;
-  --border: #e2e8f0;
-  --radius: 12px;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --border: #cbd5e1;
+  --radius: 8px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -25,11 +31,154 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-standard);
+  font-size: 1.05rem; /* ~14pt chuẩn Nghị định 30/2020/NĐ-CP */
   background-color: var(--bg-main);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5; /* Giãn dòng chuẩn 1.5 */
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tiêu đề chuẩn thể thức văn bản hành chính */
+h1, h2, h3, h4, h5, h6, .card-title {
+  font-family: var(--font-standard);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+h1 {
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+p {
+  font-family: var(--font-standard);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 0.65rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Chuẩn Typography cho Công Thức Toán Học (Theo quy phạm SGK Toán & TCVN) */
+.math {
+  font-family: var(--font-math);
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+  font-style: normal; /* Không ép nghiêng toàn bộ; chỉ biến số in nghiêng */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Biến số toán học (x, y, z, m, a, b...) */
+.math em, .math i, .math-var {
+  font-style: italic;
+  font-family: "Times New Roman", "Cambria Math", serif;
+}
+
+/* Số, phép tính, dấu ngoặc, ký hiệu toán học luôn in đứng */
+.math-num, .math-symbol, .math span.sym, .math span.num {
+  font-style: normal;
+  font-family: var(--font-standard);
+}
+
+/* Phân số chuẩn sách giáo khoa (Tử số trên, Mẫu số dưới, Dấu gạch ngang ở giữa) */
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 0.25em;
+  font-size: 0.9em;
+  line-height: 1.15;
+  font-style: normal;
+}
+
+.frac .num {
+  border-bottom: 1.2px solid currentColor;
+  padding-bottom: 1px;
+  display: block;
+}
+
+.frac .den {
+  padding-top: 1px;
+  display: block;
+}
+
+/* Căn thức toán học chuẩn với thanh gạch ngang trên đầu biểu thức */
+.sqrt {
+  display: inline-flex;
+  align-items: baseline;
+  font-style: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.sqrt .sqrt-rad {
+  font-family: "Cambria Math", "Times New Roman", serif;
+  font-size: 1.15em;
+  line-height: 1;
+  margin-right: 1px;
+}
+
+.sqrt .sqrt-val {
+  border-top: 1.2px solid currentColor;
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  display: inline-block;
+}
+
+/* Chỉ số dưới bằng chữ (subscripts) */
+.math sub, sub {
+  font-size: 0.75em;
+  vertical-align: sub;
+  font-style: normal;
+  font-family: var(--font-standard);
+}
+
+/* Chỉ số trên / số mũ (superscripts) */
+.math sup, sup {
+  font-size: 0.75em;
+  vertical-align: super;
+  font-style: normal;
+  font-family: var(--font-standard);
+}
+
+.math-box {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0.85rem 1.25rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  font-size: 1.05rem;
+  font-family: var(--font-standard);
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 /* Header & Nav */
@@ -54,11 +203,13 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+  line-height: 1.3;
 }
 
 .logo-area p {
   font-size: 0.875rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  margin-top: 0.25rem;
 }
 
 .nav-links {
@@ -75,11 +226,12 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  font-family: var(--font-standard);
+  font-weight: 700;
+  font-size: 0.95rem;
   transition: all 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .nav-btn:hover, .nav-btn.active {
@@ -154,6 +306,7 @@ body {
 .target-info h2 {
   font-size: 1.35rem;
   margin-bottom: 0.25rem;
+  font-weight: 800;
 }
 
 .target-badges {
@@ -195,13 +348,40 @@ body {
 .btn {
   padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 6px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  font-family: var(--font-standard);
+  font-size: 0.95rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: var(--font-standard);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
 
 .btn-primary {
@@ -237,7 +417,7 @@ body {
   font-weight: 500;
 }
 
-/* Checklist Table */
+/* Bảng Biểu Chuẩn Thể Thức Văn Bản Hành Chính (Nghị định 30/2020/NĐ-CP) */
 .table-responsive {
   overflow-x: auto;
 }
@@ -245,20 +425,25 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
+  margin: 1rem 0;
+  font-family: var(--font-standard);
+  font-size: 1rem;
+  border: 1px solid #475569;
 }
 
 th, td {
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #64748b;
+  vertical-align: middle;
 }
 
 th {
-  background: #f8fafc;
+  background: #f1f5f9;
   font-weight: 700;
-  color: #475569;
+  color: #0f172a;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
 }
 
 tr:hover {
@@ -315,30 +500,34 @@ tr:hover {
   background: white;
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .quiz-question {
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.98rem;
+  color: #0f172a;
 }
 
 .quiz-options {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .quiz-option-btn {
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1.1rem;
   text-align: left;
   background: #f8fafc;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-main);
 }
 
 .quiz-option-btn:hover {
@@ -349,7 +538,7 @@ tr:hover {
   background: var(--success-light);
   border-color: var(--success);
   color: #065f46;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .quiz-option-btn.wrong {
@@ -359,12 +548,13 @@ tr:hover {
 }
 
 .quiz-explanation {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 6px;
+  margin-top: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
   background: #eff6ff;
   border: 1px solid #bfdbfe;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
   display: none;
 }
 
@@ -376,14 +566,17 @@ tr:hover {
   margin-top: 1.5rem;
 }
 
-textarea.form-control {
+textarea.form-control, input.form-control {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: monospace;
-  font-size: 0.85rem;
+  border-radius: 6px;
+  font-family: var(--font-standard);
+  font-size: 1rem;
   margin-bottom: 0.75rem;
+}
+
+textarea.form-control {
   resize: vertical;
 }
 
@@ -414,4 +607,460 @@ footer {
   .timer-display {
     font-size: 2.8rem;
   }
+}
+
+/* =========================================================
+   STYLE CHO HỆ THỐNG TỰ ĐỘNG TẠO ĐỀ THI & DASHBOARD THỐNG KÊ
+   (Chuẩn phong cách exam.ktv3mien.com)
+   ========================================================= */
+
+/* KPI Dashboard Cards */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.kpi-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Exam Generator Form */
+.generator-box {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 1.75rem;
+  border: 1px solid #334155;
+}
+
+.generator-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.generator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.gen-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #1e293b;
+  color: white;
+  font-family: inherit;
+  font-size: 0.925rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.gen-select:focus {
+  border-color: #38bdf8;
+}
+
+.btn-generate {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-standard);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+/* Exam Layout in Live Mode */
+.live-exam-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .live-exam-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exam-sidebar {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 1rem;
+}
+
+.sidebar-timer {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 0.85rem;
+  border-radius: 8px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.question-palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.palette-item {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--text-main);
+}
+
+.palette-item:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.palette-item.answered {
+  background: #10b981;
+  color: white;
+  border-color: #059669;
+}
+
+.palette-item.current {
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Exam Question Card */
+.exam-qcard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.exam-qnum {
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exam-qtext {
+  font-family: var(--font-standard);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.55;
+  text-align: justify;
+}
+
+.exam-opt {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f8fafc;
+  font-family: var(--font-standard);
+  font-size: 1rem;
+}
+
+.exam-opt:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.exam-opt.selected {
+  background: #eff6ff;
+  border-color: var(--primary);
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.exam-opt input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Score Summary Modal / Card */
+.score-box {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid #10b981;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.score-num {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #34d399;
+}
+
+.score-total {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* News Article Card */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.news-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.news-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.news-desc {
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* =========================================================
+   THỂ THỨC VĂN BẢN QUY PHẠM & ĐỀ THI (NGHỊ ĐỊNH 30/2020/NĐ-CP)
+   ========================================================= */
+
+.vb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.vb-coquan {
+  text-align: center;
+  font-family: var(--font-standard);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #0f172a;
+}
+
+.vb-coquan .vb-line {
+  width: 70px;
+  height: 1.5px;
+  background: #0f172a;
+  margin: 4px auto 0 auto;
+}
+
+.vb-quochoai {
+  text-align: center;
+  font-family: var(--font-standard);
+  line-height: 1.35;
+  color: #0f172a;
+}
+
+.vb-quochoai .vb-ten-nuoc {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.vb-quochoai .vb-tieu-ngu {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vb-quochoai .vb-line {
+  width: 120px;
+  height: 1.5px;
+  background: #0f172a;
+  margin: 4px auto 0 auto;
+}
+
+.vb-title-block {
+  text-align: center;
+  margin: 1.25rem 0 1rem 0;
+}
+
+.vb-doc-title {
+  font-family: var(--font-standard);
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.vb-doc-subtitle {
+  font-family: var(--font-standard);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #334155;
+  font-style: italic;
+}
+
+.vb-meta-line {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #475569;
+  text-align: right;
+  margin-bottom: 0.75rem;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-bold {
+  font-weight: 700;
 }

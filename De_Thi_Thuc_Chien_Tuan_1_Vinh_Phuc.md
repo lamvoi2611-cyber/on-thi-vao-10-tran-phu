@@ -1,60 +1,64 @@
-# BỘ ĐỀ THI THỰC CHIẾN TUẦN 1 - CHUẨN CẤU TRÚC SỞ GD&ĐT VĨNH PHÚC
-### DÀNH CHO CON THI VÀO 10 THPT TRẦN PHÚ (NĂM HỌC 2026 - 2027)
+| UBND TỈNH VĨNH PHÚC<br>**SỞ GIÁO DỤC VÀ ĐÀO TẠO**<br>*(Đề thi có 02 trang)* | **CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM**<br>**Độc lập - Tự do - Hạnh phúc**<br>------------------------ |
+| :---: | :---: |
+
+# KỲ THI TUYỂN SINH VÀO LỚP 10 THPT TRẦN PHÚ (VĨNH YÊN)
+### NĂM HỌC 2026 - 2027
+**BỘ ĐỀ THI THỰC CHIẾN TUẦN 1 - CHUẨN CẤU TRÚC SỞ GD&ĐT VĨNH PHÚC**
 
 ---
 
-## MÔN 1: ĐỀ THI THỬ MÔN TOÁN (SỐ 01)
-*Thời gian làm bài: 120 phút (Bấm giờ nghiêm túc sáng Chủ Nhật)*
+## MÔN 1: ĐỀ THI MÔN TOÁN HỌC (ĐỀ SỐ 01)
+*Thời gian làm bài: 120 phút (Bấm giờ nghiêm túc sáng Chủ Nhật - Không kể thời gian phát đề)*
 
 ### PHẦN I: TRẮC NGHIỆM KHÁCH QUAN (2.0 ĐIỂM - 8 CÂU, MỖI CÂU 0.25 ĐIỂM)
 
 **Câu 1:** Căn bậc hai số học của 81 là:  
 A. 9  
-B. -9  
-C. $\pm 9$  
+B. −9  
+C. ±9  
 D. 6561  
 
-**Câu 2:** Biểu thức $\sqrt{\frac{1}{x - 3}}$ xác định khi và chỉ khi:  
-A. $x \ge 3$  
-B. $x > 3$  
-C. $x < 3$  
-D. $x \neq 3$  
+**Câu 2:** Biểu thức √(1 / (x − 3)) xác định khi và chỉ khi:  
+A. x ≥ 3  
+B. x > 3  
+C. x < 3  
+D. x ≠ 3  
 
-**Câu 3:** Hàm số $y = (m - 2)x + 3$ đồng biến trên $\mathbb{R}$ khi:  
-A. $m < 2$  
-B. $m > 2$  
-C. $m \ge 2$  
-D. $m \neq 2$  
+**Câu 3:** Hàm số y = (m − 2)x + 3 đồng biến trên ℝ khi:  
+A. m < 2  
+B. m > 2  
+C. m ≥ 2  
+D. m ≠ 2  
 
-**Câu 4:** Hệ phương trình $\begin{cases} 2x + y = 5 \\ x - y = 1 \end{cases}$ có nghiệm duy nhất $(x; y)$ là:  
-A. $(2; 1)$  
-B. $(1; 2)$  
-C. $(3; -1)$  
-D. $(2; -1)$  
+**Câu 4:** Hệ phương trình { 2x + y = 5; x − y = 1 } có nghiệm duy nhất (x; y) là:  
+A. (2; 1)  
+B. (1; 2)  
+C. (3; −1)  
+D. (2; −1)  
 
-**Câu 5:** Cho phương trình $x^2 - 6x + 2 = 0$ có 2 nghiệm $x_1, x_2$. Giá trị của $x_1 + x_2$ là:  
-A. $-6$  
+**Câu 5:** Cho phương trình x² − 6x + 2 = 0 có 2 nghiệm x₁, x₂. Giá trị của tổng x₁ + x₂ là:  
+A. −6  
 B. 6  
 C. 2  
-D. $-2$  
+D. −2  
 
-**Câu 6:** Cho tam giác $ABC$ vuông tại $A$, đường cao $AH$. Biết $BH = 4\text{ cm}, CH = 9\text{ cm}$. Độ dài đoạn thẳng $AH$ là:  
-A. $6\text{ cm}$  
-B. $13\text{ cm}$  
-C. $36\text{ cm}$  
-D. $\sqrt{13}\text{ cm}$  
+**Câu 6:** Cho tam giác ABC vuông tại A, đường cao AH. Biết BH = 4 cm, CH = 9 cm. Độ dài đoạn thẳng AH là:  
+A. 6 cm  
+B. 13 cm  
+C. 36 cm  
+D. √13 cm  
 
-**Câu 7:** Một chiếc máy bay bay lên với vận tốc $500\text{ km/h}$. Đường bay tạo với phương nằm ngang một góc $30^\circ$. Sau 1.2 phút máy bay lên cao được bao nhiêu kilomet theo phương thẳng đứng?  
-A. $5\text{ km}$  
-B. $10\text{ km}$  
-C. $8.66\text{ km}$  
-D. $6\text{ km}$  
+**Câu 7:** Một chiếc máy bay bay lên với vận tốc 500 km/h. Đường bay tạo với phương nằm ngang một góc 30°. Sau 1.2 phút máy bay lên cao được bao nhiêu kilomet theo phương thẳng đứng?  
+A. 5 km  
+B. 10 km  
+C. 8.66 km  
+D. 6 km  
 
-**Câu 8:** Một hình nón có bán kính đáy $r = 6\text{ cm}$ và chiều cao $h = 8\text{ cm}$. Diện tích xung quanh của hình nón là:  
-A. $48\pi\text{ cm}^2$  
-B. $60\pi\text{ cm}^2$  
-C. $96\pi\text{ cm}^2$  
-D. $80\pi\text{ cm}^2$  
+**Câu 8:** Một hình nón có bán kính đáy r = 6 cm và chiều cao h = 8 cm. Diện tích xung quanh của hình nón là:  
+A. 48π cm²  
+B. 60π cm²  
+C. 96π cm²  
+D. 80π cm²  
 
 ---
 
@@ -62,45 +66,48 @@ D. $80\pi\text{ cm}^2$
 
 **Câu 1 (1.5 điểm):**  
 Cho hai biểu thức:  
-$$A = \frac{\sqrt{x} + 4}{\sqrt{x} - 1} \quad \text{và} \quad B = \frac{3\sqrt{x} + 1}{x - 1} - \frac{2}{\sqrt{x} + 1} \quad (\text{với } x \ge 0, x \neq 1)$$  
-1. Tính giá trị của biểu thức $A$ khi $x = 9$.  
-2. Rút gọn biểu thức $B$.  
-3. Cho $P = \frac{B}{A}$. Tìm các giá trị của $x$ để biểu thức $P < \frac{1}{3}$.  
+A = (√x + 4) / (√x − 1)  và  B = (3√x + 1) / (x − 1) − 2 / (√x + 1)  (với x ≥ 0, x ≠ 1)  
+1. Tính giá trị của biểu thức A khi x = 9.  
+2. Rút gọn biểu thức B.  
+3. Cho P = B / A. Tìm các giá trị của x để biểu thức P < 1/3.
 
 **Câu 2 (1.5 điểm):**  
-1. Giải hệ phương trình: $\begin{cases} 3(x + 1) - 2(y - 2) = 7 \\ 2(x + 1) + 3(y - 2) = 9 \end{cases}$  
-2. Trong mặt phẳng tọa độ $Oxy$, cho Parabol $(P): y = x^2$ và đường thẳng $(d): y = 2x + m - 1$. Tìm $m$ để $(d)$ cắt $(P)$ tại hai điểm phân biệt có hoành độ $x_1, x_2$ thỏa mãn: $x_1^2 + x_2^2 - 3x_1 x_2 = 13$.
+1. Giải hệ phương trình:  
+   { 3(x + 1) − 2(y − 2) = 7  
+   { 2(x + 1) + 3(y − 2) = 9  
+2. Trong mặt phẳng tọa độ Oxy, cho Parabol (P): y = x² và đường thẳng (d): y = 2x + m − 1. Tìm tham số m để (d) cắt (P) tại hai điểm phân biệt có hoành độ x₁, x₂ thỏa mãn:  
+   x₁² + x₂² − 3x₁x₂ = 13.
 
 **Câu 3 (1.5 điểm - Bài toán thực tế GDPT 2018):**  
-Một đội xe theo kế hoạch phải vận chuyển $120$ tấn hàng cứu trợ đồng bào bị ảnh hưởng bởi thiên tai. Khi chuẩn bị khởi hành, đội được bổ sung thêm $2$ xe nữa, do đó mỗi xe chở ít hơn dự định ban đầu $2$ tấn hàng. Hỏi lúc đầu đội có bao nhiêu xe? (Biết sức chở của mỗi xe là như nhau).
+Một đội xe theo kế hoạch phải vận chuyển 120 tấn hàng cứu trợ đồng bào bị ảnh hưởng bởi thiên tai. Khi chuẩn bị khởi hành, đội được bổ sung thêm 2 xe nữa, do đó mỗi xe chở ít hơn dự định ban đầu 2 tấn hàng. Hỏi lúc đầu đội có bao nhiêu xe? (Biết sức chở của mỗi xe là như nhau).
 
 **Câu 4 (3.0 điểm - Hình học):**  
-Từ điểm $M$ nằm ngoài đường tròn $(O; R)$, kẻ hai tiếp tuyến $MA, MB$ với đường tròn ($A, B$ là các tiếp điểm). Kẻ đường kính $AC$ của đường tròn $(O)$. Gọi $H$ là giao điểm của $MO$ và $AB$.  
-1. Chứng minh bốn điểm $M, A, O, B$ cùng thuộc một đường tròn và $MO \perp AB$ tại $H$.  
-2. Đoạn thẳng $MC$ cắt đường tròn $(O)$ tại điểm thứ hai là $D$. Chứng minh $MA^2 = MD \cdot MC$ và $\widehat{MHD} = \widehat{MCO}$.  
-3. Tia $CH$ cắt đường tròn $(O)$ tại $E$. Chứng minh tam giác $MDE$ cân tại $M$.
+Từ điểm M nằm ngoài đường tròn (O; R), kẻ hai tiếp tuyến MA, MB với đường tròn (A, B là các tiếp điểm). Kẻ đường kính AC của đường tròn (O). Gọi H là giao điểm của MO và AB.  
+1. Chứng minh bốn điểm M, A, O, B cùng thuộc một đường tròn và MO ⊥ AB tại H.  
+2. Đoạn thẳng MC cắt đường tròn (O) tại điểm thứ hai là D. Chứng minh MA² = MD · MC và góc MHD = góc MCO.  
+3. Tia CH cắt đường tròn (O) tại E. Chứng minh tam giác MDE cân tại M.
 
 **Câu 5 (0.5 điểm - Nâng cao):**  
-Cho các số thực dương $a, b, c$ thỏa mãn $a + b + c = 3$. Tìm giá trị nhỏ nhất của biểu thức:  
-$$Q = \frac{a}{1 + b^2} + \frac{b}{1 + c^2} + \frac{c}{1 + a^2}$$
+Cho các số thực dương a, b, c thỏa mãn a + b + c = 3. Tìm giá trị nhỏ nhất của biểu thức:  
+Q = a / (1 + b²) + b / (1 + c²) + c / (1 + a²).
 
 ---
 
 ## ĐÁP ÁN VÀ THANG ĐIỂM CHI TIẾT MÔN TOÁN
 
-| Câu | Nội dung đáp án | Điểm |
+| Câu | Nội dung đáp án chuẩn barem | Điểm |
 | :--- | :--- | :---: |
-| **Phần I** | **1-A, 2-B, 3-B, 4-A, 5-B, 6-A, 7-A, 8-B** *(Mỗi câu 0.25đ)* | **2.0 đ** |
-| **Câu 1.1** | Thay $x = 9$ (thỏa mãn ĐKXĐ) vào $A$: $A = \frac{\sqrt{9}+4}{\sqrt{9}-1} = \frac{3+4}{3-1} = \frac{7}{2}$. | 0.5 đ |
-| **Câu 1.2** | $B = \frac{3\sqrt{x}+1}{(\sqrt{x}-1)(\sqrt{x}+1)} - \frac{2(\sqrt{x}-1)}{(\sqrt{x}-1)(\sqrt{x}+1)} = \frac{3\sqrt{x}+1 - 2\sqrt{x} + 2}{(\sqrt{x}-1)(\sqrt{x}+1)} = \frac{\sqrt{x}+3}{x-1}$. | 0.5 đ |
-| **Câu 1.3** | $P = \frac{B}{A} = \frac{\sqrt{x}+3}{(\sqrt{x}-1)(\sqrt{x}+1)} \cdot \frac{\sqrt{x}-1}{\sqrt{x}+4} = \frac{\sqrt{x}+3}{(\sqrt{x}+1)(\sqrt{x}+4)}$.<br>Xét $P < \frac{1}{3} \Leftrightarrow \frac{\sqrt{x}+3}{x + 5\sqrt{x} + 4} - \frac{1}{3} < 0 \Leftrightarrow \frac{3\sqrt{x}+9 - x - 5\sqrt{x} - 4}{3(x+5\sqrt{x}+4)} < 0 \Leftrightarrow \frac{-x - 2\sqrt{x} + 5}{3(x+5\sqrt{x}+4)} < 0$.<br>Vì mẫu luôn dương với $x \ge 0, x \neq 1$, giải ra kết hợp ĐKXĐ kết luận đúng $x$. | 0.5 đ |
-| **Câu 2.1** | Đặt $u = x+1, v = y-2$. Hệ trở thành $\begin{cases} 3u - 2v = 7 \\ 2u + 3v = 9 \end{cases} \Leftrightarrow \begin{cases} u = 3 \\ v = 1 \end{cases} \Rightarrow \begin{cases} x = 2 \\ y = 3 \end{cases}$. | 0.75 đ |
-| **Câu 2.2** | PT hoành độ giao điểm: $x^2 - 2x - (m-1) = 0$. $\Delta' = 1 + m - 1 = m$. Để cắt tại 2 điểm phân biệt thì $m > 0$.<br>Theo Vi-et: $x_1+x_2 = 2, x_1 x_2 = 1 - m$.<br>$x_1^2 + x_2^2 - 3x_1 x_2 = (x_1+x_2)^2 - 5x_1 x_2 = 4 - 5(1-m) = 13 \Leftrightarrow 4 - 5 + 5m = 13 \Leftrightarrow 5m = 14 \Leftrightarrow m = \frac{14}{5}$ (Thỏa mãn $m > 0$). | 0.75 đ |
-| **Câu 3** | Gọi số xe ban đầu là $x$ xe ($x \in \mathbb{N}^*, x > 0$). Lập luận ra phương trình: $\frac{120}{x} - \frac{120}{x+2} = 2$.<br>Quy đồng giải PT: $120(x+2) - 120x = 2x(x+2) \Leftrightarrow x^2 + 2x - 120 = 0 \Leftrightarrow (x-10)(x+12) = 0$.<br>Nghiệm $x = 10$ (nhận), $x = -12$ (loại). Kết luận: Lúc đầu có 10 xe. | 1.5 đ |
-| **Câu 4.1** | Vẽ hình chính xác câu a. Chứng minh $\widehat{MAO} = \widehat{MBO} = 90^\circ \Rightarrow M, A, O, B$ thuộc đường tròn đường kính $MO$. Chứng minh $MO$ là trung trực của $AB \Rightarrow MO \perp AB$ tại $H$. | 1.0 đ |
-| **Câu 4.2** | Chứng minh $\Delta MDA \sim \Delta MAC$ (g-g) $\Rightarrow MA^2 = MD \cdot MC$.<br>Chứng minh $MA^2 = MH \cdot MO$ (hệ thức lượng tam giác vuông $MAO$).<br>Từ đó $MD \cdot MC = MH \cdot MO \Rightarrow \Delta MHD \sim \Delta MCO$ (c-g-c) $\Rightarrow \widehat{MHD} = \widehat{MCO}$. | 1.0 đ |
-| **Câu 4.3** | Vận dụng tứ giác nội tiếp và góc tạo bởi tia tiếp tuyến và dây cung chứng minh $MD = ME \Rightarrow \Delta MDE$ cân tại $M$. | 1.0 đ |
-| **Câu 5** | Áp dụng kỹ thuật Cauchy ngược dấu: $\frac{a}{1+b^2} = a - \frac{ab^2}{1+b^2} \ge a - \frac{ab^2}{2b} = a - \frac{ab}{2}$.<br>Cộng vế với vế: $Q \ge (a+b+c) - \frac{ab+bc+ca}{2} \ge 3 - \frac{(a+b+c)^2}{6} = 3 - \frac{9}{6} = \frac{3}{2}$. Dấu bằng khi $a=b=c=1$. | 0.5 đ |
+| **Phần I** | **1-A, 2-B, 3-B, 4-A, 5-B, 6-A, 7-A, 8-B** (Mỗi câu đúng được 0.25 điểm) | **2.0 điểm** |
+| **Câu 1.1** | Thay x = 9 (thỏa mãn ĐKXĐ) vào A: A = (√9 + 4) / (√9 − 1) = (3 + 4) / (3 − 1) = 7/2. | 0.5 điểm |
+| **Câu 1.2** | B = (3√x + 1) / [(√x − 1)(√x + 1)] − 2(√x − 1) / [(√x − 1)(√x + 1)] = (3√x + 1 − 2√x + 2) / (x − 1) = (√x + 3) / (x − 1). | 0.5 điểm |
+| **Câu 1.3** | P = B / A = [(√x + 3) / (x − 1)] · [(√x − 1) / (√x + 4)] = (√x + 3) / [(√x + 1)(√x + 4)].<br>Xét P < 1/3 ⇔ (√x + 3) / (x + 5√x + 4) − 1/3 < 0 ⇔ (−x − 2√x + 5) / [3(x + 5√x + 4)] < 0.<br>Vì mẫu luôn dương với x ≥ 0, x ≠ 1, giải ra x và kết hợp điều kiện ban đầu để kết luận. | 0.5 điểm |
+| **Câu 2.1** | Đặt u = x + 1, v = y − 2. Hệ trở thành { 3u − 2v = 7; 2u + 3v = 9 } ⇔ { u = 3; v = 1 } ⇒ { x = 2; y = 3 }. | 0.75 điểm |
+| **Câu 2.2** | Phương trình hoành độ giao điểm: x² − 2x − (m − 1) = 0. Có Δ′ = 1 + m − 1 = m. Để cắt tại 2 điểm phân biệt thì m > 0.<br>Theo Vi-ét: x₁ + x₂ = 2 và x₁x₂ = 1 − m.<br>Biến đổi: x₁² + x₂² − 3x₁x₂ = (x₁ + x₂)² − 5x₁x₂ = 4 − 5(1 − m) = 13 ⇔ 5m = 14 ⇔ m = 14/5 (thỏa mãn m > 0). | 0.75 điểm |
+| **Câu 3** | Gọi số xe ban đầu là x (xe) (x ∈ ℕ*, x > 0).<br>Lập luận dẫn tới phương trình: 120/x − 120/(x + 2) = 2.<br>Quy đồng và rút gọn: x² + 2x − 120 = 0 ⇔ (x − 10)(x + 12) = 0.<br>Nghiệm x = 10 (thỏa mãn), x = −12 (loại). Kết luận: Đội xe ban đầu có 10 xe. | 1.5 điểm |
+| **Câu 4.1** | Vẽ hình chính xác cho câu a. Chứng minh góc MAO = góc MBO = 90° ⇒ 4 điểm M, A, O, B cùng thuộc đường tròn đường kính MO. Chứng minh MO là đường trung trực của AB ⇒ MO ⊥ AB tại H. | 1.0 điểm |
+| **Câu 4.2** | Chứng minh tam giác MDA đồng dạng tam giác MAC (g-g) ⇒ MA² = MD · MC.<br>Chứng minh MA² = MH · MO (hệ thức lượng trong tam giác vuông MAO).<br>Từ đó: MD · MC = MH · MO ⇒ tam giác MHD đồng dạng tam giác MCO (c-g-c) ⇒ góc MHD = góc MCO. | 1.0 điểm |
+| **Câu 4.3** | Vận dụng tính chất tứ giác nội tiếp và góc tạo bởi tia tiếp tuyến và dây cung chứng minh MD = ME ⇒ tam giác MDE cân tại M. | 1.0 điểm |
+| **Câu 5** | Sử dụng bất đẳng thức Cauchy ngược dấu: a / (1 + b²) = a − ab² / (1 + b²) ≥ a − ab² / (2b) = a − ab/2.<br>Cộng vế theo vế: Q ≥ (a + b + c) − (ab + bc + ca)/2 ≥ 3 − (a + b + c)² / 6 = 3 − 9/6 = 3/2.<br>Dấu bằng xảy ra khi a = b = c = 1. Giá trị nhỏ nhất của Q là 1.5. | 0.5 điểm |
 
 ---
 
@@ -114,12 +121,12 @@ $$Q = \frac{a}{1 + b^2} + \frac{b}{1 + c^2} + \frac{c}{1 + a^2}$$
 >
 > *Đừng sợ thất bại. Thất bại lớn nhất của một con người không phải là ngã ngựa trước thử thách, mà là không bao giờ dám bước lên lưng ngựa vì sợ ngã. Hãy sống như một cây xanh kiên cường giữa giông bão, rễ càng bám sâu vào lòng đất thì cành lá càng vươn cao đón ánh mặt trời..."*
 >
-> *(Trích "Đánh thức khát vọng tuổi trẻ", NXB Trẻ)*
+> *(Trích "Đánh thức khát vọng tuổi trẻ", Nhà xuất bản Trẻ)*
 
 **Câu 1 (0.5 điểm):** Xác định phương thức biểu đạt chính của đoạn trích trên.  
 **Câu 2 (0.5 điểm):** Theo tác giả, "hồng tâm của cuộc đời" mỗi con người là gì?  
 **Câu 3 (1.5 điểm):** Chỉ ra và nêu tác dụng của biện pháp tu từ so sánh trong câu: *"Hãy sống như một cây xanh kiên cường giữa giông bão, rễ càng bám sâu vào lòng đất thì cành lá càng vươn cao đón ánh mặt trời"*.  
-**Câu 4 (1.5 điểm):** Em có đồng tình với quan niệm: *"Thất bại lớn nhất của một con người không phải là ngã ngựa trước thử thách, mà là không bao giờ dám bước lên lưng ngựa vì sợ ngã"* không? Vì sao? (Trả lời ngắn gọn từ 4 - 6 dòng).
+**Câu 4 (1.5 điểm):** Em có đồng tình với quan niệm: *"Thất bại lớn nhất của một con người không phải là ngã ngựa trước thử thách, mà là không bao giờ dám bước lên lưng ngựa vì sợ ngã"* không? Vì sao? (Trả lời ngắn gọn từ 4 đến 6 dòng).
 
 ---
 
@@ -127,10 +134,10 @@ $$Q = \frac{a}{1 + b^2} + \frac{b}{1 + c^2} + \frac{c}{1 + a^2}$$
 
 **Câu 1 (2.0 điểm - Nghị luận xã hội khoảng 200 chữ):**  
 Từ nội dung đoạn trích ở phần Đọc hiểu, em hãy viết một đoạn văn (khoảng 200 chữ, không xuống dòng) trình bày suy nghĩ về **ý nghĩa của lòng dũng cảm vượt qua nỗi sợ hãi trong cuộc sống đối với thế hệ trẻ hôm nay**.  
-*(Gợi ý: Áp dụng chuẩn công thức 5 bước đã học: Mở đoạn $\rightarrow$ Giải thích $\rightarrow$ Bàn luận $\rightarrow$ Dẫn chứng $\rightarrow$ Phản đề & Bài học liên hệ bản thân).*
+*(Lưu ý: Áp dụng chuẩn công thức 5 bước: Mở đoạn ➔ Giải thích ➔ Bàn luận ➔ Dẫn chứng thực tế ➔ Phản đề và bài học liên hệ bản thân).*
 
 **Câu 2 (4.0 điểm - Nghị luận văn học):**  
-Cảm nhận của em về vẻ đẹp tâm hồn và tinh thần trách nhiệm với công việc của nhân vật anh thanh niên trong truyện ngắn *"Lặng lẽ Sa Pa"* của nhà văn Nguyễn Thành Long (hoặc tác phẩm truyện ngắn tương đương trong chương trình lớp 9). Từ đó, liên hệ với trách nhiệm của thế hệ trẻ hôm nay đối với đất nước.
+Cảm nhận của em về vẻ đẹp tâm hồn và tinh thần trách nhiệm với công việc của nhân vật anh thanh niên trong truyện ngắn *"Lặng lẽ Sa Pa"* của nhà văn Nguyễn Thành Long. Từ đó, liên hệ với trách nhiệm của thế hệ trẻ hôm nay đối với công cuộc xây dựng đất nước.
 
 ---
 
@@ -173,4 +180,5 @@ B. Because of being exhausted, she finished all her homework.
 C. Despite she was exhausted, she finished all her homework.  
 D. However exhausted, she didn't finish her homework.  
 
-*(Đầy đủ đáp án và lời giải chi tiết xem tại website hoặc sổ tay)*
+---
+*Ghi chú: Toàn bộ đáp án chi tiết và thang điểm được cập nhật trực tuyến trong phân hệ [Phòng Luyện Đề (luyende.html)](luyende.html).*

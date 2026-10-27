@@ -26,12 +26,12 @@ xychart-beta
 1. **Toán (7.0) & Tiếng Anh (7.0) - Tố chất rất tốt:**
    - Con hoàn toàn **không bị mất gốc**! Với điểm 7 khảo sát đầu năm lớp 9, con có tư duy logic rất khá, nắm được 70% kiến thức nền tảng.
    - Vấn đề của con là: Thiếu tính cẩn thận (sai vặt câu dễ, nhầm dấu, ẩu trắc nghiệm) và chưa có chiến thuật làm các câu vận dụng cao.
-   - **Mục tiêu:** Kéo từ $7.0 \rightarrow \mathbf{8.5 - 9.0}$.
+   - **Mục tiêu:** Kéo từ 7.0 ➔ **8.5 - 9.0**.
 2. **Ngữ văn (4.0) - "Tử huyệt" nhưng cũng là "Mỏ điểm" dễ khai thác nhất:**
    - Điểm 4 cho thấy con đang **sợ viết, lười đọc, không biết cách lập luận và trình bày theo barem**. Con trai thường xem Văn là môn "trừu tượng, cảm tính" nên chán nản.
-   - Khi cộng lại: $7 + 7 + 4 = 18$ điểm $\rightarrow$ **Chắc chắn trượt Trần Phú nếu không thay đổi**.
-   - Tuy nhiên, môn Văn thi vào 10 chấm theo **Ý và BAREM ĐIỂM của Sở**, không chấm theo độ dài lê thê hay câu từ bay bổng. Dạy con viết Văn bằng **"Công thức logic như giải Toán"** sẽ giúp con bật ngay lên mức **$7.0 - 7.5$** chỉ trong 2-3 tháng.
-   - **Kịch bản điểm trúng tuyển:** $\text{Toán } 8.5 + \text{Anh } 8.5 + \text{Văn } 7.5 = \mathbf{24.5 \text{ điểm}} \rightarrow$ **Đỗ đàng hoàng vào top trường Trần Phú!**
+   - Khi cộng lại: 7 + 7 + 4 = 18 điểm ➔ **Chắc chắn trượt Trần Phú nếu không thay đổi**.
+   - Tuy nhiên, môn Văn thi vào 10 chấm theo **Ý và BAREM ĐIỂM của Sở**, không chấm theo độ dài lê thê hay câu từ bay bổng. Dạy con viết Văn bằng **"Công thức logic như giải Toán"** sẽ giúp con bật ngay lên mức **7.0 - 7.5** chỉ trong 2-3 tháng.
+   - **Kịch bản điểm trúng tuyển:** Toán 8.5 + Anh 8.5 + Văn 7.5 = **24.5 điểm** ➔ **Đỗ đàng hoàng vào top trường Trần Phú!**
 
 ---
 
@@ -53,15 +53,15 @@ flowchart TD
 
 ### Chiến thuật lấy điểm từng phần trong đề thi Văn:
 
-#### Phần 1: Đọc - Hiểu văn bản (Chiếm 3.0 - 4.0 điểm) $\rightarrow$ Mục tiêu: Ăn trọn vẹn điểm!
+#### Phần 1: Đọc - Hiểu văn bản (Chiếm 3.0 - 4.0 điểm) ➔ Mục tiêu: Ăn trọn vẹn điểm!
 - Con trai rất thích phần này vì nó ngắn, giống như trắc nghiệm có đáp án rõ ràng.
 - **Quy tắc trả lời:**
   - Câu hỏi nhận biết (thể loại, phương thức biểu đạt, tác giả, hoàn cảnh sáng tác, phép tu từ): **Chỉ trả lời trong 1 - 2 dòng**. Không viết rườm rà.
   - Câu hỏi nêu tác dụng của biện pháp tu từ: Áp dụng công thức 3 vế:
-    $$\text{Tác dụng} = \text{Tăng sức gợi hình/gợi cảm} + \text{Làm nổi bật hình ảnh/nội dung X} + \text{Bộc lộ tình cảm/thái độ của tác giả Y}$$
+    > **Tác dụng = Tăng sức gợi hình/gợi cảm + Làm nổi bật hình ảnh/nội dung X + Bộc lộ tình cảm/thái độ của tác giả Y**
   - Câu hỏi thông điệp/rút ra bài học: Nêu rõ 2 thông điệp, mỗi thông điệp viết thành 1 gạch đầu dòng rõ ràng, mạch lạc.
 
-#### Phần 2: Đoạn văn Nghị luận xã hội khoảng 200 chữ (Chiếm 2.0 điểm) $\rightarrow$ Mục tiêu: 1.5 - 1.75 điểm
+#### Phần 2: Đoạn văn Nghị luận xã hội khoảng 200 chữ (Chiếm 2.0 điểm) ➔ Mục tiêu: 1.5 - 1.75 điểm
 Áp dụng chuẩn **Công thức 5 bước - Không cần bay bổng, chỉ cần gãy gọn, đủ ý:**
 1. **Mở đoạn (1 - 2 câu):** Trả lời thẳng vào vấn đề: *"Trong hành trình trưởng thành, [Vấn đề X: lòng kiên trì / tính tự lập / sự trung thực...] chính là chìa khóa quan trọng dẫn tới thành công."*
 2. **Giải thích (1 - 2 câu):** [Vấn đề X] là gì? (Ví dụ: Kiên trì là nỗ lực không ngừng nghỉ vượt qua khó khăn, không bỏ cuộc giữa chừng).
@@ -69,13 +69,13 @@ flowchart TD
    - Vì sao phải có X? Người có X sẽ nhận được gì? (Tạo dựng uy tín, vượt qua giới hạn bản thân, được mọi người tin yêu).
    - Xã hội ra sao nếu ai cũng có X?
 4. **Dẫn chứng thực tế (2 - 3 câu):** Chọn 1 tấm gương cụ thể, quen thuộc (Nick Vujicic, Thầy giáo Nguyễn Ngọc Ký, Đội tuyển bóng đá, câu chuyện cứu trợ bão lũ... tránh nêu chung chung).
-5. **Phản đề & Bài học (2 - 3 câu):** Phê phán người lười biếng, ỷ lại $\rightarrow$ Bản thân con là học sinh lớp 9 cần rèn luyện tính kiên trì ngay từ việc tự giác học tập mỗi ngày.
+5. **Phản đề & Bài học (2 - 3 câu):** Phê phán người lười biếng, ỷ lại ➔ Bản thân con là học sinh lớp 9 cần rèn luyện tính kiên trì ngay từ việc tự giác học tập mỗi ngày.
 
-#### Phần 3: Bài văn Nghị luận văn học (Chiếm 4.0 - 5.0 điểm) $\rightarrow$ Mục tiêu: 3.0 - 3.5 điểm
+#### Phần 3: Bài văn Nghị luận văn học (Chiếm 4.0 - 5.0 điểm) ➔ Mục tiêu: 3.0 - 3.5 điểm
 - **Không học thuộc lòng cả bài văn mẫu dài:** Não con trai sẽ từ chối tiếp thu.
 - **Học theo SƠ ĐỒ CÂY LUẬN ĐIỂM (Bullet points):**
   - Mỗi tác phẩm chỉ cần nắm: 1 Hoàn cảnh sáng tác, 2 - 3 Luận điểm lớn, mỗi luận điểm kèm theo 2 dẫn chứng then chốt (câu thơ hoặc hành động của nhân vật).
-  - Cấu trúc 1 đoạn thân bài chuẩn: **Câu chủ đề nêu luận điểm $\rightarrow$ Trích dẫn chứng $\rightarrow$ Phân tích từ ngữ/hình ảnh nghệ thuật $\rightarrow$ Nhận xét cảm xúc của nhân vật/tác giả.**
+  - Cấu trúc 1 đoạn thân bài chuẩn: **Câu chủ đề nêu luận điểm ➔ Trích dẫn chứng ➔ Phân tích từ ngữ/hình ảnh nghệ thuật ➔ Nhận xét cảm xúc của nhân vật/tác giả.**
 
 ---
 
@@ -84,31 +84,29 @@ flowchart TD
 ### MÔN TOÁN: Khắc phục lỗi ẩu & Chinh phục câu phân loại
 
 1. **Khóa chặt phần Trắc nghiệm (2.0 điểm - Sở Vĩnh Phúc):**
-   - Học sinh điểm 7 thường chủ quan phần trắc nghiệm, làm nhanh để sang tự luận dẫn đến mất $0.4 - 0.8$ điểm oan uổng (do nhầm điều kiện $\sqrt{A}$ có nghĩa khi $A \ge 0$, quên điều kiện mẫu khác 0, nhầm dấu âm).
+   - Học sinh điểm 7 thường chủ quan phần trắc nghiệm, làm nhanh để sang tự luận dẫn đến mất 0.4 - 0.8 điểm oan uổng (do nhầm điều kiện √A có nghĩa khi A ≥ 0, quên điều kiện mẫu khác 0, nhầm dấu âm).
    - *Hành động:* Luyện bấm máy tính Casio để kiểm tra lại nghiệm; rèn thói quen gạch chân từ khóa trong đề trắc nghiệm.
 2. **Làm chủ Tự luận cơ bản (6.0 điểm):**
-   - Rút gọn biểu thức + câu hỏi phụ: Phải đạt điểm tuyệt đối $1.5/1.5$.
-   - Giải bài toán bằng cách lập PT/HPT: Làm thành thạo 3 dạng chủ đạo (Toán chuyển động, Toán năng suất, Toán kinh tế/phần trăm).
-   - Hệ thức Vi-ét: Nắm chắc dạng tham số $m$ có điều kiện nghiệm đối xứng ($x_1^2 + x_2^2$, $x_1 - x_2$).
+   - Rút gọn biểu thức + câu hỏi phụ: Phải đạt điểm tuyệt đối 1.5/1.5 điểm.
+   - Giải bài toán bằng cách lập phương trình / hệ phương trình: Làm thành thạo 3 dạng chủ đạo (Toán chuyển động, Toán năng suất, Toán kinh tế/phần trăm).
+   - Hệ thức Vi-ét: Nắm chắc dạng tham số m có điều kiện nghiệm đối xứng (x₁² + x₂², x₁ − x₂).
 3. **Tấn công Hình học (3.0 điểm):**
-   - Câu a (Chứng minh tứ giác nội tiếp): Phải ăn trọn $1.0$ điểm.
+   - Câu a (Chứng minh tứ giác nội tiếp): Phải ăn trọn 1.0 điểm.
    - Câu b (Chứng minh hệ thức tam giác đồng dạng / tiếp tuyến): Luyện kỹ các mô hình hình học quen thuộc (tam giác nhọn nội tiếp đường tròn, hai đường cao cắt nhau tại trực tâm).
-   - Câu c (Cực trị/điểm cố định): Nếu con đuối, có thể bỏ qua để dồn thời gian soát lại toàn bộ bài làm trước đó. Đạt $8.5 - 9.0$ Toán không nhất thiết phải làm được câu cuối cùng!
+   - Câu c (Cực trị/điểm cố định): Nếu con đuối, có thể bỏ qua để dồn thời gian soát lại toàn bộ bài làm trước đó. Đạt 8.5 - 9.0 Toán không nhất thiết phải làm được câu cuối cùng!
 
-### MÔN TIẾNG ANH: Tối ưu hóa 50 câu trắc nghiệm
+### MÔN TIẾNG ANH: Tối ưu hóa điểm trắc nghiệm
 
 1. **Không để rơi điểm ở Ngữ âm & Ngữ pháp nhận biết (30 câu đầu):**
-   - Thuộc làu quy tắc phát âm đuôi `-s/es`, `-ed` và trọng âm 2 âm tiết.
+   - Thuộc làu quy tắc phát âm đuôi -s/es, -ed và trọng âm từ 2 âm tiết.
    - Khóa chặt các chuyên đề ngữ pháp chắc chắn có trong đề Vĩnh Phúc: Thì quá khứ đơn vs Hiện tại hoàn thành, Câu bị động, Câu điều kiện loại 1 & 2, Mệnh đề quan hệ, Cấu trúc câu gián tiếp.
 2. **Nâng cao vốn từ & Đọc hiểu (20 câu sau):**
-   - Học từ vựng theo cụm (Collocations) thay vì học từ đơn lẻ (Ví dụ: học *make an effort, pay attention to, take part in*).
-   - Luyện kỹ năng làm bài Đọc hiểu: Đọc câu hỏi trước $\rightarrow$ Gạch chân từ khóa $\rightarrow$ Quét lên đoạn văn để tìm thông tin (Scanning).
+   - Học từ vựng theo cụm (Collocations) thay vì học từ đơn lẻ (Ví dụ: học make an effort, pay attention to, take part in).
+   - Luyện kỹ năng làm bài Đọc hiểu: Đọc câu hỏi trước ➔ Gạch chân từ khóa ➔ Quét lên đoạn văn để tìm thông tin (Scanning).
 
 ---
 
 ## 4. THỜI KHÓA BIỂU ĐIỀU CHỈNH ĐẶC BIỆT (DỒN LỰC CHO MÔN VĂN)
-
-Để vực dậy môn Văn từ 4 lên 7 trong khi vẫn duy trì và nâng cao Toán - Anh, cần bố trí thời gian biểu có sự ưu tiên rõ ràng:
 
 ### Chi tiết các buổi tối (19h45 - 22h15)
 
@@ -138,7 +136,7 @@ flowchart TD
 
 ## 5. BỘ NGUYÊN TẮC VÀNG CHO BỐ MẸ ĐỒNG HÀNH VỚI CON TRAI
 
-1. **Khích lệ đúng điểm mạnh:** Thường xuyên nhắc con: *"Toán và Anh con đã đạt 7 điểm khảo sát, nghĩa là đầu óc con rất thông minh và sáng dạ. Con chỉ đang bị hổng cách làm bài môn Văn thôi, chỉ cần nắm đúng công thức là môn Văn lên 7.5 rất dễ!"* $\rightarrow$ Lời khen này giúp con xóa bỏ mặc cảm "mình dốt Văn".
+1. **Khích lệ đúng điểm mạnh:** Thường xuyên nhắc con: *"Toán và Anh con đã đạt 7 điểm khảo sát, nghĩa là đầu óc con rất thông minh và sáng dạ. Con chỉ đang bị hổng cách làm bài môn Văn thôi, chỉ cần nắm đúng công thức là môn Văn lên 7.5 rất dễ!"* ➔ Lời khen này giúp con xóa bỏ mặc cảm "mình dốt Văn".
 2. **Không ép viết dài ngay từ đầu:** Tuần đầu tiên chỉ yêu cầu con viết đoạn văn 15 dòng. Khi con viết được 15 dòng trôi chảy, nâng dần lên 20 - 25 dòng (khoảng 200 chữ).
 3. **Đầu tư gia sư/thầy cô dạy Văn thực chiến:** Với môn Văn đang ở mức 4 điểm, nếu bố mẹ không thể kèm cặp chuyên môn, nên tìm 1 gia sư sinh viên giỏi hoặc giáo viên dạy theo phong cách **sơ đồ tư duy, ngắn gọn, thực chiến** (tránh giáo viên dạy kiểu đọc chép văn mẫu cổ điển vì con sẽ càng ngán ngẩm).
 4. **Quy tắc thưởng nóng hàng tuần:** Nếu tuần đó con hoàn thành đủ chỉ tiêu các ca học và không vi phạm việc dùng điện thoại, cuối tuần bố mẹ thưởng một bữa ăn con thích hoặc một món quà nhỏ để tạo động lực duy trì.

@@ -42,9 +42,9 @@ sequenceDiagram
 
 #### Bước 1: Đưa mã nguồn lên GitHub (Miễn phí)
 1. Truy cập [https://github.com/](https://github.com/) và đăng ký tài khoản (nếu chưa có).
-2. Sau khi đăng nhập, bấm vào dấu **`+`** ở góc phải trên cùng $\rightarrow$ Chọn **`New repository`**.
-3. Điền tên: `on-thi-vao-10-tran-phu` $\rightarrow$ Chọn chế độ **`Public`** $\rightarrow$ Bấm nút xanh **`Create repository`**.
-4. Ở trang hiển thị tiếp theo, tìm dòng chữ: *"uploading an existing file"* (hoặc bấm vào nút **`Add file`** $\rightarrow$ **`Upload files`**).
+2. Sau khi đăng nhập, bấm vào dấu **`+`** ở góc phải trên cùng ➔ Chọn **`New repository`**.
+3. Điền tên: `on-thi-vao-10-tran-phu` ➔ Chọn chế độ **`Public`** ➔ Bấm nút xanh **`Create repository`**.
+4. Ở trang hiển thị tiếp theo, tìm dòng chữ: *"uploading an existing file"* (hoặc bấm vào nút **`Add file`** ➔ **`Upload files`**).
 5. Mở thư mục `c:\Users\Administrator\Downloads\LOP 9` trên máy tính, **chọn toàn bộ các file sau và kéo thả vào trình duyệt**:
    - `index.html`
    - `toan.html`
@@ -53,13 +53,13 @@ sequenceDiagram
    - `style.css`
    - `app.js`
    - `vercel.json`
-6. Đợi thanh tải lên chạy đủ các file $\rightarrow$ Kéo xuống dưới bấm nút xanh **`Commit changes`**.
+6. Đợi thanh tải lên chạy đủ các file ➔ Kéo xuống dưới bấm nút xanh **`Commit changes`**.
 
 ---
 
 #### Bước 2: Liên kết và Deploy trên Vercel (1 Click)
-1. Mở trang [https://vercel.com/](https://vercel.com/) $\rightarrow$ Bấm **`Sign Up`** hoặc **`Log In`** $\rightarrow$ Chọn **`Continue with GitHub`** (Đăng nhập cùng tài khoản GitHub vừa tạo ở Bước 1).
-2. Sau khi vào màn hình chính của Vercel (Dashboard), bấm nút **`Add New...`** $\rightarrow$ Chọn **`Project`**.
+1. Mở trang [https://vercel.com/](https://vercel.com/) ➔ Bấm **`Sign Up`** hoặc **`Log In`** ➔ Chọn **`Continue with GitHub`** (Đăng nhập cùng tài khoản GitHub vừa tạo ở Bước 1).
+2. Sau khi vào màn hình chính của Vercel (Dashboard), bấm nút **`Add New...`** ➔ Chọn **`Project`**.
 3. Bạn sẽ nhìn thấy danh sách các repository của mình, bấm nút **`Import`** cạnh repository `on-thi-vao-10-tran-phu`.
 4. Giữ nguyên toàn bộ cài đặt mặc định (Framework Preset: *Other*, Root Directory: *./*).
 5. Bấm nút xanh **`Deploy`**.
@@ -93,9 +93,9 @@ Nếu sau này bạn muốn triển khai bằng dòng lệnh từ máy tính:
 
 ### Cơ chế 2: Đồng bộ 1 chạm qua "Mã Sao Lưu" (1-Click Sync)
 - **Kịch bản thực tế:** Con học trên điện thoại và đã tích hoàn thành 5 ca học cùng 2 lỗi sai môn Toán. Bố mẹ muốn xem tiến độ trên máy tính ở cơ quan:
-  1. Trên điện thoại của con, vào mục *"Đồng bộ dữ liệu"* ở cuối trang $\rightarrow$ Bấm nút **`Xuất Mã Sao Lưu (Copy)`**.
+  1. Trên điện thoại của con, vào mục *"Đồng bộ dữ liệu"* ở cuối trang ➔ Bấm nút **`Xuất Mã Sao Lưu (Copy)`**.
   2. Con gửi đoạn mã đó qua Zalo cho bố mẹ.
-  3. Bố mẹ mở web trên máy tính $\rightarrow$ Dán mã đó vào ô văn bản $\rightarrow$ Bấm **`Đồng Bộ Dữ Liệu Vào Máy Này`**.
+  3. Bố mẹ mở web trên máy tính ➔ Dán mã đó vào ô văn bản ➔ Bấm **`Đồng Bộ Dữ Liệu Vào Máy Này`**.
   4. Ngay lập tức, màn hình máy tính của bố mẹ sẽ hiển thị chính xác 100% tiến độ và các lỗi sai con vừa cập nhật!
 
 ---

@@ -18,7 +18,9 @@
       border: 1px solid var(--border);
       background: white;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 700;
+      font-family: var(--font-standard);
+      font-size: 1rem;
       transition: all 0.2s;
     }
     .tab-btn.active {
@@ -62,10 +64,12 @@
       </div>
       <nav class="nav-links">
         <a href="index.html" class="nav-btn">🏠 Tổng Quan</a>
+        <a href="taode.html" class="nav-btn" style="background: rgba(56, 189, 248, 0.25); border-color: #38bdf8;">⚡ Tạo Đề Tự Động</a>
         <a href="toan.html" class="nav-btn">📐 Môn Toán</a>
         <a href="van.html" class="nav-btn">📖 Môn Văn</a>
-        <a href="anh.html" class="nav-btn">🇬🇧 Môn Tiếng Anh</a>
-        <a href="luyende.html" class="nav-btn active">🎯 Phòng Luyện Đề</a>
+        <a href="anh.html" class="nav-btn">Môn Tiếng Anh</a>
+        <a href="luyende.html" class="nav-btn active">🎯 Đề Chuẩn Sở</a>
+        <a href="tintuc.html" class="nav-btn" style="background: rgba(16, 185, 129, 0.25); border-color: #34d399;">📢 Tin Tuyển Sinh</a>
       </nav>
     </div>
   </header>
@@ -90,7 +94,7 @@
     <div class="tab-buttons">
       <button class="tab-btn active" onclick="switchExamTab('toanTab', this)">📐 Đề Số 01: Môn Toán (120p)</button>
       <button class="tab-btn" onclick="switchExamTab('vanTab', this)">📖 Đề Số 01: Môn Ngữ Văn (120p)</button>
-      <button class="tab-btn" onclick="switchExamTab('anhTab', this)">🇬🇧 Đề Số 01: Môn Tiếng Anh (60p)</button>
+      <button class="tab-btn" onclick="switchExamTab('anhTab', this)">📘 Đề Số 01: Môn Tiếng Anh (60p)</button>
     </div>
 
     <!-- TAB 1: MÔN TOÁN -->
@@ -98,35 +102,57 @@
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <span class="card-title">📐 ĐỀ THI THỬ MÔN TOÁN SỐ 01 (SỞ GD&ĐT VĨNH PHÚC)</span>
-          <a href="De_Thi_Thuc_Chien_Tuan_1_Vinh_Phuc.md" class="btn btn-outline" style="font-size: 0.8rem;" download>📄 Tải Bản In (Markdown)</a>
+          <a href="De_Thi_Thuc_Chien_Tuan_1_Vinh_Phuc.md" class="btn btn-outline" style="font-size: 0.85rem;" download>📄 Tải Bản In (Markdown)</a>
         </div>
 
-        <div style="font-size: 0.95rem; line-height: 1.7;">
-          <h4 style="color: var(--primary); margin: 1rem 0 0.5rem 0;">PHẦN I: TRẮC NGHIỆM (2.0 ĐIỂM)</h4>
-          <p><strong>Câu 1:</strong> Căn bậc hai số học của 81 là: <br><em>A. 9 &nbsp;&nbsp;&nbsp;&nbsp; B. -9 &nbsp;&nbsp;&nbsp;&nbsp; C. ±9 &nbsp;&nbsp;&nbsp;&nbsp; D. 6561</em></p>
-          <p><strong>Câu 2:</strong> Biểu thức $\sqrt{\frac{1}{x-3}}$ xác định khi: <br><em>A. $x \ge 3$ &nbsp;&nbsp;&nbsp;&nbsp; B. $x > 3$ &nbsp;&nbsp;&nbsp;&nbsp; C. $x < 3$ &nbsp;&nbsp;&nbsp;&nbsp; D. $x \neq 3$</em></p>
-          <p><strong>Câu 3:</strong> Phương trình $x^2 - 6x + 2 = 0$ có 2 nghiệm $x_1, x_2$. Giá trị của $x_1 + x_2$ là: <br><em>A. -6 &nbsp;&nbsp;&nbsp;&nbsp; B. 6 &nbsp;&nbsp;&nbsp;&nbsp; C. 2 &nbsp;&nbsp;&nbsp;&nbsp; D. -2</em></p>
-          <p><strong>Câu 4:</strong> Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$, biết $BH = 4\text{cm}, CH = 9\text{cm}$. Độ dài $AH$ là: <br><em>A. 6cm &nbsp;&nbsp;&nbsp;&nbsp; B. 13cm &nbsp;&nbsp;&nbsp;&nbsp; C. 36cm &nbsp;&nbsp;&nbsp;&nbsp; D. $\sqrt{13}\text{cm}$</em></p>
+        <!-- Thể thức Văn bản Đề thi chuẩn Việt Nam (Nghị định 30/2020/NĐ-CP) -->
+        <div class="vb-header">
+          <div class="vb-coquan">
+            UBND TỈNH VĨNH PHÚC<br>
+            <strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO</strong>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">ĐỀ THI THỬ SỐ 01</div>
+          </div>
+          <div class="vb-quochoai">
+            <div class="vb-ten-nuoc">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+            <div class="vb-tieu-ngu">Độc lập - Tự do - Hạnh phúc</div>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">Kỳ thi tuyển sinh vào lớp 10 THPT</div>
+          </div>
+        </div>
+
+        <div class="vb-title-block">
+          <div class="vb-doc-title">KỲ THI TUYỂN SINH VÀO LỚP 10 THPT TRẦN PHÚ</div>
+          <div class="vb-doc-subtitle">MÔN THI: TOÁN HỌC (NĂM HỌC 2026 - 2027)</div>
+          <div style="font-size: 0.95rem; font-style: italic; margin-top: 4px;">Thời gian làm bài: 120 phút (không kể thời gian giao đề)</div>
+        </div>
+
+        <div style="font-size: 1.05rem; line-height: 1.65;">
+          <h4 style="color: var(--primary); margin: 1rem 0 0.5rem 0;">PHẦN I: TRẮC NGHIỆM KHÁCH QUAN (2.0 ĐIỂM)</h4>
+          <p><strong>Câu 1:</strong> Căn bậc hai số học của 81 là: <br><em>A. 9 &nbsp;&nbsp;&nbsp;&nbsp; B. −9 &nbsp;&nbsp;&nbsp;&nbsp; C. ±9 &nbsp;&nbsp;&nbsp;&nbsp; D. 6561</em></p>
+          <p><strong>Câu 2:</strong> Biểu thức <span class="math"><span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><span class="frac"><span class="num">1</span><span class="den"><em>x</em> − 3</span></span></span></span></span> xác định khi: <br><em>A. <span class="math"><em>x</em> ≥ 3</span> &nbsp;&nbsp;&nbsp;&nbsp; B. <span class="math"><em>x</em> > 3</span> &nbsp;&nbsp;&nbsp;&nbsp; C. <span class="math"><em>x</em> < 3</span> &nbsp;&nbsp;&nbsp;&nbsp; D. <span class="math"><em>x</em> ≠ 3</span></em></p>
+          <p><strong>Câu 3:</strong> Phương trình <span class="math"><em>x</em><sup>2</sup> − 6<em>x</em> + 2 = 0</span> có 2 nghiệm <span class="math"><em>x</em><sub>1</sub>, <em>x</em><sub>2</sub></span>. Giá trị của tổng <span class="math"><em>x</em><sub>1</sub> + <em>x</em><sub>2</sub></span> là: <br><em>A. −6 &nbsp;&nbsp;&nbsp;&nbsp; B. 6 &nbsp;&nbsp;&nbsp;&nbsp; C. 2 &nbsp;&nbsp;&nbsp;&nbsp; D. −2</em></p>
+          <p><strong>Câu 4:</strong> Cho tam giác <em>ABC</em> vuông tại A, đường cao AH, biết <span class="math"><em>BH</em> = 4 cm, <em>CH</em> = 9 cm</span>. Độ dài đoạn AH là: <br><em>A. 6 cm &nbsp;&nbsp;&nbsp;&nbsp; B. 13 cm &nbsp;&nbsp;&nbsp;&nbsp; C. 36 cm &nbsp;&nbsp;&nbsp;&nbsp; D. <span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val">13</span></span> cm</em></p>
 
           <h4 style="color: var(--primary); margin: 1.5rem 0 0.5rem 0;">PHẦN II: TỰ LUẬN (8.0 ĐIỂM)</h4>
-          <p><strong>Câu 1 (1.5đ):</strong> Rút gọn biểu thức $A = \frac{\sqrt{x}+4}{\sqrt{x}-1}$ và $B = \frac{3\sqrt{x}+1}{x-1} - \frac{2}{\sqrt{x}+1}$. Tính $A$ khi $x = 9$ và tìm $x$ để $\frac{B}{A} < \frac{1}{3}$.</p>
-          <p><strong>Câu 2 (1.5đ):</strong> Cho $(P): y = x^2$ và $(d): y = 2x + m - 1$. Tìm $m$ để $(d)$ cắt $(P)$ tại 2 điểm phân biệt thỏa mãn $x_1^2 + x_2^2 - 3x_1x_2 = 13$.</p>
-          <p><strong>Câu 3 (1.5đ - Toán thực tế):</strong> Đội xe chở 120 tấn hàng, khi khởi hành bổ sung thêm 2 xe nên mỗi xe chở ít hơn 2 tấn. Tính số xe ban đầu.</p>
-          <p><strong>Câu 4 (3.0đ - Hình học):</strong> Từ $M$ ngoài đường tròn $(O)$, kẻ 2 tiếp tuyến $MA, MB$. Kẻ đường kính $AC$. Chứng minh $M,A,O,B$ cùng thuộc đường tròn và $MO \perp AB$. Chứng minh $MA^2 = MD \cdot MC$.</p>
+          <p class="text-justify"><strong>Câu 1 (1.5 điểm):</strong> Cho hai biểu thức <span class="math"><em>A</em> = <span class="frac"><span class="num"><span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><em>x</em></span></span> + 4</span><span class="den"><span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><em>x</em></span></span> − 1</span></span></span> và <span class="math"><em>B</em> = <span class="frac"><span class="num">3<span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><em>x</em></span></span> + 1</span><span class="den"><em>x</em> − 1</span></span> − <span class="frac"><span class="num">2</span><span class="den"><span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><em>x</em></span></span> + 1</span></span></span> (với <span class="math"><em>x</em> ≥ 0, <em>x</em> ≠ 1</span>). Tính giá trị của biểu thức <em>A</em> khi <span class="math"><em>x</em> = 9</span> và tìm tất cả giá trị của <em>x</em> để <span class="math"><span class="frac"><span class="num"><em>B</em></span><span class="den"><em>A</em></span></span> < <span class="frac"><span class="num">1</span><span class="den">3</span></span></span>.</p>
+          <p class="text-justify"><strong>Câu 2 (1.5 điểm):</strong> Trong mặt phẳng tọa độ Oxy, cho Parabol (P): <span class="math"><em>y</em> = <em>x</em><sup>2</sup></span> và đường thẳng (d): <span class="math"><em>y</em> = 2<em>x</em> + <em>m</em> − 1</span>. Tìm tham số <em>m</em> để đường thẳng (d) cắt Parabol (P) tại hai điểm phân biệt có hoành độ <span class="math"><em>x</em><sub>1</sub>, <em>x</em><sub>2</sub></span> thỏa mãn hệ thức: <span class="math"><em>x</em><sub>1</sub><sup>2</sup> + <em>x</em><sub>2</sub><sup>2</sup> − 3<em>x</em><sub>1</sub><em>x</em><sub>2</sub> = 13</span>.</p>
+          <p class="text-justify"><strong>Câu 3 (1.5 điểm - Toán thực tế):</strong> Một đội xe chở 120 tấn hàng cứu trợ đồng bào bị bão lũ. Khi khởi hành, đội được bổ sung thêm 2 xe nữa nên mỗi xe chở ít hơn dự định ban đầu 2 tấn hàng. Tính số xe ban đầu của đội (biết sức chở mỗi xe là như nhau).</p>
+          <p class="text-justify"><strong>Câu 4 (3.0 điểm - Hình học):</strong> Từ điểm <em>M</em> nằm ngoài đường tròn (O), kẻ 2 tiếp tuyến <em>MA</em>, <em>MB</em> với đường tròn (<em>A, B</em> là các tiếp điểm). Kẻ đường kính <em>AC</em>. Chứng minh 4 điểm <em>M, A, O, B</em> cùng thuộc một đường tròn và <span class="math"><em>MO</em> ⊥ <em>AB</em></span>. Gọi <em>D</em> là giao điểm thứ hai của đoạn thẳng <em>MC</em> với đường tròn (O). Chứng minh hệ thức <span class="math"><em>MA</em><sup>2</sup> = <em>MD</em> · <em>MC</em></span>.</p>
         </div>
 
         <button class="btn btn-primary" onclick="toggleAnswer('ans_toan')" style="margin-top: 1rem;">
           👁️ Bấm Xem Đáp Án & Thang Điểm Chi Tiết Môn Toán
         </button>
 
-        <div id="ans_toan" style="display: none; margin-top: 1rem; padding: 1rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;">
-          <h4 style="color: var(--success);">ĐÁP ÁN BAREM:</h4>
+        <div id="ans_toan" style="display: none; margin-top: 1rem; padding: 1.25rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;">
+          <h4 style="color: var(--success); margin-bottom: 0.5rem;">ĐÁP ÁN VÀ THANG ĐIỂM BAREM CHI TIẾT:</h4>
           <p><strong>Trắc nghiệm:</strong> 1-A | 2-B | 3-B | 4-A.</p>
           <p><strong>Tự luận:</strong><br>
-          - Câu 1.1: $A = \frac{7}{2}$ (0.5đ). Câu 1.2: $B = \frac{\sqrt{x}+3}{x-1}$ (0.5đ).<br>
-          - Câu 2.1: $x = 2, y = 3$ (0.75đ). Câu 2.2: $m = \frac{14}{5}$ (thỏa mãn $m > 0$) (0.75đ).<br>
-          - Câu 3 (Toán thực tế): PT $\frac{120}{x} - \frac{120}{x+2} = 2 \Rightarrow x = 10$ xe (1.5đ).<br>
-          - Câu 4: Chứng minh tứ giác nội tiếp và tam giác đồng dạng (3.0đ).</p>
+          • <strong>Câu 1.1:</strong> <span class="math"><em>A</em> = <span class="frac"><span class="num">7</span><span class="den">2</span></span></span> (0.5 điểm). <strong>Câu 1.2:</strong> <span class="math"><em>B</em> = <span class="frac"><span class="num"><span class="sqrt"><span class="sqrt-rad">√</span><span class="sqrt-val"><em>x</em></span></span> + 3</span><span class="den"><em>x</em> − 1</span></span></span> (0.5 điểm).<br>
+          • <strong>Câu 2.1:</strong> <span class="math"><em>x</em> = 2, <em>y</em> = 3</span> (0.75 điểm). <strong>Câu 2.2:</strong> <span class="math"><em>m</em> = <span class="frac"><span class="num">14</span><span class="den">5</span></span></span> (thỏa mãn <span class="math"><em>m</em> > 0</span>) (0.75 điểm).<br>
+          • <strong>Câu 3 (Toán thực tế):</strong> Phương trình <span class="math"><span class="frac"><span class="num">120</span><span class="den"><em>x</em></span></span> − <span class="frac"><span class="num">120</span><span class="den"><em>x</em> + 2</span></span> = 2 ⇒ <em>x</em> = 10</span> xe (1.5 điểm).<br>
+          • <strong>Câu 4:</strong> Chứng minh tứ giác nội tiếp và tam giác đồng dạng (3.0 điểm).</p>
         </div>
       </div>
     </div>
@@ -138,30 +164,52 @@
           <span class="card-title" style="color: #9d174d;">📖 ĐỀ THI THỬ MÔN NGỮ VĂN SỐ 01 (NGỮ LIỆU NGOÀI SGK)</span>
         </div>
 
-        <div style="font-size: 0.95rem; line-height: 1.7;">
+        <!-- Thể thức Văn bản Đề thi chuẩn Việt Nam (Nghị định 30/2020/NĐ-CP) -->
+        <div class="vb-header">
+          <div class="vb-coquan">
+            UBND TỈNH VĨNH PHÚC<br>
+            <strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO</strong>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">ĐỀ THI THỬ SỐ 01</div>
+          </div>
+          <div class="vb-quochoai">
+            <div class="vb-ten-nuoc">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+            <div class="vb-tieu-ngu">Độc lập - Tự do - Hạnh phúc</div>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">Kỳ thi tuyển sinh vào lớp 10 THPT</div>
+          </div>
+        </div>
+
+        <div class="vb-title-block">
+          <div class="vb-doc-title">KỲ THI TUYỂN SINH VÀO LỚP 10 THPT TRẦN PHÚ</div>
+          <div class="vb-doc-subtitle">MÔN THI: NGỮ VĂN (NGỮ LIỆU NGOÀI SGK - NĂM HỌC 2026 - 2027)</div>
+          <div style="font-size: 0.95rem; font-style: italic; margin-top: 4px;">Thời gian làm bài: 120 phút (không kể thời gian giao đề)</div>
+        </div>
+
+        <div style="font-size: 1.05rem; line-height: 1.6;">
           <h4 style="color: #be185d;">I. ĐỌC - HIỂU VĂN BẢN (4.0 ĐIỂM)</h4>
-          <blockquote style="border-left: 4px solid #db2777; padding-left: 1rem; margin: 1rem 0; color: #475569; font-style: italic;">
+          <blockquote style="border-left: 4px solid #db2777; padding-left: 1rem; margin: 1rem 0; color: #334155; font-style: italic; text-align: justify;">
             "Có người bảo: 'Đời người như một mũi tên, đã bắn đi là không quay trở lại'. Quả thực thời gian một đi không trở lại, tuổi trẻ ngắn ngủi như một giấc mơ... Đừng sợ thất bại. Thất bại lớn nhất của một con người không phải là ngã ngựa trước thử thách, mà là không bao giờ dám bước lên lưng ngựa vì sợ ngã..."
           </blockquote>
-          <p><strong>Câu 1 (0.5đ):</strong> Phương thức biểu đạt chính là gì?</p>
-          <p><strong>Câu 2 (0.5đ):</strong> "Hồng tâm của cuộc đời" theo tác giả là gì?</p>
-          <p><strong>Câu 3 (1.5đ):</strong> Phân tích tác dụng biện pháp tu từ so sánh trong câu: <em>"Hãy sống như một cây xanh kiên cường giữa giông bão..."</em> (áp dụng công thức 3 vế).</p>
+          <p><strong>Câu 1 (0.5đ):</strong> Xác định phương thức biểu đạt chính của đoạn trích trên.</p>
+          <p><strong>Câu 2 (0.5đ):</strong> Theo tác giả, thất bại lớn nhất của một con người là gì?</p>
+          <p><strong>Câu 3 (1.5đ):</strong> Phân tích tác dụng của biện pháp tu từ so sánh trong câu: <em>"Hãy sống như một cây xanh kiên cường giữa giông bão..."</em> (áp dụng công thức 3 vế chuẩn).</p>
 
           <h4 style="color: #be185d; margin-top: 1.5rem;">II. LÀM VĂN (6.0 ĐIỂM)</h4>
-          <p><strong>Câu 1 (2.0đ):</strong> Viết đoạn văn khoảng 200 chữ trình bày suy nghĩ về <em>ý nghĩa của lòng dũng cảm vượt qua nỗi sợ hãi</em> đối với thế hệ trẻ hôm nay (áp dụng công thức 5 bước).</p>
-          <p><strong>Câu 2 (4.0đ):</strong> Cảm nhận vẻ đẹp tinh thần trách nhiệm của nhân vật anh thanh niên trong <em>Lặng lẽ Sa Pa</em>.</p>
+          <p class="text-justify"><strong>Câu 1 (2.0đ):</strong> Viết đoạn văn khoảng 200 chữ trình bày suy nghĩ của em về <em>ý nghĩa của lòng dũng cảm vượt qua nỗi sợ hãi</em> đối với thế hệ trẻ hôm nay (áp dụng công thức Lego 5 bước).</p>
+          <p class="text-justify"><strong>Câu 2 (4.0đ):</strong> Cảm nhận vẻ đẹp tinh thần trách nhiệm và lòng yêu nghề của nhân vật anh thanh niên trong tác phẩm <em>Lặng lẽ Sa Pa</em> của nhà văn Nguyễn Thành Long.</p>
         </div>
 
         <button class="btn btn-primary" onclick="toggleAnswer('ans_van')" style="margin-top: 1rem; background: #be185d;">
           👁️ Bấm Xem Gợi Ý Barem Chấm Điểm Môn Văn
         </button>
 
-        <div id="ans_van" style="display: none; margin-top: 1rem; padding: 1rem; background: #fffafb; border: 1px solid #fbcfe8; border-radius: 8px;">
+        <div id="ans_van" style="display: none; margin-top: 1rem; padding: 1.25rem; background: #fffafb; border: 1px solid #fbcfe8; border-radius: 8px;">
           <h4 style="color: #9d174d;">GỢI Ý CHẤM ĐIỂM BAREM:</h4>
           <p><strong>Câu 1:</strong> Phương thức biểu đạt chính: Nghị luận (0.5đ).</p>
           <p><strong>Câu 2:</strong> Hồng tâm là mục tiêu, ước mơ, lý tưởng kiên trì theo đuổi (0.5đ).</p>
           <p><strong>Câu 3:</strong> BPTT So sánh. Tác dụng 3 vế: Hình ảnh cây xanh dẻo dai làm nổi bật bản lĩnh kiên cường của con người trước bão tố cuộc đời; bộc lộ niềm tin yêu, khích lệ của tác giả (1.5đ).</p>
-          <p><strong>NLXH 200 chữ:</strong> Đủ 5 bước: Mở trực tiếp $\rightarrow$ Giải thích $\rightarrow$ Bàn luận vai trò $\rightarrow$ Dẫn chứng cụ thể $\rightarrow$ Phản đề & liên hệ học sinh lớp 9 (2.0đ).</p>
+          <p><strong>NLXH 200 chữ:</strong> Đủ 5 bước: Mở trực tiếp ➔ Giải thích ➔ Bàn luận vai trò ➔ Dẫn chứng cụ thể ➔ Phản đề & bài học liên hệ học sinh lớp 9 (2.0 điểm).</p>
         </div>
       </div>
     </div>
@@ -170,7 +218,29 @@
     <div id="anhTab" class="tab-content">
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
-          <span class="card-title" style="color: #065f46;">🇬🇧 ĐỀ THI THỬ MÔN TIẾNG ANH SỐ 01 (TRẮC NGHIỆM TƯƠNG TÁC)</span>
+          <span class="card-title" style="color: #065f46;">📘 ĐỀ THI THỬ MÔN TIẾNG ANH SỐ 01 (TRẮC NGHIỆM TƯƠNG TÁC)</span>
+        </div>
+
+        <!-- Thể thức Văn bản Đề thi chuẩn Việt Nam (Nghị định 30/2020/NĐ-CP) -->
+        <div class="vb-header">
+          <div class="vb-coquan">
+            UBND TỈNH VĨNH PHÚC<br>
+            <strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO</strong>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">ĐỀ THI THỬ SỐ 01</div>
+          </div>
+          <div class="vb-quochoai">
+            <div class="vb-ten-nuoc">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+            <div class="vb-tieu-ngu">Độc lập - Tự do - Hạnh phúc</div>
+            <div class="vb-line"></div>
+            <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">Kỳ thi tuyển sinh vào lớp 10 THPT</div>
+          </div>
+        </div>
+
+        <div class="vb-title-block">
+          <div class="vb-doc-title">KỲ THI TUYỂN SINH VÀO LỚP 10 THPT TRẦN PHÚ</div>
+          <div class="vb-doc-subtitle">MÔN THI: TIẾNG ANH (NĂM HỌC 2026 - 2027)</div>
+          <div style="font-size: 0.95rem; font-style: italic; margin-top: 4px;">Thời gian làm bài: 60 phút (Trắc nghiệm khách quan)</div>
         </div>
 
         <div class="quiz-card">
