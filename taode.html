@@ -20,7 +20,7 @@
         <a href="taode.html" class="nav-btn active">⚡ Tạo Đề Tự Động</a>
         <a href="toan.html" class="nav-btn">📐 Môn Toán</a>
         <a href="van.html" class="nav-btn">📖 Môn Văn</a>
-        <a href="anh.html" class="nav-btn">Môn Tiếng Anh</a>
+        <a href="anh.html" class="nav-btn">📘 Môn Tiếng Anh</a>
         <a href="luyende.html" class="nav-btn">🎯 Đề Chuẩn Sở</a>
         <a href="tintuc.html" class="nav-btn">📢 Tin Tuyển Sinh</a>
       </nav>
@@ -79,37 +79,56 @@
           </div>
         </div>
 
-        <div class="generator-grid">
+        <div class="generator-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
           <div>
             <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
-              1. CHỌN MÔN THI TRỌNG TÂM:
+              1. CHỌN TRƯỜNG & NGUỒN ĐỀ THI:
+            </label>
+            <select id="examSchoolSelect" class="gen-select">
+              <option value="all">🏛️ Toàn bộ ngân hàng đề (Tất cả các trường)</option>
+              <option value="vinhphuc_so">🏛️ Sở GD&ĐT Vĩnh Phúc & Phú Thọ (Đề chuẩn)</option>
+              <option value="tranphu">🏫 Trường THPT Trần Phú (TP. Vĩnh Yên)</option>
+              <option value="doanhung">🏫 Trường THPT Đoan Hùng (Phú Thọ)</option>
+              <option value="chuyen_vp_hv">🏆 Chuyên Vĩnh Phúc & Chuyên Hùng Vương</option>
+              <option value="vinhyen">🏫 Trường THPT Vĩnh Yên & Nguyễn Thái Học</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
+              2. CHỌN MÔN THI TRỌNG TÂM:
             </label>
             <select id="examSubjectSelect" class="gen-select">
-              <option value="toan">📐 Môn Toán 9 (Đại số, Hình học, Toán thực tế)</option>
-              <option value="van">📖 Môn Ngữ văn 9 (Đọc hiểu, Tiếng Việt, NLXH)</option>
-              <option value="tonghop">⚡ Đề Tổng Hợp Toán + Văn (Bộ GD&ĐT 2027)</option>
+              <option value="toan">📐 Môn Toán 9 (Đại số, Hình học, Toán thực tế, BĐT)</option>
+              <option value="van">📖 Môn Ngữ văn 9 (Đọc hiểu, Tiếng Việt, NLXH 200 chữ)</option>
+              <option value="anh">📘 Môn Tiếng Anh 9 (Ngữ âm, Ngữ pháp, Đọc hiểu, Viết lại)</option>
+              <option value="chuyen">🏆 Đề Nâng Cao / Trường Chuyên (Toán & Anh Phân Loại)</option>
+              <option value="tonghop2">⚡ Đề Cốt Lõi 2 Môn: Toán + Văn (Bộ GD&ĐT 2027)</option>
+              <option value="tonghop3">🎯 Đề Tổng Hợp 3 Môn: Toán + Văn + Anh</option>
             </select>
           </div>
 
           <div>
             <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
-              2. CHỌN CẤP ĐỘ PHÂN HÓA:
+              3. CẤP ĐỘ PHÂN HÓA:
             </label>
             <select id="examLevelSelect" class="gen-select">
-              <option value="tatca">🎲 Ngẫu nhiên toàn diện (Bám sát đề thi)</option>
-              <option value="coban">🟢 Cơ bản (Mục tiêu 5.0 - 6.5đ - Lấy gốc)</option>
+              <option value="tatca">🎲 Ngẫu nhiên toàn diện (Bám sát ma trận đề thi)</option>
+              <option value="coban">🟢 Cơ bản (Mục tiêu 5.0 - 6.5đ - Lấy trọn điểm nhận biết)</option>
               <option value="nangcao">🔵 Khá & Nâng cao (Mục tiêu 7.0 - 8.5đ)</option>
-              <option value="tranphu">🔥 Chiến lược Trần Phú (Mục tiêu 8.5 - 10đ)</option>
+              <option value="chuyen">🔥 Trường Chuyên & Phân Loại Điểm 9 - 10 (Chuyên VP, HV)</option>
             </select>
           </div>
 
           <div>
             <label style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; display: block; color: #94a3b8;">
-              3. SỐ LƯỢNG CÂU & THỜI LƯỢNG:
+              4. SỐ CÂU & THỜI LƯỢNG CHUẨN SỞ GD&ĐT:
             </label>
             <select id="examCountSelect" class="gen-select">
-              <option value="10">⏱️ 10 Câu hỏi (Khởi động - 15 phút)</option>
-              <option value="20" selected>⏱️ 20 Câu hỏi (Luyện chuẩn - 30 phút)</option>
+              <option value="10">⏱️ 10 Câu hỏi (Khởi động nhanh - 15 phút)</option>
+              <option value="20" selected>⏱️ 20 Câu hỏi (Luyện đề tiêu chuẩn - 30 phút)</option>
+              <option value="30">⏱️ 30 Câu hỏi (Đề thi thử chuyên đề - 45 phút)</option>
+              <option value="40">⏱️ 40 Câu hỏi (Đề chuẩn Sở môn Tiếng Anh - 60 phút)</option>
             </select>
           </div>
         </div>
