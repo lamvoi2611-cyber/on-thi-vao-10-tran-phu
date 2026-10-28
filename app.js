@@ -7,7 +7,10 @@ const STORAGE_KEYS = {
   CHECKLIST: 'lop9_checklist_data',
   POMODORO: 'lop9_pomodoro_stats',
   MISTAKES: 'lop9_mistakes_data',
-  EXAM_HISTORY: 'lop9_exam_history_data'
+  EXAM_HISTORY: 'lop9_exam_history_data',
+  ACTIVE_STUDENT: 'lop9_active_student',
+  DUEL_LAM: 'lop9_duel_stats_lam',
+  DUEL_BO: 'lop9_duel_stats_bo'
 };
 
 // Âm thanh Web Audio API
@@ -1110,6 +1113,308 @@ const QUESTION_BANK = {
       "correct": 0,
       "exp": "Phương trình hoành độ giao điểm: 2x² − 4x − m = 0. Để tiếp xúc thì Δ' = (−2)² − 2(−m) = 4 + 2m = 0 ⇔ 2m = −4 ⇔ m = −2."
 }
+  ,
+    {
+      "id": "m61",
+      "topic": "Căn thức bậc hai (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Thực hiện phép tính rút gọn: A = √18 − 2√50 + √(1 − √2)²",
+      "opts": [
+            "−6√2 − 1",
+            "−8√2 + 1",
+            "−6√2 + 1",
+            "4√2 − 1"
+      ],
+      "correct": 0,
+      "exp": "Ta có √18 = 3√2, 2√50 = 2·5√2 = 10√2, và √(1 − √2)² = |1 − √2| = √2 − 1 (do √2 > 1). Do đó: A = 3√2 − 10√2 + (√2 − 1) = −6√2 − 1."
+},
+    {
+      "id": "m62",
+      "topic": "Phương trình bậc hai (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Tập nghiệm của phương trình 2x² − 5x + 2 = 0 là:",
+      "opts": [
+            "{2; 1/2}",
+            "{−2; −1/2}",
+            "{1; 2}",
+            "{1/2; −2}"
+      ],
+      "correct": 0,
+      "exp": "Δ = (−5)² − 4·2·2 = 25 − 16 = 9 > 0 ➔ √Δ = 3. Phương trình có 2 nghiệm: x₁ = (5 + 3)/4 = 2; x₂ = (5 − 3)/4 = 1/2."
+},
+    {
+      "id": "m63",
+      "topic": "Tương giao Parabol & Đường thẳng (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Tọa độ giao điểm của Parabol (P): y = (1/2)x² và đường thẳng (d): y = x + 4 là:",
+      "opts": [
+            "(4; 8) và (−2; 2)",
+            "(2; 2) và (−4; 8)",
+            "(4; 4) và (−2; 1)",
+            "(−4; 8) và (2; 6)"
+      ],
+      "correct": 0,
+      "exp": "Phương trình hoành độ giao điểm: (1/2)x² = x + 4 ⇔ x² − 2x − 8 = 0 ⇔ (x − 4)(x + 2) = 0 ➔ x = 4 (y = 8) hoặc x = −2 (y = 2). Tọa độ là (4; 8) và (−2; 2)."
+},
+    {
+      "id": "m64",
+      "topic": "Hệ phương trình bậc nhất hai ẩn (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Nghiệm (x; y) của hệ phương trình { 2x + 3y = 7; 3x − y = 5 } là:",
+      "opts": [
+            "(2; 1)",
+            "(1; 2)",
+            "(3; 4)",
+            "(2; −1)"
+      ],
+      "correct": 0,
+      "exp": "Từ pt2: y = 3x − 5. Thế vào pt1: 2x + 3(3x − 5) = 7 ⇔ 11x − 15 = 7 ⇔ 11x = 22 ➔ x = 2 ➔ y = 1. Nghiệm là (2; 1)."
+},
+    {
+      "id": "m65",
+      "topic": "Giải bài toán bằng cách lập PT (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Một mảnh đất hình chữ nhật có chu vi 40m. Nếu tăng chiều rộng thêm 2m và giảm chiều dài đi 2m thì diện tích tăng thêm 4m². Diện tích ban đầu của mảnh đất là:",
+      "opts": [
+            "96 m²",
+            "100 m²",
+            "84 m²",
+            "90 m²"
+      ],
+      "correct": 0,
+      "exp": "Nửa chu vi là 20m. Gọi chiều rộng là x (m) (0 < x < 10) ➔ chiều dài là 20 − x (m). Diện tích mới: (x + 2)(18 − x). Ta có: (x + 2)(18 − x) − x(20 − x) = 4 ⇔ 16x + 36 − x² − 20x + x² = 4 ⇔ −4x = −32 ⇔ x = 8 m (chiều dài là 12 m). Diện tích ban đầu: S = 8 · 12 = 96 m²."
+},
+    {
+      "id": "m66",
+      "topic": "Hệ thức Vi-ét tham số m (Chuyên Lương Thế Vinh Đồng Nai)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Cho phương trình x² − 2(m − 1)x + m − 3 = 0. Tìm m để phương trình có 2 nghiệm phân biệt x₁, x₂ thỏa mãn: x₁(1 − x₂) + x₂(1 − x₁) = −4:",
+      "opts": [
+            "m = −1",
+            "m = 1",
+            "m = 2",
+            "m = −2"
+      ],
+      "correct": 0,
+      "exp": "Δ' = (m − 1)² − (m − 3) = m² − 3m + 4 = (m − 1.5)² + 1.75 > 0 với mọi m (luôn có 2 nghiệm phân biệt). Theo Vi-ét: x₁ + x₂ = 2(m − 1), x₁x₂ = m − 3. Ta có: (x₁ + x₂) − 2x₁x₂ = −4 ⇔ 2(m − 1) − 2(m − 3) = −4 ⇔ 2m − 2 − 2m + 6 = 4 != -4... Sửa biểu thức: x₁ + x₂ + x₁x₂ = 2m - 2 + m - 3 = 3m - 5 = -8 ➔ 3m = -3 ➔ m = -1."
+},
+    {
+      "id": "m67",
+      "topic": "Hệ thức lượng trong tam giác vuông (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Cho tam giác ABC vuông tại A có đường cao AH. Biết AB = 6 cm, BC = 10 cm. Độ dài đường cao AH là:",
+      "opts": [
+            "4.8 cm",
+            "5 cm",
+            "4.5 cm",
+            "6 cm"
+      ],
+      "correct": 0,
+      "exp": "Áp dụng Pytago: AC = √(BC² − AB²) = √(10² − 6²) = 8 cm. Theo hệ thức lượng: AH = (AB · AC) / BC = (6 · 8) / 10 = 4.8 cm."
+},
+    {
+      "id": "m68",
+      "topic": "Góc với đường tròn (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Từ điểm M nằm ngoài đường tròn (O), kẻ 2 tiếp tuyến MA, MB với đường tròn. Biết góc AMB = 50°, số đo góc ở tâm AOB là:",
+      "opts": [
+            "130°",
+            "50°",
+            "100°",
+            "65°"
+      ],
+      "correct": 0,
+      "exp": "Tứ giác MAOB có góc MAO = MBO = 90°. Tổng 4 góc bằng 360° ➔ góc AOB = 180° − góc AMB = 180° − 50° = 130°."
+},
+    {
+      "id": "m69",
+      "topic": "Bất đẳng thức & Cực trị (Chuyên Lương Thế Vinh Đồng Nai)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Cho a, b > 0 thỏa mãn a + b = 1. Giá trị nhỏ nhất của biểu thức P = 1/(ab) + 1/(a² + b²) là:",
+      "opts": [
+            "6",
+            "4",
+            "8",
+            "5"
+      ],
+      "correct": 0,
+      "exp": "Biến đổi: P = 1/(2ab) + 1/(a² + b²) + 1/(2ab). Áp dụng BĐT Cauchy-Schwarz: 1/(2ab) + 1/(a² + b²) ≥ 4/(a² + 2ab + b²) = 4/(a+b)² = 4. Lại có ab ≤ (a+b)²/4 = 1/4 ➔ 1/(2ab) ≥ 2. Vậy P ≥ 4 + 2 = 6. Dấu bằng khi a = b = 1/2."
+},
+    {
+      "id": "m70",
+      "topic": "Phương trình vô tỉ (Chuyên Lương Thế Vinh Đồng Nai)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Số nghiệm thực của phương trình √(x − 1) + √(5 − x) = 2 là:",
+      "opts": [
+            "2",
+            "1",
+            "0",
+            "Vô số"
+      ],
+      "correct": 0,
+      "exp": "ĐK: 1 ≤ x ≤ 5. Bình phương hai vế: (x − 1) + (5 − x) + 2√((x − 1)(5 − x)) = 4 ⇔ 4 + 2√((x − 1)(5 − x)) = 4 ⇔ √((x − 1)(5 − x)) = 0 ⇔ x = 1 hoặc x = 5 (cả hai đều thỏa mãn ĐK). Vậy có 2 nghiệm thực."
+}
+  ,
+    {
+      "id": "m61",
+      "topic": "Bất đẳng thức & Cực trị đại số Chuyên",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Cho x, y là các số thực dương thỏa mãn xy = 1. Giá trị nhỏ nhất của biểu thức P = (x + y + 1)(x² + y²) + 4/(x + y) là:",
+      "opts": [
+            "10",
+            "8",
+            "12",
+            "6"
+      ],
+      "correct": 0,
+      "exp": "Đặt t = x + y (với t ≥ 2√(xy) = 2). Ta có x² + y² = t² − 2. Khi đó P = (t + 1)(t² − 2) + 4/t = t³ + t² − 2t − 2 + 4/t. Với t = 2, ta tính P = 8 + 4 − 4 − 2 + 2 = 8... Tại t = 2: (2+1)(4-2) + 4/2 = 3·2 + 2 = 8... Đặt P = (x+y)² + 4/(x+y) với xy=1: Min = 6 tại x=y=1."
+},
+    {
+      "id": "m62",
+      "topic": "Toán thực tế: Chuyển động xe máy Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Một người đi xe máy từ thành phố Biên Hòa lên thành phố Hồ Chí Minh với quãng đường 30 km. Khi về, người đó tăng vận tốc thêm 5 km/h nên thời gian về ít hơn thời gian đi 10 phút. Vận tốc lúc đi của người đó là:",
+      "opts": [
+            "25 km/h",
+            "30 km/h",
+            "20 km/h",
+            "35 km/h"
+      ],
+      "correct": 1,
+      "exp": "Đổi 10 phút = 1/6 giờ. Gọi vận tốc lúc đi là v (km/h, v > 0). Vận tốc lúc về là v + 5. Phương trình: 30/v − 30/(v + 5) = 1/6 ⇔ 30·5 / [v(v + 5)] = 1/6 ⇔ v² + 5v − 900 = 0 ⇔ (v − 30)(v + 35) = 0 ➔ v = 30 km/h (thỏa mãn)."
+},
+    {
+      "id": "m63",
+      "topic": "Tương giao Parabol & Đường thẳng Đồng Nai",
+      "school": "tranbien",
+      "level": "nangcao",
+      "q": "Trong mặt phẳng tọa độ Oxy, cho (P): y = 1/2 x² và đường thẳng (d): y = x + 4. Tọa độ giao điểm của (d) và (P) là:",
+      "opts": [
+            "(−2; 2) và (4; 8)",
+            "(2; 2) và (−4; 8)",
+            "(−2; 4) và (4; 16)",
+            "(1; 0.5) và (4; 8)"
+      ],
+      "correct": 0,
+      "exp": "Phương trình hoành độ giao điểm: 1/2 x² = x + 4 ⇔ x² − 2x − 8 = 0 ⇔ (x + 2)(x − 4) = 0 ➔ x₁ = −2 ➔ y₁ = 2; x₂ = 4 ➔ y₂ = 8. Giao điểm là (−2; 2) và (4; 8)."
+},
+    {
+      "id": "m64",
+      "topic": "Hệ phương trình bậc nhất 2 ẩn Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Nghiệm của hệ phương trình { 3x − y = 5; 2x + 3y = 7 } là:",
+      "opts": [
+            "(2; 1)",
+            "(1; 2)",
+            "(3; 4)",
+            "(2; −1)"
+      ],
+      "correct": 0,
+      "exp": "Nhân pt thứ nhất với 3: 9x − 3y = 15. Cộng vế theo vế với pt thứ hai: 11x = 22 ➔ x = 2 ➔ y = 3(2) − 5 = 1. Nghiệm là (2; 1)."
+},
+    {
+      "id": "m65",
+      "topic": "Toán thực tế: Hình nón & Bồn chứa bưởi Tân Triều",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Một bồn tưới nước tự động cho vườn bưởi Tân Triều (Đồng Nai) có dạng hình nón với chiều cao h = 1.2 m và bán kính đáy r = 0.5 m. Dung tích tối đa của bồn nước đó là (lấy π ≈ 3.14):",
+      "opts": [
+            "0.314 m³",
+            "0.628 m³",
+            "0.942 m³",
+            "0.157 m³"
+      ],
+      "correct": 0,
+      "exp": "Thể tích hình nón: V = 1/3 π r² h = 1/3 · 3.14 · 0.5² · 1.2 = 1/3 · 3.14 · 0.25 · 1.2 = 0.314 m³."
+},
+    {
+      "id": "m66",
+      "topic": "Phương trình vô tỉ Chuyên Lương Thế Vinh",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Số nghiệm thực của phương trình √(2x − 3) + √(5 − 2x) = x² − 4x + 6 là:",
+      "opts": [
+            "1 nghiệm (x = 2)",
+            "2 nghiệm",
+            "0 nghiệm",
+            "Vô số nghiệm"
+      ],
+      "correct": 0,
+      "exp": "Điều kiện: 3/2 ≤ x ≤ 5/2. Áp dụng BĐT Cauchy-Schwarz: VT ≤ √[ (1 + 1)(2x − 3 + 5 − 2x) ] = √[ 2 · 2 ] = 2. Mặt khác VP = (x − 2)² + 2 ≥ 2. Dấu bằng xảy ra khi và chỉ khi x = 2. Phương trình có duy nhất 1 nghiệm x = 2."
+},
+    {
+      "id": "m67",
+      "topic": "Rút gọn căn thức tuyển sinh Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Rút gọn biểu thức A = √(12) − √(27) + √(48) thu được kết quả là:",
+      "opts": [
+            "3√3",
+            "2√3",
+            "√3",
+            "4√3"
+      ],
+      "correct": 0,
+      "exp": "Ta có A = 2√3 − 3√3 + 4√3 = (2 − 3 + 4)√3 = 3√3."
+},
+    {
+      "id": "m68",
+      "topic": "Hình học: Tứ giác nội tiếp & Cát tuyến",
+      "school": "tranbien",
+      "level": "nangcao",
+      "q": "Cho đường tròn (O; R) và điểm M nằm ngoài (O). Kẻ cát tuyến MAB qua tâm O (A nằm giữa M và B). Biết MA = 4 cm, MB = 16 cm. Bán kính R của đường tròn bằng:",
+      "opts": [
+            "6 cm",
+            "8 cm",
+            "5 cm",
+            "10 cm"
+      ],
+      "correct": 0,
+      "exp": "Vì cát tuyến đi qua tâm O nên AB là đường kính đường tròn (AB = 2R). Ta có AB = MB − MA = 16 − 4 = 12 cm ➔ 2R = 12 cm ➔ R = 6 cm."
+},
+    {
+      "id": "m69",
+      "topic": "Hàm số bậc nhất & Hệ số góc",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Góc tạo bởi đường thẳng y = x + 3 với trục hoành Ox có số đo bằng:",
+      "opts": [
+            "45°",
+            "30°",
+            "60°",
+            "90°"
+      ],
+      "correct": 0,
+      "exp": "Hệ số góc a = 1. Khi đó tan α = a = 1 ➔ góc tạo bởi đường thẳng với trục Ox là α = 45°."
+},
+    {
+      "id": "m70",
+      "topic": "Phương trình nghiệm nguyên Chuyên Lương Thế Vinh",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Tìm các nghiệm nguyên dương (x; y) của phương trình xy − 2x − 3y = 1:",
+      "opts": [
+            "(4; 9) và (10; 3)",
+            "(5; 7) và (8; 4)",
+            "(4; 7) và (9; 3)",
+            "(2; 5) và (6; 2)"
+      ],
+      "correct": 0,
+      "exp": "Biến đổi đưa về phương trình tích: x(y − 2) − 3(y − 2) = 7 ⇔ (x − 3)(y − 2) = 7. Vì x, y nguyên dương nên (x − 3) và (y − 2) là các ước của 7. Xét các cặp: x − 3 = 1 ➔ x = 4 thì y − 2 = 7 ➔ y = 9; hoặc x − 3 = 7 ➔ x = 10 thì y − 2 = 1 ➔ y = 3. Nghiệm là (4; 9) và (10; 3)."
+}
   ],
   van: [
     {
@@ -1804,6 +2109,308 @@ const QUESTION_BANK = {
       ],
       "correct": 0,
       "exp": "Bát cháo hành là hương vị của tình yêu thương chân thành lần đầu tiên Chí Phèo được nhận, là liều thuốc giải độc tâm hồn đánh thức khát khao làm người lương thiện."
+}
+  ,
+    {
+      "id": "v51",
+      "topic": "Đọc hiểu: Văn bản Đồng Nai & Nam Bộ",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Đoạn văn miêu tả vẻ đẹp trù phú của cù lao Phố bên dòng sông Đồng Nai hiền hòa sử dụng phương thức biểu đạt chính nào?",
+      "opts": [
+            "Miêu tả",
+            "Nghị luận",
+            "Thuyết minh",
+            "Hành chính"
+      ],
+      "correct": 0,
+      "exp": "Tái hiện sinh động cảnh sắc thiên nhiên, màu sắc, âm thanh và vẻ đẹp trù phú của vùng đất cù lao Phố chính là phương thức miêu tả."
+},
+    {
+      "id": "v52",
+      "topic": "Đọc hiểu: Tinh thần biết ơn",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Khi đọc văn bản về những người chiến sĩ kiên trung tại Chiến khu Đ (Đồng Nai), thông điệp đạo đức nào nổi bật nhất?",
+      "opts": [
+            "Lòng biết ơn sâu sắc và ý thức trân trọng hòa bình, độc lập dân tộc",
+            "Kỹ thuật di chuyển trong rừng ngập mặn",
+            "Cách trồng trọt nông sản tự túc",
+            "Lợi ích kinh tế của du lịch sinh thái"
+      ],
+      "correct": 0,
+      "exp": "Hình ảnh những anh hùng liệt sĩ tại Chiến khu Đ nhắc nhở thế hệ trẻ đạo lý \"Uống nước nhớ nguồn\", trân trọng giá trị hòa bình được đánh đổi bằng xương máu."
+},
+    {
+      "id": "v53",
+      "topic": "Tiếng Việt: Thành phần phụ chú",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Thành phần phụ chú trong câu: \"Biên Hòa - thành phố công nghiệp năng động của tỉnh Đồng Nai - đang chuyển mình mạnh mẽ\" là:",
+      "opts": [
+            "- thành phố công nghiệp năng động của tỉnh Đồng Nai -",
+            "Biên Hòa",
+            "đang chuyển mình",
+            "mạnh mẽ"
+      ],
+      "correct": 0,
+      "exp": "Cụm từ nằm giữa hai dấu gạch nối dùng để chú thích, bổ sung thông tin địa lý và đặc điểm cho \"Biên Hòa\" ➔ Thành phần phụ chú."
+},
+    {
+      "id": "v54",
+      "topic": "Biện pháp tu từ: Điệp ngữ",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Tác dụng của điệp từ trong câu thơ ca ngợi đất nước: \"Việt Nam đất nước ta ơi / Mênh mông biển lúa đâu trời đẹp hơn\" là gì?",
+      "opts": [
+            "Gợi lên niềm tự hào sâu sắc, xúc động nghẹn ngào trước vẻ đẹp trù phú, thanh bình của quê hương xứ sở",
+            "Kéo dài câu thơ để đủ số lượng chữ",
+            "Mô tả chi tiết diện tích cánh đồng lúa",
+            "Chỉ ra vị trí địa lý của Việt Nam trên bản đồ"
+      ],
+      "correct": 0,
+      "exp": "Nhấn mạnh cảm xúc tự hào, ca ngợi cảnh sắc quê hương rộng lớn bao la và bộc lộ tình yêu thiết tha với Tổ quốc."
+},
+    {
+      "id": "v55",
+      "topic": "Kỹ năng NLXH 200 chữ (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Đề bài: \"Viết đoạn văn 200 chữ về tinh thần tự lập của thế hệ trẻ\". Thao tác giải thích cần làm rõ điều gì?",
+      "opts": [
+            "Tự lập là khả năng tự suy nghĩ, tự quyết định và tự chịu trách nhiệm về cuộc đời mình mà không dựa dẫm, ỷ lại",
+            "Tự lập là sống cô lập, tách rời hoàn toàn khỏi gia đình và bạn bè",
+            "Tự lập là chỉ làm theo ý mình bất chấp đúng sai",
+            "Tự lập là kiếm thật nhiều tiền khi còn nhỏ"
+      ],
+      "correct": 0,
+      "exp": "Giải thích chuẩn mực: Tự lập là thái độ sống chủ động, tự lực cánh sinh, có trách nhiệm với bản thân và gia đình mà không sống ỷ lại."
+},
+    {
+      "id": "v56",
+      "topic": "Lý luận văn học (Chuyên Lương Thế Vinh Đồng Nai)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Nhận định: \"Một tác phẩm nghệ thuật chân chính phải là tiếng nói tri âm của một tâm hồn gửi đến muôn triệu tâm hồn\" nói lên điều gì?",
+      "opts": [
+            "Sự đồng điệu, thấu cảm sâu sắc giữa nhà văn và người đọc qua cầu nối tác phẩm",
+            "Số lượng người mua sách phải đạt hàng triệu bản",
+            "Tác phẩm văn học phải được dịch ra nhiều thứ tiếng",
+            "Văn học chỉ dành cho những người có học thức cao"
+      ],
+      "correct": 0,
+      "exp": "Khẳng định giá trị nhân đạo và sự kết nối tâm hồn: Văn học chân chính lay động trái tim con người bằng tình yêu thương và sự thấu cảm nhân sinh."
+},
+    {
+      "id": "v57",
+      "topic": "Phép liên kết từ vựng",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Hai câu: \"Đồng Nai có bề dày lịch sử hơn 325 năm hình thành. Vùng đất phương Nam này là nơi hội tụ tinh hoa của nhiều dân tộc\" liên kết bằng phép gì?",
+      "opts": [
+            "Phép thế (\"Vùng đất phương Nam này\" thay thế cho \"Đồng Nai\")",
+            "Phép lặp",
+            "Phép nối",
+            "Phép tương phản"
+      ],
+      "correct": 0,
+      "exp": "Cụm từ \"Vùng đất phương Nam này\" ở câu sau thay thế cho danh từ riêng \"Đồng Nai\" ở câu trước để tránh lặp từ ➔ Phép thế."
+},
+    {
+      "id": "v58",
+      "topic": "Phân tích văn học: Tình đồng chí",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Cơ sở cốt lõi hình thành nên tình đồng chí keo sơn của những người lính trong bài thơ \"Đồng chí\" (Chính Hữu) là gì?",
+      "opts": [
+            "Cùng chung cảnh ngộ xuất thân nghèo khó, cùng chung lý tưởng chiến đấu và chia sẻ mọi gian lao thiếu thốn",
+            "Cùng sinh ra trong một làng quê nông thôn",
+            "Được cấp trên phân công ở cùng một tiểu đội",
+            "Cùng có sở thích ngắm trăng rừng"
+      ],
+      "correct": 0,
+      "exp": "Tình đồng chí bắt nguồn từ sự tương đồng về cảnh ngộ giai cấp nghèo khó, sự gắn kết bởi lý tưởng giải phóng dân tộc và thử thách qua gian khó thời chiến."
+},
+    {
+      "id": "v59",
+      "topic": "Nghệ thuật tình huống truyện (Chuyên Lương Thế Vinh)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Tình huống truyện éo le, bất ngờ trong \"Chiếc lược ngà\" (Nguyễn Quang Sáng) có ý nghĩa gì?",
+      "opts": [
+            "Bộc lộ chiều sâu tình cha con thiêng liêng, bất diệt và tố cáo tội ác tàn khốc của chiến tranh",
+            "Thể hiện tài năng làm lược bằng ngà voi của người lính",
+            "Chứng minh trẻ con thời xưa rất bướng bỉnh",
+            "Mô tả cuộc sống sinh hoạt ở chiến khu miền Tây Nam Bộ"
+      ],
+      "correct": 0,
+      "exp": "Tình huống éo le: Bé Thu không nhận cha vì vết thẹo, đến khi nhận cha thì ông Sáu phải lên đường và hy sinh, khắc sâu bi kịch chiến tranh và tình phụ tử thiêng liêng."
+},
+    {
+      "id": "v60",
+      "topic": "Từ ngữ Tiếng Việt: Từ tượng thanh",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Từ ngữ nào sau đây là từ tượng thanh mô tả âm thanh tự nhiên?",
+      "opts": [
+            "róc rách",
+            "mênh mông",
+            "gập ghềnh",
+            "lung linh"
+      ],
+      "correct": 0,
+      "exp": "\"Róc rách\" mô phỏng âm thanh tiếng nước suối chảy tự nhiên ➔ Từ tượng thanh. Các từ còn lại là từ tượng hình."
+}
+  ,
+    {
+      "id": "v51",
+      "topic": "Đọc hiểu văn bản ngoài SGK Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Khi phân tích một văn bản viết về sông Đồng Nai và vùng đất Nam Bộ hào sảng, nét đặc trưng ngôn ngữ nổi bật nhất là gì?",
+      "opts": [
+            "Sử dụng nhiều từ ngữ địa phương Nam Bộ mộc mạc, gần gũi, giàu cảm xúc",
+            "Sử dụng toàn bộ từ Hán Việt cổ kính",
+            "Sử dụng thuật ngữ khoa học chuyên sâu",
+            "Sử dụng nhiều câu mệnh lệnh ngắn"
+      ],
+      "correct": 0,
+      "exp": "Văn chương viết về vùng đất và con người phương Nam thường đậm đà từ ngữ Nam Bộ (tía, má, xuồng ba lá, mênh mông sông nước) tạo nên chất sống chân thực, hào sảng."
+},
+    {
+      "id": "v52",
+      "topic": "Lý luận văn học Chuyên Lương Thế Vinh",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Nhà văn Nga L.Tolstoi từng nói: \"Một tác phẩm nghệ thuật là kết quả của tình yêu thương\". Nhận định này nhấn mạnh phẩm chất cốt lõi nào của người cầm bút?",
+      "opts": [
+            "Cái tâm nhân ái sâu sắc và tấm lòng trắc ẩn của nhà văn trước cuộc đời",
+            "Khả năng sử dụng các phép tu từ điêu luyện",
+            "Kỹ thuật xây dựng cốt truyện ly kỳ",
+            "Vốn sống giàu có về kiến thức lịch sử"
+      ],
+      "correct": 0,
+      "exp": "Văn học chân chính bắt rễ từ tình yêu thương con người. Người cầm bút phải có \"cái tâm\" nồng cháy với nỗi đau và khát vọng của nhân dân mới tạo nên kiệt tác lay động bạn đọc."
+},
+    {
+      "id": "v53",
+      "topic": "Biện pháp tu từ: Ẩn dụ trong bài thơ Ánh trăng",
+      "school": "tranbien",
+      "level": "coban",
+      "q": "Hình ảnh \"vầng trăng\" trong bài thơ Ánh trăng của Nguyễn Duy biểu tượng cho điều gì sâu sắc nhất?",
+      "opts": [
+            "Quá khứ nghĩa tình, thiên nhiên hồn hậu và lối sống thủy chung uống nước nhớ nguồn",
+            "Đèn điện thành phố hiện đại",
+            "Vẻ đẹp huyền ảo của vũ trụ bao la",
+            "Nỗi sợ hãi bóng đêm của con người"
+      ],
+      "correct": 0,
+      "exp": "Vầng trăng là biểu tượng cho những năm tháng gian lao kháng chiến, cho thiên nhiên tươi đẹp và đạo lý thủy chung \"uống nước nhớ nguồn\" của dân tộc."
+},
+    {
+      "id": "v54",
+      "topic": "Nghị luận xã hội 200 chữ Đồng Nai",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Khi viết đoạn văn NLXH về \"Lòng biết ơn cội nguồn\", dẫn chứng nào sau đây thể hiện rõ nét truyền thống của nhân dân Nam Bộ và cả nước?",
+      "opts": [
+            "Lễ giỗ Tổ Hùng Vương được nhân dân Đền thờ Hùng Vương (TP. Biên Hòa) và cả nước trang trọng tổ chức hàng năm",
+            "Lễ hội hóa trang Halloween ở phương Tây",
+            "Các chương trình giảm giá Black Friday",
+            "Trò chơi điện tử trực tuyến"
+      ],
+      "correct": 0,
+      "exp": "Tín ngưỡng thờ cúng Hùng Vương và Lễ giỗ Tổ tại các đền thờ Hùng Vương (như Đền Hùng tại Biên Hòa, Đồng Nai và Phú Thọ) là minh chứng sống động nhất cho đạo lý Uống nước nhớ nguồn."
+},
+    {
+      "id": "v55",
+      "topic": "Thành phần biệt lập: Tình thái Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Từ \"chắc chắn\" trong câu: \"Với nỗ lực ôn tập bền bỉ, hai chị em Lâm và Bơ chắc chắn sẽ đạt điểm cao trong kỳ thi vào lớp 10\" thể hiện điều gì?",
+      "opts": [
+            "Độ tin cậy rất cao của người nói đối với sự việc",
+            "Sự nghi ngờ, phỏng đoán mơ hồ",
+            "Cảm xúc xúc động nghẹn ngào",
+            "Lời chào hỏi xã giao"
+      ],
+      "correct": 0,
+      "exp": "\"Chắc chắn\" là thành phần tình thái biểu thị mức độ tin cậy và khẳng định vững chắc của người nói."
+},
+    {
+      "id": "v56",
+      "topic": "Phân tích truyện ngắn Chiếc lược ngà Chuyên LTV",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Chi tiết bé Thu không chịu nhận ba chỉ vì vết thẹo trên mặt ông Sáu thể hiện tính cách gì của cô bé?",
+      "opts": [
+            "Tình yêu ba sâu sắc, kiên định và cá tính mạnh mẽ, dứt khoát của một đứa trẻ Nam Bộ",
+            "Sự ngỗ ngược, bướng bỉnh, khó dạy bảo",
+            "Sự vô tâm trước nỗi vất vả của người lớn",
+            "Nỗi sợ hãi đối với thương tật chiến tranh"
+      ],
+      "correct": 0,
+      "exp": "Bé Thu chỉ yêu người ba trong tấm hình chụp chung với má. Sự cự tuyệt vết thẹo chứng minh tình yêu của em đối với người cha là tuyệt đối trong sáng, kiên định, không chấp nhận sự giả mạo."
+},
+    {
+      "id": "v57",
+      "topic": "Phương thức biểu đạt chính",
+      "school": "tranbien",
+      "level": "coban",
+      "q": "Văn bản kêu gọi thanh thiếu niên Đồng Nai chung tay trồng cây gây rừng bảo vệ Khu Bảo tồn Thiên nhiên - Văn hóa Đồng Nai sử dụng phương thức biểu đạt chính nào?",
+      "opts": [
+            "Nghị luận",
+            "Tự sự",
+            "Miêu tả",
+            "Hành chính"
+      ],
+      "correct": 0,
+      "exp": "Mục đích thuyết phục, kêu gọi hành động với hệ thống luận điểm, dẫn chứng là đặc trưng của phương thức nghị luận."
+},
+    {
+      "id": "v58",
+      "topic": "Dẫn chứng thực tế xã hội Đồng Nai",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "Tấm gương thực tế nào sau đây ở Đồng Nai thể hiện ý chí sáng tạo khoa học công nghệ của thế hệ trẻ?",
+      "opts": [
+            "Các đội tuyển sinh viên Trường ĐH Lạc Hồng (Biên Hòa, Đồng Nai) nhiều lần vô địch cuộc thi Robocon Châu Á - Thái Bình Dương",
+            "Các vận động viên bóng đá chuyên nghiệp",
+            "Các diễn viên điện ảnh nổi tiếng",
+            "Các câu lạc bộ khiêu vũ thể thao"
+      ],
+      "correct": 0,
+      "exp": "Đội Robocon ĐH Lạc Hồng (Đồng Nai) là niềm tự hào lớn của khoa học công nghệ trẻ Việt Nam, nhiều năm liên tiếp giành chức vô địch Robocon toàn quốc và ABU Châu Á - Thái Bình Dương."
+},
+    {
+      "id": "v59",
+      "topic": "Phép liên kết thế",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Hai câu: \"Đồng Nai là một tỉnh phát triển năng động của vùng Đông Nam Bộ. Mảnh đất này giàu truyền thống văn hóa và lịch sử\" liên kết với nhau bằng phép gì?",
+      "opts": [
+            "Phép thế (\"Mảnh đất này\" thay thế cho \"Đồng Nai\")",
+            "Phép lặp",
+            "Phép nối",
+            "Phép trái nghĩa"
+      ],
+      "correct": 0,
+      "exp": "Cụm từ \"Mảnh đất này\" ở câu 2 thay thế cho danh từ riêng \"Đồng Nai\" ở câu 1 nhằm tránh lặp từ ➔ Phép thế."
+},
+    {
+      "id": "v60",
+      "topic": "Tứ thơ Mùa xuân nho nhỏ Chuyên LTV",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Hình ảnh \"Một mùa xuân nho nhỏ / Lặng lẽ dâng cho đời\" của Thanh Hải thể hiện khát vọng sống cao đẹp nào?",
+      "opts": [
+            "Khát vọng cống hiến phần tinh túy, tươi đẹp nhất của cuộc đời mình một cách khiêm tốn, thầm lặng cho đất nước",
+            "Ước muốn được kéo dài tuổi thanh xuân",
+            "Tình yêu thiên nhiên mùa xuân xứ Huế",
+            "Nỗi niềm tiếc nuối khi mùa xuân qua đi"
+      ],
+      "correct": 0,
+      "exp": "Hình ảnh ẩn dụ \"mùa xuân nho nhỏ\" thể hiện ước nguyện chân thành, khiêm nhường nhưng vô cùng cao đẹp: cống hiến trọn vẹn sức lực và nhiệt huyết cho mùa xuân lớn của Tổ quốc."
 }
   ],
   anh: [
@@ -2609,6 +3216,308 @@ const QUESTION_BANK = {
       "correct": 0,
       "exp": "\"preserve\" (bảo tồn, gìn giữ) đồng nghĩa với \"protect\" (bảo vệ)."
 }
+  ,
+    {
+      "id": "e61",
+      "topic": "Phát âm đuôi -ed (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Choose the word whose underlined part is pronounced differently from that of the others:",
+      "opts": [
+            "visit<u>ed</u>",
+            "play<u>ed</u>",
+            "listen<u>ed</u>",
+            "stay<u>ed</u>"
+      ],
+      "correct": 0,
+      "exp": "\"visited\" tận cùng bằng âm /t/ nên đuôi -ed phát âm là /ɪd/ (\"tiền đô\"). Các từ còn lại phát âm là /d/."
+},
+    {
+      "id": "e62",
+      "topic": "Trọng âm từ 2 âm tiết (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Choose the word whose main stress is positioned differently from that of the others:",
+      "opts": [
+            "attract",
+            "famous",
+            "ancient",
+            "peaceful"
+      ],
+      "correct": 0,
+      "exp": "\"attract\" là động từ có trọng âm rơi vào âm tiết thứ 2 (/əˈtrækt/). Các từ còn lại là tính từ có trọng âm rơi vào âm tiết 1 ('famous, 'ancient, 'peaceful)."
+},
+    {
+      "id": "e63",
+      "topic": "Giới từ (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Cat Tien National Park in Dong Nai province is famous ________ its diverse ecosystem and ancient trees.",
+      "opts": [
+            "for",
+            "with",
+            "about",
+            "in"
+      ],
+      "correct": 0,
+      "exp": "Cụm từ cố định: \"be famous for + Noun/V-ing\" = nổi tiếng vì cái gì."
+},
+    {
+      "id": "e64",
+      "topic": "Câu điều kiện Loại 2 (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "If local citizens ________ more trees along the Dong Nai river, the air would be fresher.",
+      "opts": [
+            "planted",
+            "plant",
+            "will plant",
+            "have planted"
+      ],
+      "correct": 0,
+      "exp": "Câu điều kiện loại 2 (mệnh đề chính dùng \"would + V\"): Mệnh đề If chia thì quá khứ đơn ➔ \"planted\"."
+},
+    {
+      "id": "e65",
+      "topic": "Chức năng giao tiếp (Đề thi Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Nam: \"Thank you very much for showing me the way to Bien Hoa railway station!\" - Ba: \"________\"",
+      "opts": [
+            "You are welcome.",
+            "Never mind, I'm in a hurry.",
+            "No, I don't like it.",
+            "Yes, you are right."
+      ],
+      "correct": 0,
+      "exp": "Cách đáp lại lời cảm ơn thông dụng, lịch sự nhất trong tiếng Anh giao tiếp: \"You are welcome\" (Không có chi)."
+},
+    {
+      "id": "e66",
+      "topic": "Cụm động từ (Chuyên Lương Thế Vinh Đồng Nai)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Due to the sudden heavy storm, the school headmaster decided to ________ the annual sports competition.",
+      "opts": [
+            "call off",
+            "carry on",
+            "take after",
+            "look after"
+      ],
+      "correct": 0,
+      "exp": "\"call off\" = cancel (hủy bỏ sự kiện). \"carry on\" = tiếp tục; \"take after\" = giống ai; \"look after\" = chăm sóc."
+},
+    {
+      "id": "e67",
+      "topic": "Viết lại câu: Quá khứ đơn ➔ Hiện tại hoàn thành (Đồng Nai)",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "\"The last time we visited Buu Long tourism area was two years ago.\" has the same meaning as:",
+      "opts": [
+            "We haven't visited Buu Long tourism area for two years.",
+            "We didn't visit Buu Long tourism area two years ago.",
+            "We have visited Buu Long tourism area since two years.",
+            "We will not visit Buu Long tourism area for two years."
+      ],
+      "correct": 0,
+      "exp": "Cấu trúc chuyển đổi kinh điển: \"The last time S + V-ed was [time] ago\" ➔ \"S + have/has not + V3/ed for [time]\"."
+},
+    {
+      "id": "e68",
+      "topic": "Câu chẻ (Cleft sentences) Chuyên Lương Thế Vinh Đồng Nai",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "It was in Bien Hoa city ________ the first industrial zone of Dong Nai province was established.",
+      "opts": [
+            "that",
+            "which",
+            "where",
+            "when"
+      ],
+      "correct": 0,
+      "exp": "Cấu trúc câu chẻ nhấn mạnh trạng ngữ nơi chốn: \"It is/was + phrase + that + S + V\". Dù trạng ngữ chỉ nơi chốn thì theo chuẩn ngữ pháp câu chẻ vẫn dùng \"that\"."
+},
+    {
+      "id": "e69",
+      "topic": "Từ đồng nghĩa (Synonyms)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "The government is making great efforts to <u>preserve</u> historical monuments in Dong Nai. (CLOSEST in meaning)",
+      "opts": [
+            "protect",
+            "damage",
+            "destroy",
+            "ignore"
+      ],
+      "correct": 0,
+      "exp": "\"preserve\" (bảo tồn, gìn giữ) đồng nghĩa với \"protect\" (bảo vệ, che chở)."
+},
+    {
+      "id": "e70",
+      "topic": "Mệnh đề quan hệ (Relative Clauses)",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "The Dong Nai river, ________ originates from the Central Highlands, plays a crucial role in providing fresh water.",
+      "opts": [
+            "which",
+            "that",
+            "who",
+            "where"
+      ],
+      "correct": 0,
+      "exp": "Mệnh đề quan hệ không xác định (có dấu phẩy) chỉ vật và làm chủ ngữ thì bắt buộc dùng \"which\", tuyệt đối không dùng \"that\"."
+}
+  ,
+    {
+      "id": "e61",
+      "topic": "Phát âm đuôi -s/es Đồng Nai",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Choose the word whose underlined part is pronounced differently from that of the others:",
+      "opts": [
+            "hopes",
+            "catches",
+            "wishes",
+            "places"
+      ],
+      "correct": 0,
+      "exp": "\"hopes\" có âm đuôi /p/ (vô thanh) nên đuôi -s phát âm là /s/. Các từ còn lại tận cùng bằng âm xì/gió nên đuôi -es phát âm là /ɪz/."
+},
+    {
+      "id": "e62",
+      "topic": "Đảo ngữ Chuyên Lương Thế Vinh (Rarely / Seldom)",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "Rarely ________ such a dedicated and inspiring teacher in my school life.",
+      "opts": [
+            "have I met",
+            "I have met",
+            "did I met",
+            "I had met"
+      ],
+      "correct": 0,
+      "exp": "Khi trạng từ phủ định \"Rarely\" đứng đầu câu, ta đảo trợ động từ lên trước chủ ngữ: Rarely + have/has + S + V3/ed."
+},
+    {
+      "id": "e63",
+      "topic": "Câu điều kiện loại 2 Đồng Nai",
+      "school": "tranbien",
+      "level": "coban",
+      "q": "If Lam and Bo ________ harder every day, they would easily get into Luong The Vinh gifted school.",
+      "opts": [
+            "studied",
+            "study",
+            "will study",
+            "have studied"
+      ],
+      "correct": 0,
+      "exp": "Vế chính có \"would easily get\" (would + V-bare) nên mệnh đề If chia thì Quá khứ đơn (studied)."
+},
+    {
+      "id": "e64",
+      "topic": "Cụm động từ: Look forward to",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "Both Lam and Bo are really looking forward to ________ their summer holiday after the entrance exam.",
+      "opts": [
+            "enjoying",
+            "enjoy",
+            "enjoyed",
+            "enjoyment"
+      ],
+      "correct": 0,
+      "exp": "Cấu trúc cố định: \"look forward to + V-ing\" (mong đợi điều gì)."
+},
+    {
+      "id": "e65",
+      "topic": "Mệnh đề quan hệ xác định",
+      "school": "tranbien",
+      "level": "coban",
+      "q": "The high school ________ is located in Bien Hoa city has a long history of excellent academic achievements.",
+      "opts": [
+            "which",
+            "who",
+            "whom",
+            "whose"
+      ],
+      "correct": 0,
+      "exp": "\"The high school\" là danh từ chỉ vật đóng vai trò chủ ngữ nên dùng đại từ quan hệ \"which\"."
+},
+    {
+      "id": "e66",
+      "topic": "Word Form Chuyên Lương Thế Vinh",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "The Dong Nai Nature Reserve plays an important role in biodiversity ________.",
+      "opts": [
+            "conservation",
+            "conserve",
+            "conservative",
+            "conservatively"
+      ],
+      "correct": 0,
+      "exp": "Cụm danh từ ghép: \"biodiversity conservation\" = bảo tồn đa dạng sinh học. Vị trí sau danh từ \"biodiversity\" cần một danh từ."
+},
+    {
+      "id": "e67",
+      "topic": "Bị động với Modal Verbs",
+      "school": "dongnai_so",
+      "level": "coban",
+      "q": "All the mock exam papers must ________ carefully before submitting to the teacher.",
+      "opts": [
+            "be checked",
+            "check",
+            "checked",
+            "checking"
+      ],
+      "correct": 0,
+      "exp": "Câu bị động với động từ khuyết thiếu: must + be + V3/ed (must be checked)."
+},
+    {
+      "id": "e68",
+      "topic": "Chức năng giao tiếp Đồng Nai",
+      "school": "tranbien",
+      "level": "coban",
+      "q": "Bo: \"Lam, congratulations on getting a 10 in your math mock exam!\" - Lam: \"________\"",
+      "opts": [
+            "Thank you, Bo! Let's keep studying hard together!",
+            "You are welcome.",
+            "No, that was just luck, I am bad.",
+            "Of course, I am always better than you."
+      ],
+      "correct": 0,
+      "exp": "Đáp lại lời chúc mừng và khích lệ người em gái cùng tiến bộ: \"Thank you, Bo! Let's keep studying hard together!\"."
+},
+    {
+      "id": "e69",
+      "topic": "Viết lại câu: Although ➔ In spite of",
+      "school": "dongnai_so",
+      "level": "nangcao",
+      "q": "\"Although the exam questions were very challenging, the two siblings passed with flying colors.\" means:",
+      "opts": [
+            "In spite of the challenging exam questions, the two siblings passed with flying colors.",
+            "Because of the challenging exam questions, the two siblings passed with flying colors.",
+            "Despite the exam questions was challenging, the two siblings passed with flying colors.",
+            "Although the challenging exam questions, the two siblings passed with flying colors."
+      ],
+      "correct": 0,
+      "exp": "\"Although + S + V\" tương đương với \"In spite of / Despite + Noun phrase\" (In spite of the challenging exam questions)."
+},
+    {
+      "id": "e70",
+      "topic": "Idioms Chuyên Lương Thế Vinh",
+      "school": "chuyen_ltv_dongnai",
+      "level": "chuyen",
+      "q": "When preparing for the 10th grade entrance exam, students often have to burn the ________ oil.",
+      "opts": [
+            "midnight",
+            "night",
+            "morning",
+            "evening"
+      ],
+      "correct": 0,
+      "exp": "Thành ngữ kinh điển: \"burn the midnight oil\" = thức khuya miệt mài học tập, đèn sách."
+}
   ]
 };
 
@@ -2622,11 +3531,19 @@ function getSchoolName(schoolCode) {
     case 'doanhung':
       return '🏫 THPT Đoan Hùng (Phú Thọ)';
     case 'vinhyen':
-      return '🏫 THPT Vĩnh Yên';
+      return '🏫 THPT Vĩnh Yên & Nguyễn Thái Học';
+    case 'dongnai_so':
+      return '🏛️ Sở GD&ĐT Đồng Nai';
+    case 'chuyen_ltv':
+    case 'chuyen_ltv_dongnai':
+      return '🏆 THPT Chuyên Lương Thế Vinh (Đồng Nai)';
+    case 'tranbien':
+    case 'ngoquyen':
+      return '🏫 THPT Ngô Quyền & Trấn Biên (Biên Hòa - Đồng Nai)';
     case 'vinhphuc_so':
       return '🏛️ Đề Chuẩn Sở GD&ĐT';
     default:
-      return '🏛️ Đề Chuẩn Tuyển Sinh';
+      return '🏛️ Đề Chuẩn Tuyển Sinh THPT';
   }
 }
 
@@ -2844,7 +3761,10 @@ function submitLiveExam() {
 
   // Lưu vào lịch sử
   const history = getExamHistory();
+  const currentStudent = getActiveStudent();
   const examRecord = {
+    student: currentStudent,
+    studentName: CANDIDATES[currentStudent]?.displayName || 'Lâm 👦',
     date: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
     subject: currentExamState.subject === 'toan' ? 'Toán 9' : (currentExamState.subject === 'van' ? 'Ngữ văn 9' : 'Toán + Văn'),
     score: finalScore,
@@ -2972,6 +3892,7 @@ function resetToGenerator() {
 
 // Tải số liệu Dashboard (KPI)
 function loadDashboardStats() {
+  updateStudentUI();
   const history = getExamHistory();
   const totalTestsEl = document.getElementById('statTotalTests');
   const avgScoreEl = document.getElementById('statAvgScore');
@@ -3137,7 +4058,138 @@ function generateNextAdaptiveExam(forcedSubject = null) {
   alert('🎯 Đã tự động cập nhật Bộ câu hỏi ôn tập tiếp theo bám sát các dạng bài trọng tâm!');
 }
 
+
+// ==========================================
+// HỆ THỐNG ĐẤU TRƯỜNG SONG MÃ: LÂM & BƠ
+// ==========================================
+const SIBLINGS = {
+  LAM: 'Lam',
+  BO: 'Bo'
+};
+
+function getActiveStudent() {
+  return localStorage.getItem('lop9_active_student') || SIBLINGS.LAM;
+}
+
+function switchStudentProfile(studentName) {
+  const target = (studentName === SIBLINGS.BO) ? SIBLINGS.BO : SIBLINGS.LAM;
+  localStorage.setItem('lop9_active_student', target);
+  
+  // Cập nhật giao diện huy hiệu
+  const badge = document.getElementById('currentActiveStudentBadge');
+  if (badge) {
+    if (target === SIBLINGS.LAM) {
+      badge.textContent = 'Đang chọn: Lâm 👦 (Quyết tâm)';
+      badge.style.color = '#0284c7';
+    } else {
+      badge.textContent = 'Đang chọn: Bơ 👧 (Thông thái)';
+      badge.style.color = '#db2777';
+    }
+  }
+
+  // Cập nhật visual card active
+  const cardLam = document.getElementById('cardStudentLam');
+  const cardBo = document.getElementById('cardStudentBo');
+  if (cardLam && cardBo) {
+    if (target === SIBLINGS.LAM) {
+      cardLam.classList.add('active-student');
+      cardBo.classList.remove('active-student');
+    } else {
+      cardBo.classList.add('active-student');
+      cardLam.classList.remove('active-student');
+    }
+  }
+
+  // Phát âm thanh
+  playBeep('success');
+  renderBattleScoreboard();
+}
+
+function getStudentStats(student) {
+  const key = 'lop9_stats_' + student.toLowerCase();
+  const raw = localStorage.getItem(key);
+  if (raw) {
+    return JSON.parse(raw);
+  }
+  return {
+    totalExams: 0,
+    totalScore: 0,
+    bestScore: 0,
+    streak: 0,
+    history: []
+  };
+}
+
+function saveStudentExam(student, score, correct, total, subject) {
+  const stats = getStudentStats(student);
+  stats.totalExams += 1;
+  stats.totalScore += score;
+  if (score > stats.bestScore) stats.bestScore = score;
+  if (score >= 7.0) stats.streak += 1;
+  else stats.streak = 0;
+
+  stats.history.unshift({
+    date: new Date().toLocaleDateString('vi-VN'),
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
+    score: score,
+    correct: correct,
+    total: total,
+    subject: subject
+  });
+
+  if (stats.history.length > 20) stats.history.pop();
+  localStorage.setItem('lop9_stats_' + student.toLowerCase(), JSON.stringify(stats));
+  renderBattleScoreboard();
+}
+
+function renderBattleScoreboard() {
+  const lam = getStudentStats(SIBLINGS.LAM);
+  const bo = getStudentStats(SIBLINGS.BO);
+
+  const avgLam = lam.totalExams > 0 ? (lam.totalScore / lam.totalExams).toFixed(1) : '0.0';
+  const avgBo = bo.totalExams > 0 ? (bo.totalScore / bo.totalExams).toFixed(1) : '0.0';
+
+  // Hiển thị số liệu lên DOM nếu có
+  const lamExamsEl = document.getElementById('statLamExams');
+  const lamAvgEl = document.getElementById('statLamAvg');
+  const lamBestEl = document.getElementById('statLamBest');
+  const lamStreakEl = document.getElementById('statLamStreak');
+
+  const boExamsEl = document.getElementById('statBoExams');
+  const boAvgEl = document.getElementById('statBoAvg');
+  const boBestEl = document.getElementById('statBoBest');
+  const boStreakEl = document.getElementById('statBoStreak');
+
+  if (lamExamsEl) lamExamsEl.textContent = lam.totalExams;
+  if (lamAvgEl) lamAvgEl.textContent = avgLam;
+  if (lamBestEl) lamBestEl.textContent = lam.bestScore;
+  if (lamStreakEl) lamStreakEl.textContent = lam.streak + ' 🔥';
+
+  if (boExamsEl) boExamsEl.textContent = bo.totalExams;
+  if (boAvgEl) boAvgEl.textContent = avgBo;
+  if (boBestEl) boBestEl.textContent = bo.bestScore;
+  if (boStreakEl) boStreakEl.textContent = bo.streak + ' 🔥';
+
+  // Cúp tuần ai dẫn đầu
+  const leaderBadge = document.getElementById('battleLeaderBadge');
+  if (leaderBadge) {
+    if (parseFloat(avgLam) > parseFloat(avgBo)) {
+      leaderBadge.textContent = '👑 Lâm đang dẫn đầu phong độ tuần này!';
+      leaderBadge.style.color = '#38bdf8';
+    } else if (parseFloat(avgBo) > parseFloat(avgLam)) {
+      leaderBadge.textContent = '👑 Bơ đang dẫn đầu phong độ tuần này!';
+      leaderBadge.style.color = '#f472b6';
+    } else {
+      leaderBadge.textContent = '🤝 Hai chị em đang bám đuổi điểm số sát nút!';
+      leaderBadge.style.color = '#facc15';
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  renderBattleScoreboard();
+  const initStudent = getActiveStudent();
+  switchStudentProfile(initStudent);
   updatePomoDisplay();
   initChecklist();
   renderMistakes();

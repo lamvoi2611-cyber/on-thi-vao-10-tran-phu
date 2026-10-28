@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiến Lược Ôn Thi Vào 10 - THPT Trần Phú (Vĩnh Yên)</title>
+  <title>CHINH PHỤC VÀO LỚP 10 THPT - TRƯỜNG CHUYÊN (Lâm & Bơ)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
   <header class="header">
     <div class="header-container">
       <div class="logo-area">
-        <h1>🚀 CHINH PHỤC VÀO 10 THPT TRẦN PHÚ</h1>
-        <p>Lộ trình thực chiến 2026 - 2027 dành cho học sinh lớp 9 (Phú Thọ - Vĩnh Phúc)</p>
+        <h1>🚀 CHINH PHỤC VÀO LỚP 10 THPT - TRƯỜNG CHUYÊN</h1>
+        <p>Đấu Trường Thi Thử & Luyện Đề Song Mã: Lâm & Bơ • Năm Học 2026 - 2027 (Đồng Nai - Vĩnh Phúc - Phú Thọ)</p>
       </div>
       <nav class="nav-links">
         <a href="index.html" class="nav-btn active">🏠 Tổng Quan</a>
@@ -29,16 +29,122 @@
 
   <main class="container">
 
+    <!-- BIỂU NGỮ CHÀO ĐÓN 2 CHỊ EM LÂM & BƠ ĐẾN VỚI CUỘC ĐUA -->
+    <div class="card" style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%); color: white; border: none; margin-bottom: 1.5rem; box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.45); border-radius: 14px;">
+      <div style="padding: 1.25rem 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.75rem;">🚀</span>
+            <span style="font-size: 1.35rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase;">CHÀO ĐÓN 2 CHIẾN BINH NHÍ: LÂM & BƠ BƯỚC VÀO CUỘC ĐUA THI VÀO CẤP 3!</span>
+          </div>
+          <span class="badge" style="background: #facc15; color: #713f12; font-weight: 800; font-size: 0.95rem; padding: 0.35rem 0.85rem; border-radius: 20px;">🏆 ĐẤU TRƯỜNG SONG MÃ</span>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.6; color: #f8fafc; margin-bottom: 1.25rem; text-align: justify;">
+          <em>"Chào mừng hai chị em Lâm và Bơ! Phía trước là cánh cửa các trường THPT trọng điểm & trường Chuyên danh giá: <strong>THPT Chuyên Lương Thế Vinh, THPT Ngô Quyền, THPT Trấn Biên (Đồng Nai)</strong> và <strong>THPT Chuyên Vĩnh Phúc, THPT Trần Phú</strong>. Chị em cùng tiến, học hết sức, so tài hết mình, ngày nào cũng tiến bộ để cùng nhau đỗ thủ khoa!"</em>
+        </p>
+
+        <!-- Thanh chuyển đổi hồ sơ học sinh đang làm bài -->
+        <div style="background: rgba(0, 0, 0, 0.25); backdrop-filter: blur(8px); padding: 0.85rem 1.25rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1rem; font-weight: 700;">👤 Hồ sơ người học hiện tại:</span>
+            <span id="currentActiveStudentBadge" style="background: white; color: #0284c7; font-weight: 800; padding: 0.3rem 0.85rem; border-radius: 20px; font-size: 0.95rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">Đang chọn: Lâm 👦 (Quyết tâm)</span>
+          </div>
+          <div style="display: flex; gap: 0.6rem;">
+            <button class="btn" id="btnSelectLam" onclick="switchStudentProfile('Lam')" style="background: #38bdf8; color: #0f172a; font-weight: 800; border: 2px solid white; cursor: pointer;">👦 Tôi là Lâm</button>
+            <button class="btn" id="btnSelectBo" onclick="switchStudentProfile('Bo')" style="background: #f472b6; color: white; font-weight: 800; border: 2px solid white; cursor: pointer;">👧 Tôi là Bơ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BẢNG ĐẤU TRƯỜNG SO KÈ ĐIỂM SỐ: LÂM VS BƠ -->
+    <div class="battle-arena-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
+        <span style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+          <span>⚔️ BẢNG ĐỐI ĐẦU & THỐNG KÊ SO KÈ ĐIỂM SỐ: LÂM VS BƠ</span>
+        </span>
+        <span id="battleLeaderBadge" style="font-weight: 700; font-size: 0.95rem; color: #facc15;">
+          👑 Cúp Tuần: Đang cập nhật thành tích...
+        </span>
+      </div>
+
+      <div class="battle-grid">
+        <!-- Cột Lâm -->
+        <div class="student-card" id="cardStudentLam">
+          <div class="student-avatar">👦</div>
+          <div class="student-name" style="color: #38bdf8;">LÂM (Chiến Binh)</div>
+          <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Mục tiêu: Chuyên Toán & Anh</div>
+          <div class="student-kpi-grid">
+            <div class="student-kpi">
+              <div>Số đề đã thi:</div>
+              <div class="student-kpi-val" id="statLamExams">0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Điểm trung bình:</div>
+              <div class="student-kpi-val" id="statLamAvg">0.0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Điểm cao nhất:</div>
+              <div class="student-kpi-val" id="statLamBest">0.0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Chuỗi phong độ:</div>
+              <div class="student-kpi-val" id="statLamStreak">0 🔥</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="switchStudentProfile('Lam'); window.location.href='taode.html';" style="margin-top: 0.85rem; width: 100%; background: #0284c7; font-weight: 700;">
+            🚀 Lâm Vào Thi Thử
+          </button>
+        </div>
+
+        <!-- Trọng tài VS -->
+        <div class="vs-divider">
+          <div class="vs-circle">VS</div>
+          <div class="vs-score-tag">SO KÈ ĐIỂM</div>
+          <div style="font-size: 0.75rem; opacity: 0.8; text-align: center;">Chị Em Cùng Tiến</div>
+        </div>
+
+        <!-- Cột Bơ -->
+        <div class="student-card" id="cardStudentBo">
+          <div class="student-avatar">👧</div>
+          <div class="student-name" style="color: #f472b6;">BƠ (Chiến Binh)</div>
+          <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem;">Mục tiêu: Chuyên Văn & Anh</div>
+          <div class="student-kpi-grid">
+            <div class="student-kpi">
+              <div>Số đề đã thi:</div>
+              <div class="student-kpi-val" id="statBoExams">0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Điểm trung bình:</div>
+              <div class="student-kpi-val" id="statBoAvg">0.0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Điểm cao nhất:</div>
+              <div class="student-kpi-val" id="statBoBest">0.0</div>
+            </div>
+            <div class="student-kpi">
+              <div>Chuỗi phong độ:</div>
+              <div class="student-kpi-val" id="statBoStreak">0 🔥</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="switchStudentProfile('Bo'); window.location.href='taode.html';" style="margin-top: 0.85rem; width: 100%; background: #db2777; font-weight: 700;">
+            🌸 Bơ Vào Thi Thử
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Target Banner -->
     <div class="target-banner">
       <div class="target-info">
-        <h2>🎯 MỤC TIÊU: TRƯỜNG THPT TRẦN PHÚ (VĨNH YÊN)</h2>
-        <p>Điểm khảo sát: <strong>Toán 7.0 | Anh 7.0 | Văn 4.0</strong> (Tổng: 18.0) ➔ <strong>Mục tiêu: ≥ 24.5 Điểm</strong></p>
+        <h2>🎯 MỤC TIÊU: THPT CHUYÊN LƯƠNG THẾ VINH, NGÔ QUYỀN (ĐỒNG NAI) & THPT CHUYÊN VĨNH PHÚC, TRẦN PHÚ</h2>
+        <p>Lộ trình bứt phá năng lực dành cho 2 chị em (Lâm & Bơ): <strong>Toán 8.5+ | Văn 8.0+ | Anh 9.0+</strong> (Tổng: ≥ 25.5 Điểm)</p>
       </div>
       <div class="target-badges">
-        <span class="badge">Toán: 8.5 - 9.0</span>
-        <span class="badge" style="background: #f43f5e;">Văn: 7.0 - 7.5 (Cứu nguy)</span>
-        <span class="badge">Trọng tâm: 2 Môn Bộ GD&ĐT 2027</span>
+        <span class="badge" style="background: #0284c7;">Toán: 8.5 - 9.5</span>
+        <span class="badge" style="background: #f43f5e;">Văn: 7.5 - 8.5</span>
+        <span class="badge" style="background: #10b981;">Anh: 8.5 - 9.5+</span>
+        <span class="badge" style="background: #7c3aed;">Trường Chuyên & Top 1</span>
       </div>
     </div>
 
@@ -244,7 +350,7 @@
   </main>
 
   <footer>
-    <p>Hệ thống hỗ trợ ôn thi vào 10 THPT Trần Phú - Năm học 2026-2027 • Thiết kế tối ưu theo chuẩn GDPT mới</p>
+    <p>Hệ thống hỗ trợ ôn thi vào lớp 10 THPT - Trường Chuyên • Đấu trường học tập dành riêng cho 2 chị em: Lâm & Bơ • Năm học 2026-2027 (Đồng Nai - Vĩnh Phúc - Phú Thọ)</p>
   </footer>
 
   <script src="app.js"></script>

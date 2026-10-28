@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tự Động Tạo Đề Thi Vào 10 - THPT Trần Phú (Toán & Văn)</title>
+  <title>Tự Động Tạo Đề Thi Vào Lớp 10 THPT - Trường Chuyên (Lâm & Bơ)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
   <header class="header" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);">
     <div class="header-container">
       <div class="logo-area">
-        <h1>⚡ PHÒNG TẠO ĐỀ THI THỬ TỰ ĐỘNG VÀO 10</h1>
-        <p>Hệ thống tự động sinh đề thi ngẫu nhiên Toán & Ngữ văn theo chuẩn Bộ GD&ĐT 2026 - 2027</p>
+        <h1>⚡ PHÒNG TẠO ĐỀ THI VÀO LỚP 10 THPT - TRƯỜNG CHUYÊN</h1>
+        <p>Ngân hàng 230+ câu hỏi chuẩn Đồng Nai, Vĩnh Phúc, Phú Thọ • Đấu trường thi thử: Lâm & Bơ (2026 - 2027)</p>
       </div>
       <nav class="nav-links">
         <a href="index.html" class="nav-btn">🏠 Tổng Quan</a>
@@ -71,11 +71,23 @@
           <div>
             <h3 style="font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
               <span>🤖 BỘ TẠO ĐỀ THI TỰ ĐỘNG THÔNG MINH</span>
-              <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #0284c7;">2026-2027</span>
+              <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #0284c7;">230+ Câu Hỏi</span>
             </h3>
             <p style="font-size: 0.875rem; opacity: 0.85; margin-top: 0.25rem;">
-              Hệ thống sẽ tự động quét ngân hàng câu hỏi chuẩn GDPT mới, xáo trộn ngẫu nhiên và sinh đề thi có bấm giờ & tự chấm điểm.
+              Hệ thống tự động sinh đề theo ma trận Đồng Nai, Vĩnh Phúc & Chuyên Lương Thế Vinh, Chuyên Vĩnh Phúc, tự bấm giờ và so kè điểm số Lâm & Bơ.
             </p>
+          </div>
+        </div>
+
+        <!-- Chọn Thí Sinh Dự Thi (Lâm hoặc Bơ) -->
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; border: 1px solid rgba(255,255,255,0.15);">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-weight: 700; color: #facc15;">👤 THÍ SINH DỰ THI BÀI NÀY:</span>
+            <span id="currentActiveStudentBadge" style="background: white; color: #0284c7; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 14px; font-size: 0.88rem;">Lâm 👦 (Đang sẵn sàng)</span>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn" onclick="switchStudentProfile('Lam')" style="background: #38bdf8; color: #0f172a; font-weight: 800; padding: 0.4rem 0.85rem; font-size: 0.85rem;">👦 Lâm Thi</button>
+            <button class="btn" onclick="switchStudentProfile('Bo')" style="background: #f472b6; color: white; font-weight: 800; padding: 0.4rem 0.85rem; font-size: 0.85rem;">👧 Bơ Thi</button>
           </div>
         </div>
 
@@ -85,7 +97,10 @@
               1. CHỌN TRƯỜNG & NGUỒN ĐỀ THI:
             </label>
             <select id="examSchoolSelect" class="gen-select">
-              <option value="all">🏛️ Toàn bộ ngân hàng đề (Tất cả các trường)</option>
+              <option value="all">🏛️ Toàn bộ ngân hàng đề (Đồng Nai & Vĩnh Phúc & Phú Thọ)</option>
+              <option value="dongnai_so">🏛️ Sở GD&ĐT Đồng Nai (Đề chuẩn tuyển sinh)</option>
+              <option value="chuyen_ltv_dongnai">🏆 THPT Chuyên Lương Thế Vinh (Đồng Nai)</option>
+              <option value="tranbien">🏫 THPT Ngô Quyền & Trấn Biên (Biên Hòa - Đồng Nai)</option>
               <option value="vinhphuc_so">🏛️ Sở GD&ĐT Vĩnh Phúc & Phú Thọ (Đề chuẩn)</option>
               <option value="tranphu">🏫 Trường THPT Trần Phú (TP. Vĩnh Yên)</option>
               <option value="doanhung">🏫 Trường THPT Đoan Hùng (Phú Thọ)</option>
@@ -102,7 +117,7 @@
               <option value="toan">📐 Môn Toán 9 (Đại số, Hình học, Toán thực tế, BĐT)</option>
               <option value="van">📖 Môn Ngữ văn 9 (Đọc hiểu, Tiếng Việt, NLXH 200 chữ)</option>
               <option value="anh">📘 Môn Tiếng Anh 9 (Ngữ âm, Ngữ pháp, Đọc hiểu, Viết lại)</option>
-              <option value="chuyen">🏆 Đề Nâng Cao / Trường Chuyên (Toán & Anh Phân Loại)</option>
+              <option value="chuyen">🏆 Đề Nâng Cao / Trường Chuyên (Lương Thế Vinh & Vĩnh Phúc)</option>
               <option value="tonghop2">⚡ Đề Cốt Lõi 2 Môn: Toán + Văn (Bộ GD&ĐT 2027)</option>
               <option value="tonghop3">🎯 Đề Tổng Hợp 3 Môn: Toán + Văn + Anh</option>
             </select>
@@ -212,7 +227,7 @@
   </main>
 
   <footer>
-    <p>Hệ thống tự động tạo đề thi vào 10 THPT Trần Phú (Vĩnh Yên) • Chuẩn hóa theo mô hình exam.ktv3mien.com • Năm học 2026-2027</p>
+    <p>Hệ thống tự động tạo đề thi vào lớp 10 THPT - Trường Chuyên • Đấu trường ôn thi: Lâm & Bơ • Chuẩn hóa theo mô hình exam.ktv3mien.com • Năm học 2026-2027 (Đồng Nai - Vĩnh Phúc - Phú Thọ)</p>
   </footer>
 
   <script src="app.js"></script>
