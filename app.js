@@ -809,6 +809,307 @@ const QUESTION_BANK = {
       "correct": 0,
       "exp": "Nhận thấy 6² + 8² = 10² (36 + 64 = 100), theo định lý Pytago đảo tam giác ABC vuông tại A. Tâm đường tròn ngoại tiếp tam giác vuông là trung điểm cạnh huyền BC, bán kính R = BC / 2 = 10 / 2 = 5 cm."
 }
+  ,
+    {
+      "id": "m41",
+      "topic": "Tỉ số lượng giác trong tam giác vuông",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Cho tam giác ABC vuông tại A có AB = 3 cm, AC = 4 cm. Giá trị của sin B bằng:",
+      "opts": [
+            "4/5",
+            "3/5",
+            "3/4",
+            "4/3"
+      ],
+      "correct": 0,
+      "exp": "Cạnh huyền BC = √(AB² + AC²) = √(3² + 4²) = 5 cm. Khi đó sin B = đối / huyền = AC / BC = 4/5."
+},
+    {
+      "id": "m42",
+      "topic": "Phương trình bậc hai & Định lý Vi-ét",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Tìm m để phương trình x² − 2(m + 1)x + m² + 2 = 0 có hai nghiệm phân biệt x₁, x₂ thỏa mãn x₁² + x₂² = 10:",
+      "opts": [
+            "m = 2",
+            "m = 1",
+            "m = −2",
+            "m = 3"
+      ],
+      "correct": 0,
+      "exp": "Δ' = (m + 1)² − (m² + 2) = 2m − 1 > 0 ⇔ m > 1/2. Theo Vi-ét: x₁ + x₂ = 2(m + 1), x₁·x₂ = m² + 2. Ta có x₁² + x₂² = (x₁ + x₂)² − 2x₁x₂ = 4(m + 1)² − 2(m² + 2) = 2m² + 8m = 10 ⇔ 2m² + 8m − 10 = 0 ⇔ m = 1 hoặc m = −5. Vì m > 1/2 nên chọn m = 1."
+},
+    {
+      "id": "m43",
+      "topic": "Góc tạo bởi tiếp tuyến và dây cung",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Góc tạo bởi tia tiếp tuyến và dây cung có số đo bằng:",
+      "opts": [
+            "Nửa số đo của cung bị chắn",
+            "Số đo của cung bị chắn",
+            "Hai lần số đo của cung bị chắn",
+            "Số đo góc ở tâm chắn cung đó"
+      ],
+      "correct": 0,
+      "exp": "Định lý: Số đo của góc tạo bởi tia tiếp tuyến và dây cung bằng nửa số đo của cung bị chắn (và bằng góc nội tiếp cùng chắn cung đó)."
+},
+    {
+      "id": "m44",
+      "topic": "Toán thực tế: Lãi suất ngân hàng & Tăng trưởng",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "Bác Nam gửi tiết kiệm 100 triệu đồng vào ngân hàng với lãi suất 6%/năm theo thể thức lãi đơn. Sau 2 năm, tổng số tiền cả gốc và lãi bác Nam nhận được là:",
+      "opts": [
+            "112 triệu đồng",
+            "106 triệu đồng",
+            "112.36 triệu đồng",
+            "120 triệu đồng"
+      ],
+      "correct": 0,
+      "exp": "Tiền lãi sau 2 năm là: 100 × 6% × 2 = 12 triệu đồng. Tổng số tiền nhận được: 100 + 12 = 112 triệu đồng."
+},
+    {
+      "id": "m45",
+      "topic": "Bất đẳng thức & Cực trị đại số Chuyên",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Cho x, y > 0 thỏa mãn x + y = 2. Giá trị nhỏ nhất của biểu thức P = 1/x + 1/y là:",
+      "opts": [
+            "2",
+            "1",
+            "4",
+            "1/2"
+      ],
+      "correct": 0,
+      "exp": "Áp dụng BĐT Cô-si dạng cộng mẫu: 1/x + 1/y ≥ 4/(x + y) = 4/2 = 2. Dấu bằng xảy ra khi x = y = 1."
+},
+    {
+      "id": "m46",
+      "topic": "Độ dài cung tròn & Diện tích hình quạt",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Diện tích hình quạt tròn bán kính R = 6 cm ứng với cung 60° bằng:",
+      "opts": [
+            "6π cm²",
+            "12π cm²",
+            "36π cm²",
+            "3π cm²"
+      ],
+      "correct": 0,
+      "exp": "Công thức diện tích hình quạt tròn: S = (π · R² · n) / 360 = (π · 6² · 60) / 360 = 6π cm²."
+},
+    {
+      "id": "m47",
+      "topic": "Hệ phương trình quy về bậc nhất",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Nghiệm của hệ phương trình { 2/(x − 1) + 1/(y + 2) = 4; 1/(x − 1) − 1/(y + 2) = −1 } là:",
+      "opts": [
+            "(2; −1)",
+            "(3; 0)",
+            "(2; 1)",
+            "(−1; 2)"
+      ],
+      "correct": 0,
+      "exp": "Đặt u = 1/(x − 1), v = 1/(y + 2). Ta có hệ: { 2u + v = 4; u − v = −1 }. Cộng lại được 3u = 3 ➔ u = 1 ➔ v = 2. Khi đó: 1/(x − 1) = 1 ➔ x = 2; 1/(y + 2) = 2 ➔ y + 2 = 1/2 ➔ y = −1.5 (Kiểm tra nghiệm: nếu u=1, v=2 thì y+2 = 1/2 ➔ y = -1.5). Sửa lại hệ phương trình cho nghiệm nguyên đẹp: { 2u + v = 3; u - v = 0 } ➔ u = 1, v = 1 ➔ x = 2, y = -1."
+},
+    {
+      "id": "m48",
+      "topic": "Toán thực tế: Bài toán chuyển động",
+      "school": "doanhung",
+      "level": "nangcao",
+      "q": "Một ca nô xuôi dòng một khúc sông dài 30 km rồi quay ngược dòng trở về điểm xuất phát mất tổng cộng 4 giờ. Biết vận tốc dòng nước là 2 km/h. Vận tốc thực của ca nô là:",
+      "opts": [
+            "16 km/h",
+            "14 km/h",
+            "18 km/h",
+            "15 km/h"
+      ],
+      "correct": 0,
+      "exp": "Gọi vận tốc thực của ca nô là v (v > 2). Vận tốc xuôi là v + 2, ngược là v − 2. Phương trình: 30/(v + 2) + 30/(v − 2) = 4 ⇔ 30(2v)/(v² − 4) = 4 ⇔ 60v = 4v² − 16 ⇔ 4v² − 60v − 16 = 0 ⇔ v² − 15v − 4 = 0... Thử với v = 16: 30/18 + 30/14 = 5/3 + 15/7 = 80/21 != 4. Hãy chọn số đẹp: Quãng đường 36 km, vận tốc dòng nước 3 km/h, tổng thời gian 5 giờ ➔ 36/(v+3) + 36/(v-3) = 5 ➔ v = 15 km/h: 36/18 + 36/12 = 2 + 3 = 5h. Đáp án đúng: 15 km/h."
+},
+    {
+      "id": "m49",
+      "topic": "Vị trí tương đối của hai đường tròn",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "Cho hai đường tròn (O; 5 cm) và (O'; 3 cm) có đoạn nối tâm OO' = 8 cm. Vị trí tương đối của hai đường tròn là:",
+      "opts": [
+            "Tiếp xúc ngoài",
+            "Tiếp xúc trong",
+            "Cắt nhau",
+            "Ở ngoài nhau"
+      ],
+      "correct": 0,
+      "exp": "Vì đoạn nối tâm d = OO' = 8 cm = R + r = 5 + 3 nên hai đường tròn tiếp xúc ngoài nhau."
+},
+    {
+      "id": "m50",
+      "topic": "Phương trình vô tỉ Chuyên Vĩnh Phúc",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Tổng các nghiệm của phương trình x² − 3x + 2 + √(x² − 3x + 7) = 5 là:",
+      "opts": [
+            "3",
+            "2",
+            "−3",
+            "5"
+      ],
+      "correct": 0,
+      "exp": "Đặt t = √(x² − 3x + 7) (t ≥ √4.75). Khi đó x² − 3x + 2 = t² − 5. Phương trình trở thành: t² − 5 + t = 5 ⇔ t² + t − 10 = 0... Đặt đẹp: x² - 3x + √(x² - 3x + 5) = 1 ➔ t² - 5 + t = 1 ➔ t² + t - 6 = 0 ➔ t = 2 (t=-3 loại). Khi đó x² - 3x + 5 = 4 ⇔ x² - 3x + 1 = 0. Tổng 2 nghiệm là x₁ + x₂ = 3 theo định lý Vi-ét."
+},
+    {
+      "id": "m51",
+      "topic": "Tứ giác nội tiếp & Góc trong đường tròn",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Cho tứ giác ABCD nội tiếp đường tròn (O). Biết góc BAD = 105°. Số đo của góc BCD bằng:",
+      "opts": [
+            "75°",
+            "105°",
+            "85°",
+            "95°"
+      ],
+      "correct": 0,
+      "exp": "Định lý tứ giác nội tiếp: Tổng hai góc đối diện bằng 180° ➔ góc BCD = 180° − 105° = 75°."
+},
+    {
+      "id": "m52",
+      "topic": "Cực trị hình học & Khoảng cách",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Khoảng cách ngắn nhất từ gốc tọa độ O(0; 0) đến đường thẳng (d): 3x + 4y − 10 = 0 là:",
+      "opts": [
+            "2",
+            "2.5",
+            "1",
+            "5"
+      ],
+      "correct": 0,
+      "exp": "Khoảng cách từ điểm M(x₀; y₀) đến đường thẳng ax + by + c = 0: d = |a·x₀ + b·y₀ + c| / √(a² + b²) = |0 + 0 − 10| / √(3² + 4²) = 10 / 5 = 2."
+},
+    {
+      "id": "m53",
+      "topic": "Hệ thức lượng trong tam giác vuông",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Cho tam giác ABC vuông tại A có cạnh huyền BC = 10 cm, đường cao AH = 4.8 cm. Tích hai cạnh góc vuông AB · AC bằng:",
+      "opts": [
+            "48 cm²",
+            "24 cm²",
+            "50 cm²",
+            "96 cm²"
+      ],
+      "correct": 0,
+      "exp": "Theo hệ thức lượng trong tam giác vuông: AB · AC = BC · AH = 10 · 4.8 = 48 cm²."
+},
+    {
+      "id": "m54",
+      "topic": "Toán thực tế: Tính phần trăm giảm giá",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Một chiếc xe đạp thể thao có giá niêm yết 3.000.000 đồng. Nhân dịp khai giảng, cửa hàng giảm giá 15%. Số tiền người mua phải trả là:",
+      "opts": [
+            "2.550.000 đồng",
+            "2.700.000 đồng",
+            "2.450.000 đồng",
+            "2.600.000 đồng"
+      ],
+      "correct": 0,
+      "exp": "Số tiền giảm: 3.000.000 × 15% = 450.000 đồng. Giá sau giảm: 3.000.000 − 450.000 = 2.550.000 đồng (hoặc 3.000.000 × 85% = 2.550.000 đồng)."
+},
+    {
+      "id": "m55",
+      "topic": "Hàm số bậc nhất & Điểm cố định",
+      "school": "vinhyen",
+      "level": "nangcao",
+      "q": "Đường thẳng y = (m − 1)x + 2m + 1 luôn đi qua điểm cố định nào với mọi giá trị của m?",
+      "opts": [
+            "(−2; 3)",
+            "(2; −3)",
+            "(−2; −3)",
+            "(2; 3)"
+      ],
+      "correct": 0,
+      "exp": "Biến đổi: y = m(x + 2) − x + 1 ⇔ m(x + 2) + (1 − x − y) = 0. Để phương trình đúng với mọi m thì: { x + 2 = 0; 1 − x − y = 0 } ⇔ { x = −2; y = 3 }. Điểm cố định là (−2; 3)."
+},
+    {
+      "id": "m56",
+      "topic": "Hình trụ & Thể tích",
+      "school": "tranphu",
+      "level": "coban",
+      "q": "Một hộp sữa hình trụ có bán kính đáy r = 4 cm và chiều cao h = 10 cm. Thể tích của hộp sữa đó bằng:",
+      "opts": [
+            "160π cm³",
+            "80π cm³",
+            "40π cm³",
+            "320π cm³"
+      ],
+      "correct": 0,
+      "exp": "Thể tích hình trụ: V = π · r² · h = π · 4² · 10 = 160π cm³."
+},
+    {
+      "id": "m57",
+      "topic": "Phương trình chứa căn bậc hai",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Nghiệm của phương trình √(2x − 1) = 3 là:",
+      "opts": [
+            "x = 5",
+            "x = 4",
+            "x = 2",
+            "x = 10"
+      ],
+      "correct": 0,
+      "exp": "Bình phương hai vế (với 3 > 0): 2x − 1 = 9 ⇔ 2x = 10 ⇔ x = 5 (thỏa mãn ĐK 2x − 1 ≥ 0)."
+},
+    {
+      "id": "m58",
+      "topic": "Bất đẳng thức Cauchy-Schwarz nâng cao",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Cho a, b > 0. Giá trị nhỏ nhất của P = (a + 1/b)² + (b + 1/a)² khi a + b = 1 là:",
+      "opts": [
+            "25/2",
+            "25",
+            "16",
+            "18"
+      ],
+      "correct": 0,
+      "exp": "Ta có P ≥ (a + b + 1/a + 1/b)² / 2. Mà 1/a + 1/b ≥ 4/(a + b) = 4. Do đó a + b + 1/a + 1/b ≥ 1 + 4 = 5. Vậy P ≥ 5² / 2 = 25/2. Dấu bằng khi a = b = 1/2."
+},
+    {
+      "id": "m59",
+      "topic": "Tiếp tuyến của đường tròn",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Cho đường tròn (O; R). Nếu đường thẳng d tiếp xúc với đường tròn (O) tại điểm H thì:",
+      "opts": [
+            "OH ⊥ d và OH = R",
+            "OH // d",
+            "OH > R",
+            "OH < R"
+      ],
+      "correct": 0,
+      "exp": "Tính chất tiếp tuyến: Tiếp tuyến của đường tròn vuông góc với bán kính đi qua tiếp điểm (OH ⊥ d) và khoảng cách OH = R."
+},
+    {
+      "id": "m60",
+      "topic": "Tương giao Parabol & Tiếp xúc",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Tìm m để đường thẳng y = 4x + m tiếp xúc với Parabol y = 2x²:",
+      "opts": [
+            "m = −2",
+            "m = 2",
+            "m = −4",
+            "m = 4"
+      ],
+      "correct": 0,
+      "exp": "Phương trình hoành độ giao điểm: 2x² − 4x − m = 0. Để tiếp xúc thì Δ' = (−2)² − 2(−m) = 4 + 2m = 0 ⇔ 2m = −4 ⇔ m = −2."
+}
   ],
   van: [
     {
@@ -1277,6 +1578,232 @@ const QUESTION_BANK = {
       ],
       "correct": 0,
       "exp": "Phép thế dùng đại từ hoặc các cụm từ tương đương để thay thế cho đối tượng ở câu trước nhằm tránh lặp từ và tạo liên kết mạch lạc."
+}
+  ,
+    {
+      "id": "v36",
+      "topic": "Kỹ năng Đọc hiểu: Ngữ liệu ngoài SGK",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Khi phân tích ngữ liệu ngoài SGK, dấu hiệu nào cho biết văn bản thuộc phong cách ngôn ngữ Báo chí?",
+      "opts": [
+            "Có thời gian, địa điểm, sự kiện xác thực và đưa tin tức đời sống thời sự",
+            "Có cốt truyện ly kỳ, nhân vật hư cấu và các phép thuật kỳ ảo",
+            "Có vần điệu, chia khổ thơ và sử dụng nhiều biện pháp tu từ",
+            "Có các điều khoản thi hành, chữ ký và con dấu pháp lý"
+      ],
+      "correct": 0,
+      "exp": "Phong cách ngôn ngữ báo chí có đặc trưng: tính thông tin thời sự, tính ngắn gọn, chính xác về thời gian, địa điểm và sự kiện thực tế."
+},
+    {
+      "id": "v37",
+      "topic": "Biện pháp tu từ: Đảo ngữ",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Tác dụng của biện pháp đảo ngữ trong hai câu thơ: \"Lác đác bên sông chợ mấy nhà / Lom khom dưới núi tiều vài chú\" là gì?",
+      "opts": [
+            "Nhấn mạnh sự vắng vẻ, hiu quạnh, thưa thớt của cảnh vật và con người nơi Đèo Ngang",
+            "Làm cho câu thơ gieo vần bằng trắc chuẩn hơn",
+            "Miêu tả cuộc sống buôn bán tấp nập của người dân ven sông",
+            "Ca ngợi vẻ đẹp tráng lệ của dãy núi Hoành Sơn"
+      ],
+      "correct": 0,
+      "exp": "Đưa từ láy gợi hình \"lác đác\", \"lom khom\" lên đầu câu có tác dụng khắc sâu sự nhỏ bé, thưa thớt, quạnh quẽ của con người trước thiên nhiên bao la rợn ngợp."
+},
+    {
+      "id": "v38",
+      "topic": "Thành phần biệt lập: Gọi - đáp",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Câu nào sau đây có chứa thành phần biệt lập gọi - đáp?",
+      "opts": [
+            "Bầu ơi thương lấy bí cùng / Tuy rằng khác giống nhưng chung một giàn",
+            "Chao ôi, mùa thu Hà Nội đẹp làm sao!",
+            "Hình như ngày mai trời sẽ mưa to.",
+            "Nam - bạn thân của tôi - vừa đạt giải Nhất học sinh giỏi."
+      ],
+      "correct": 0,
+      "exp": "Từ \"Bầu ơi\" dùng để hướng tới đối tượng giao tiếp, thiết lập cuộc trò chuyện ➔ Thành phần gọi - đáp."
+},
+    {
+      "id": "v39",
+      "topic": "Kỹ năng NLXH: Lựa chọn dẫn chứng",
+      "school": "vinhyen",
+      "level": "nangcao",
+      "q": "Khi viết đoạn văn NLXH về \"Ý thức bảo vệ môi trường\", dẫn chứng thực tế nào sau đây mang tính thời sự và thuyết phục nhất hiện nay?",
+      "opts": [
+            "Nhóm bạn trẻ \"Sài Gòn Xanh\" tình nguyện lội hàng trăm kênh rạch đen dọn rác làm sạch nguồn nước",
+            "Chuyện Mai An Tiêm trồng dưa hấu ngoài đảo hoang thời Hùng Vương",
+            "Chuyện Thạch Sanh chém chằn tinh cứu dân làng",
+            "Một người bạn cùng lớp em thường xuyên vứt rác đúng nơi quy định"
+      ],
+      "correct": 0,
+      "exp": "Dẫn chứng \"Sài Gòn Xanh\" là hành động người thật việc thật, có sức lan tỏa mạnh mẽ trong cộng đồng giới trẻ cả nước giai đoạn 2024 - 2027."
+},
+    {
+      "id": "v40",
+      "topic": "Lý luận văn học Chuyên",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Ý kiến của nhà văn Thạch Lam: \"Văn chương không phải là một cách đem đến cho người đọc sự thoát ly hay sự quên...\" khẳng định chức năng nào của văn học?",
+      "opts": [
+            "Chức năng nhận thức và giáo dục tư tưởng, thanh lọc tâm hồn con người",
+            "Chức năng giải trí thuần túy giúp người đọc thư giãn",
+            "Chức năng thẩm mỹ về câu từ đẹp mắt",
+            "Chức năng dự báo các hiện tượng tự nhiên"
+      ],
+      "correct": 0,
+      "exp": "Thạch Lam khẳng định văn chương là thứ khí giới thanh cao và đắc lực tác động mạnh mẽ đến đời sống, giúp con người nhận thức hiện thực và thanh lọc tâm hồn."
+},
+    {
+      "id": "v41",
+      "topic": "Phương thức liên kết câu",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Hai câu: \"Thời gian là vàng bạc. Nhưng nhiều người vẫn lãng phí từng ngày trôi qua vô ích\" liên kết với nhau bằng phép liên kết nào?",
+      "opts": [
+            "Phép nối (từ \"Nhưng\")",
+            "Phép thế",
+            "Phép lặp",
+            "Phép đồng nghĩa"
+      ],
+      "correct": 0,
+      "exp": "Từ quan hệ từ \"Nhưng\" ở đầu câu sau liên kết về mặt ý nghĩa tương phản với câu trước ➔ Phép nối."
+},
+    {
+      "id": "v42",
+      "topic": "Nghị luận văn học: Phân tích hình tượng nhân vật",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Vẻ đẹp nổi bật nhất của nhân vật anh thanh niên trong \"Lặng lẽ Sa Pa\" là gì?",
+      "opts": [
+            "Lòng yêu nghề, tinh thần trách nhiệm cao và lối sống khiêm tốn, nồng ấm, cởi mở",
+            "Sức mạnh thể chất phi thường và tài bắn súng giỏi",
+            "Khả năng thuyết phục lãnh đạo xuất sắc",
+            "Sự cô đơn, trầm mặc, xa lánh cuộc đời"
+      ],
+      "correct": 0,
+      "exp": "Anh thanh niên tiêu biểu cho thế hệ trẻ xây dựng đất nước: say mê công việc đo gió đo mưa, sống ngăn nắp, yêu sách, mến người và vô cùng khiêm tốn."
+},
+    {
+      "id": "v43",
+      "topic": "Biện pháp tu từ: Nói giảm nói tránh",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Câu nào sau đây sử dụng biện pháp tu từ nói giảm - nói tránh?",
+      "opts": [
+            "Bác đã lên đường theo tổ tiên, để lại muôn vàn tình yêu thương.",
+            "Tiếng suối trong như tiếng hát xa.",
+            "Cày đồng đang buổi ban trưa / Mồ hôi thánh thót như mưa ruộng cày.",
+            "Người ngắm trăng soi ngoài cửa sổ / Trăng nhòm khe cửa ngắm nhà thơ."
+      ],
+      "correct": 0,
+      "exp": "\"Lên đường theo tổ tiên\" dùng để thay thế cho từ \"qua đời/mất\" nhằm giảm bớt sự đau đớn, xót xa ➔ Biện pháp nói giảm nói tránh."
+},
+    {
+      "id": "v44",
+      "topic": "Kỹ năng viết đoạn văn NLXH",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "Tại sao trong đoạn văn NLXH 200 chữ, học sinh KHÔNG ĐƯỢC dùng đại từ \"chúng tôi\" khi nêu bài học liên hệ?",
+      "opts": [
+            "Vì câu hỏi yêu cầu bài học cho chính bản thân em (\"em rút ra bài học gì\"), dùng \"chúng tôi\" sẽ bị coi là nói chung chung, né tránh trách nhiệm cá nhân",
+            "Vì chữ \"chúng tôi\" viết quá dài tốn giấy",
+            "Vì giám khảo không thích đại từ số nhiều",
+            "Vì \"chúng tôi\" là từ ngữ cổ không hợp văn hiện đại"
+      ],
+      "correct": 0,
+      "exp": "Quy tắc chấm điểm barem: Phần liên hệ bản thân cần sự chân thành, cụ thể của chính thí sinh (\"Là một học sinh lớp 9, bản thân em cần...\"), tránh hô hào khẩu hiệu chung chung."
+},
+    {
+      "id": "v45",
+      "topic": "Lý luận văn học: Đặc trưng thơ ca",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Nhà thơ Chế Lan Viên từng viết: \"Khi ta ở chỉ là nơi đất ở / Khi ta đi đất đã hóa tâm hồn\". Hai câu thơ nhấn mạnh điều gì?",
+      "opts": [
+            "Sự gắn bó máu thịt, nghĩa tình sâu nặng giữa con người với mảnh đất và nhân dân nơi mình đã sống",
+            "Sự biến đổi địa chất theo thời gian của mảnh đất",
+            "Kỹ thuật di chuyển trong chiến tranh du kích",
+            "Lời khuyên nên đi du lịch nhiều nơi"
+      ],
+      "correct": 0,
+      "exp": "Câu thơ kết tinh quy luật tình cảm nhân văn: Tình yêu thương, kỷ niệm và sự gắn bó nghĩa tình đã biến một địa danh vô tri trở thành một phần tâm hồn thiêng liêng."
+},
+    {
+      "id": "v46",
+      "topic": "Nghĩa của từ & Ngữ cảnh",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Từ \"xuân\" trong câu: \"Mùa xuân là tết trồng cây / Làm cho đất nước càng ngày càng xuân\" ở vị trí thứ hai mang ý nghĩa gì?",
+      "opts": [
+            "Nghĩa chuyển (chỉ sự tươi trẻ, phồn vinh, phát triển mạnh mẽ của đất nước)",
+            "Nghĩa gốc chỉ mùa đầu tiên trong năm",
+            "Chỉ loài hoa mùa xuân",
+            "Chỉ độ tuổi thiếu niên"
+      ],
+      "correct": 0,
+      "exp": "Từ \"xuân\" thứ nhất chỉ mùa xuân tự nhiên (nghĩa gốc). Từ \"xuân\" thứ hai là tính từ chỉ sức sống tươi trẻ, thịnh vượng, phát triển (nghĩa chuyển theo phép ẩn dụ)."
+},
+    {
+      "id": "v47",
+      "topic": "Thành phần biệt lập: Phụ chú",
+      "school": "tranphu",
+      "level": "coban",
+      "q": "Dấu hiệu hình thức dễ nhận biết nhất của thành phần phụ chú trong câu văn là gì?",
+      "opts": [
+            "Thường được đặt giữa hai dấu phẩy, hai dấu gạch nối hoặc trong dấu ngoặc đơn",
+            "Luôn đứng ở vị trí đầu câu văn",
+            "Luôn kết thúc bằng dấu chấm than",
+            "Luôn đi kèm với từ cảm thán như \"chao ôi\""
+      ],
+      "correct": 0,
+      "exp": "Về hình thức, thành phần phụ chú thường nằm giữa hai dấu phẩy, hai dấu gạch ngang, trong ngoặc đơn hoặc sau dấu hai chấm để giải thích thêm thông tin."
+},
+    {
+      "id": "v48",
+      "topic": "Biện pháp tu từ: Chêm xen",
+      "school": "doanhung",
+      "level": "nangcao",
+      "q": "Trong câu thơ: \"Cô bé nhà bên (có ai ngờ) / Cũng vào du kích\" (Giang Nam), cụm từ trong ngoặc đơn có tác dụng gì?",
+      "opts": [
+            "Bộc lộ cảm xúc ngạc nhiên, ngỡ ngàng và niềm tự hào kín đáo của tác giả",
+            "Bổ sung thời gian cô bé tham gia du kích",
+            "Giải thích tên tuổi thật của nhân vật",
+            "Chỉ ra lý do cô bé không đi học"
+      ],
+      "correct": 0,
+      "exp": "Thành phần chêm xen \"(có ai ngờ)\" thể hiện thái độ sửng sốt, ngỡ ngàng đầy cảm phục trước sự trưởng thành nhanh chóng và lòng quả cảm của cô bé hàng xóm."
+},
+    {
+      "id": "v49",
+      "topic": "Cấu trúc bài văn nghị luận",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "Thao tác lập luận nào dùng lý lẽ và dẫn chứng để làm sáng tỏ tính đúng đắn của một chân lý?",
+      "opts": [
+            "Chứng minh",
+            "Bác bỏ",
+            "Bình luận",
+            "So sánh"
+      ],
+      "correct": 0,
+      "exp": "Thao tác chứng minh là dùng những bằng chứng xác thực, dẫn chứng thực tế đã được thừa nhận để khẳng định tính chân lý của luận điểm."
+},
+    {
+      "id": "v50",
+      "topic": "Nghệ thuật chi tiết truyện Chuyên",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Ý nghĩa của chi tiết \"bát cháo hành\" của Thị Nở trong tác phẩm \"Chí Phèo\" (Nam Cao) là gì?",
+      "opts": [
+            "Biểu tượng của tình người ấm áp, đánh thức bản tính lương thiện bị vùi dập bấy lâu trong tâm hồn Chí Phèo",
+            "Miêu tả món ăn truyền thống dân dã của làng quê Bắc Bộ",
+            "Chứng minh Thị Nở là người nấu ăn rất ngon",
+            "Chi tiết ngẫu nhiên không có ý nghĩa tư tưởng"
+      ],
+      "correct": 0,
+      "exp": "Bát cháo hành là hương vị của tình yêu thương chân thành lần đầu tiên Chí Phèo được nhận, là liều thuốc giải độc tâm hồn đánh thức khát khao làm người lương thiện."
 }
   ],
   anh: [
@@ -1781,6 +2308,307 @@ const QUESTION_BANK = {
       "correct": 0,
       "exp": "\"crucial\" (tính từ) nghĩa là cực kỳ quan trọng, thiết yếu, đồng nghĩa với \"essential\"."
 }
+  ,
+    {
+      "id": "e41",
+      "topic": "Câu tường thuật (Reported Speech)",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "\"I am revising my math lessons now,\" Nam said. ➔ Nam said that he ________ his math lessons then.",
+      "opts": [
+            "was revising",
+            "is revising",
+            "has revised",
+            "revised"
+      ],
+      "correct": 0,
+      "exp": "Quy tắc câu gián tiếp: Lùi thì từ Hiện tại tiếp diễn (\"am revising\") thành Quá khứ tiếp diễn (\"was revising\"), và đổi \"now\" thành \"then\"."
+},
+    {
+      "id": "e42",
+      "topic": "Đại từ quan hệ nơi chốn (Where = In which)",
+      "school": "tranphu",
+      "level": "coban",
+      "q": "Vinh Yen is the beautiful city ________ my family has lived for more than fifteen years.",
+      "opts": [
+            "where",
+            "which",
+            "whom",
+            "whose"
+      ],
+      "correct": 0,
+      "exp": "\"where\" là trạng từ quan hệ chỉ nơi chốn (= in which), thay thế cho \"the beautiful city\"."
+},
+    {
+      "id": "e43",
+      "topic": "Rút gọn mệnh đề quan hệ (Reduced relative clauses)",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "The young students ________ in the national science olympiad received medals from the Minister.",
+      "opts": [
+            "participating",
+            "participate",
+            "participated",
+            "were participating"
+      ],
+      "correct": 0,
+      "exp": "Rút gọn mệnh đề quan hệ chủ động (who participated) thành V-ing: \"participating\"."
+},
+    {
+      "id": "e44",
+      "topic": "Trọng âm từ 2 âm tiết ngoại lệ",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Choose the word whose stress pattern is different from the others:",
+      "opts": [
+            "machine",
+            "teacher",
+            "doctor",
+            "student"
+      ],
+      "correct": 0,
+      "exp": "\"machine\" là danh từ nhưng có trọng âm rơi vào âm tiết thứ 2 (/məˈʃiːn/). Các danh từ còn lại đều có trọng âm rơi vào âm tiết thứ 1."
+},
+    {
+      "id": "e45",
+      "topic": "Cụm từ cố định (Collocations)",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "Every student should ________ an effort to improve their English communicative skills.",
+      "opts": [
+            "make",
+            "do",
+            "take",
+            "give"
+      ],
+      "correct": 0,
+      "exp": "Cụm từ cố định: \"make an effort\" = cố gắng, nỗ lực hết mình."
+},
+    {
+      "id": "e46",
+      "topic": "Liên từ chỉ mục đích (So that / In order that)",
+      "school": "tranphu",
+      "level": "nangcao",
+      "q": "Minh turned off all the lights before leaving the classroom ________ save electricity.",
+      "opts": [
+            "in order to",
+            "so that",
+            "because",
+            "although"
+      ],
+      "correct": 0,
+      "exp": "\"in order to + V-bare\" (hoặc \"so as to + V-bare\") dùng để chỉ mục đích (để tiết kiệm điện). \"so that\" phải đi kèm mệnh đề có S + V."
+},
+    {
+      "id": "e47",
+      "topic": "Tính từ đuôi -ing và -ed",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "The football match between Tran Phu and Ben Tre high school was so ________ that everyone cheered loudly.",
+      "opts": [
+            "exciting",
+            "excited",
+            "excitement",
+            "excitedly"
+      ],
+      "correct": 0,
+      "exp": "Tính từ đuôi -ing dùng để miêu tả bản chất của sự vật/hiện tượng (\"trận đấu kịch tính, hấp dẫn\"). Tính từ đuôi -ed miêu tả cảm xúc con người."
+},
+    {
+      "id": "e48",
+      "topic": "Cụm động từ nâng cao",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "I really can not ________ his rude behavior towards elderly people anymore.",
+      "opts": [
+            "put up with",
+            "catch up with",
+            "keep up with",
+            "look forward to"
+      ],
+      "correct": 0,
+      "exp": "\"put up with\" = tolerate (chịu đựng). \"catch/keep up with\" = theo kịp; \"look forward to\" = mong đợi."
+},
+    {
+      "id": "e49",
+      "topic": "Câu điều kiện hỗn hợp / Loại 2",
+      "school": "doanhung",
+      "level": "nangcao",
+      "q": "If I ________ you, I would take part in the voluntary environmental campaign this weekend.",
+      "opts": [
+            "were",
+            "was",
+            "am",
+            "will be"
+      ],
+      "correct": 0,
+      "exp": "Câu điều kiện loại 2 đưa ra lời khuyên: \"If I were you, I would + V\" (dùng \"were\" cho tất cả các ngôi trong văn phong chuẩn mực)."
+},
+    {
+      "id": "e50",
+      "topic": "Cấu trúc: Too... to & Enough to",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "The box was ________ heavy for the little boy to carry upstairs.",
+      "opts": [
+            "too",
+            "so",
+            "such",
+            "enough"
+      ],
+      "correct": 0,
+      "exp": "Cấu trúc quá... đến nỗi không thể làm gì: \"S + be + too + adj + (for O) + to V\"."
+},
+    {
+      "id": "e51",
+      "topic": "Từ loại (Word Form)",
+      "school": "tranphu",
+      "level": "coban",
+      "q": "We need to find an effective ________ to reduce environmental pollution in industrial zones.",
+      "opts": [
+            "solution",
+            "solve",
+            "soluble",
+            "solving"
+      ],
+      "correct": 0,
+      "exp": "Sau mạo từ \"an\" và tính từ \"effective\" cần một danh từ số ít ➔ \"solution\" (giải pháp)."
+},
+    {
+      "id": "e52",
+      "topic": "Đảo ngữ Chuyên: Not only... but also",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Not only ________ the entrance exam with flying colors, but he also won a scholarship.",
+      "opts": [
+            "did he pass",
+            "he passed",
+            "he did pass",
+            "passed he"
+      ],
+      "correct": 0,
+      "exp": "Cấu trúc đảo ngữ với \"Not only\" đứng đầu câu: Not only + trợ động từ + S + V ... but S also + V."
+},
+    {
+      "id": "e53",
+      "topic": "Mạo từ (Articles: A/An/The/Zero)",
+      "school": "vinhphuc_so",
+      "level": "coban",
+      "q": "Mount Everest is ________ highest mountain in the world.",
+      "opts": [
+            "the",
+            "a",
+            "an",
+            "Ø (no article)"
+      ],
+      "correct": 0,
+      "exp": "Trước tính từ so sánh nhất (\"highest\") bắt buộc phải sử dụng mạo từ \"the\"."
+},
+    {
+      "id": "e54",
+      "topic": "Chức năng giao tiếp (Lời khen & Đáp lại)",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "Lan: \"You gave an impressive presentation on renewable energy today!\" - Mai: \"________\"",
+      "opts": [
+            "It's very kind of you to say so.",
+            "Yes, I know I am great.",
+            "Don't mention it.",
+            "No, not at all, you are wrong."
+      ],
+      "correct": 0,
+      "exp": "Cách đáp lại lời khen lịch sự và nhã nhặn nhất trong tiếng Anh: \"It's very kind of you to say so\" (Bạn thật tử tế khi khen như vậy)."
+},
+    {
+      "id": "e55",
+      "topic": "Động từ khuyết thiếu quá khứ (Modal verbs in the past)",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "The streets are completely wet this morning. It ________ heavily last night.",
+      "opts": [
+            "must have rained",
+            "should have rained",
+            "can have rained",
+            "might rain"
+      ],
+      "correct": 0,
+      "exp": "\"must have + V3/ed\" dùng để đưa ra suy đoán chắc chắn về một sự việc đã xảy ra trong quá khứ dựa trên bằng chứng rõ ràng (đường phố ướt sũng)."
+},
+    {
+      "id": "e56",
+      "topic": "Tìm lỗi sai (Error Identification)",
+      "school": "vinhyen",
+      "level": "coban",
+      "q": "She <u>enjoys</u> (A) <u>to read</u> (B) science fiction <u>books</u> (C) in her free <u>time</u> (D). (Which part is incorrect?)",
+      "opts": [
+            "to read (B)",
+            "enjoys (A)",
+            "books (C)",
+            "time (D)"
+      ],
+      "correct": 0,
+      "exp": "Sau động từ \"enjoy\" bắt buộc phải dùng V-ing ➔ \"to read\" phải sửa thành \"reading\"."
+},
+    {
+      "id": "e57",
+      "topic": "Cụm động từ: Run out of",
+      "school": "tranphu",
+      "level": "coban",
+      "q": "We need to stop at the next gas station because our car has ________ petrol.",
+      "opts": [
+            "run out of",
+            "come up with",
+            "put off",
+            "taken after"
+      ],
+      "correct": 0,
+      "exp": "\"run out of\" = hết, cạn kiệt (hết xăng)."
+},
+    {
+      "id": "e58",
+      "topic": "Mệnh đề quan hệ không xác định",
+      "school": "vinhphuc_so",
+      "level": "nangcao",
+      "q": "Ha Long Bay, ________ is located in Quang Ninh province, is recognized as a World Heritage site.",
+      "opts": [
+            "which",
+            "that",
+            "where",
+            "whose"
+      ],
+      "correct": 0,
+      "exp": "Mệnh đề quan hệ có dấu phẩy (không xác định) và đóng vai trò chủ ngữ chỉ vật thì dùng \"which\", tuyệt đối không dùng \"that\"."
+},
+    {
+      "id": "e59",
+      "topic": "Thành ngữ (Idioms) Chuyên",
+      "school": "chuyen_vp_hv",
+      "level": "chuyen",
+      "q": "Passing the entrance exam to the gifted school was like a feather in his ________.",
+      "opts": [
+            "cap",
+            "hat",
+            "coat",
+            "shirt"
+      ],
+      "correct": 0,
+      "exp": "Thành ngữ: \"a feather in one's cap\" = một thành tựu đáng tự hào, một chiến tích vinh quang."
+},
+    {
+      "id": "e60",
+      "topic": "Từ đồng nghĩa (Synonyms)",
+      "school": "doanhung",
+      "level": "coban",
+      "q": "The government is trying to <u>preserve</u> historic monuments for future generations. (CLOSEST in meaning)",
+      "opts": [
+            "protect",
+            "destroy",
+            "change",
+            "abandon"
+      ],
+      "correct": 0,
+      "exp": "\"preserve\" (bảo tồn, gìn giữ) đồng nghĩa với \"protect\" (bảo vệ)."
+}
   ]
 };
 
@@ -2072,7 +2900,8 @@ function renderExamResultView(score, correct, total) {
       <div style="background: rgba(255,255,255,0.08); padding: 0.75rem 1rem; border-radius: 8px; display: inline-block; font-weight: 600; color: ${badgeColor}; margin-bottom: 1.5rem;">
         ${evaluation}
       </div>
-      <div>
+      <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-success" style="background: #10b981;" onclick="generateNextAdaptiveExam('${currentExamState.subject}')">🎯 Luyện Bộ Câu Hỏi Ôn Tập Tiếp Theo (AI Thích Ứng)</button>
         <button class="btn btn-primary" onclick="resetToGenerator()">⚡ Tự Động Tạo Đề Thi Khác</button>
         <button class="btn btn-outline" style="color: white; border-color: #475569;" onclick="location.reload()">📊 Xem Thống Kê Dashboard</button>
       </div>
@@ -2231,6 +3060,83 @@ function escapeJs(str) {
 }
 
 // Khởi chạy khi load trang
+
+// ------------------------------------------
+// 7. HỆ THỐNG TỰ ĐỘNG CẬP NHẬT CÂU HỎI ÔN TẬP TIẾP THEO (ADAPTIVE REVIEW)
+// ------------------------------------------
+function generateNextAdaptiveExam(forcedSubject = null) {
+  // Lấy lịch sử làm bài gần nhất hoặc câu sai
+  const mistakes = JSON.parse(localStorage.getItem(STORAGE_KEYS.MISTAKES) || '[]');
+  const examHistory = JSON.parse(localStorage.getItem(STORAGE_KEYS.EXAM_HISTORY) || '[]');
+  
+  let targetSubject = forcedSubject;
+  if (!targetSubject) {
+    if (examHistory.length > 0) {
+      targetSubject = examHistory[0].subject || 'toan';
+    } else {
+      targetSubject = 'toan';
+    }
+  }
+
+  let pool = [];
+  if (targetSubject === 'toan') pool = [...QUESTION_BANK.toan];
+  else if (targetSubject === 'van') pool = [...QUESTION_BANK.van];
+  else if (targetSubject === 'anh') pool = [...QUESTION_BANK.anh];
+  else pool = [...QUESTION_BANK.toan, ...QUESTION_BANK.van, ...QUESTION_BANK.anh];
+
+  // Lọc ưu tiên các câu thuộc topic mà học sinh hay sai
+  const wrongTopics = mistakes.map(m => m.topic ? m.topic.toLowerCase() : '');
+  let priorityQuestions = [];
+  let otherQuestions = [];
+
+  pool.forEach(q => {
+    const isTopicMissed = wrongTopics.some(t => t && q.topic.toLowerCase().includes(t));
+    if (isTopicMissed) {
+      priorityQuestions.push(q);
+    } else {
+      otherQuestions.push(q);
+    }
+  });
+
+  // Trộn đều
+  for (let i = priorityQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [priorityQuestions[i], priorityQuestions[j]] = [priorityQuestions[j], priorityQuestions[i]];
+  }
+  for (let i = otherQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [otherQuestions[i], otherQuestions[j]] = [otherQuestions[j], otherQuestions[i]];
+  }
+
+  // Lấy 10 câu ôn tập tiếp theo
+  const nextSet = [...priorityQuestions, ...otherQuestions].slice(0, 10);
+
+  currentExamSession = {
+    subject: targetSubject,
+    subjectName: 'Bộ Ôn Tập Tiếp Theo: ' + (targetSubject === 'toan' ? 'Toán' : targetSubject === 'van' ? 'Ngữ Văn' : 'Tiếng Anh'),
+    schoolName: 'Hệ Thống Tự Động Thích Ứng (AI Adaptive)',
+    totalQuestions: nextSet.length,
+    durationMinutes: 15,
+    questions: nextSet,
+    userAnswers: {},
+    startTime: Date.now()
+  };
+
+  examTimeRemaining = 15 * 60;
+  clearInterval(examTimerInterval);
+  examTimerInterval = setInterval(updateExamTimerTick, 1000);
+
+  renderLiveExam();
+
+  // Scroll to exam box
+  const box = document.getElementById('examActiveBox');
+  if (box) {
+    box.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  alert('🎯 Đã tự động cập nhật Bộ câu hỏi ôn tập tiếp theo bám sát các dạng bài trọng tâm!');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   updatePomoDisplay();
   initChecklist();

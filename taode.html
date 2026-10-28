@@ -137,9 +137,14 @@
           <div style="font-size: 0.85rem; color: #94a3b8;">
             💡 <em>Mẹo: Con nên tạo 1 đề 10 câu khởi động vào đầu mỗi buổi tối trước khi làm bài tập trên lớp!</em>
           </div>
-          <button class="btn-generate" onclick="generateAutoExam()">
-            <span>⚡ Bắt Đầu Tạo Đề & Vào Phòng Thi Ngay</span>
-          </button>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-success" onclick="generateNextAdaptiveExam()" style="background: #059669; font-weight: 700; padding: 0.75rem 1.25rem; border-radius: 8px; border: none; color: white; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🎯 Bộ Ôn Tập Tiếp Theo (AI Thích Ứng)</span>
+            </button>
+            <button class="btn-generate" onclick="generateAutoExam()">
+              <span>⚡ Bắt Đầu Tạo Đề & Vào Phòng Thi</span>
+            </button>
+          </div>
         </div>
       </div>
 
