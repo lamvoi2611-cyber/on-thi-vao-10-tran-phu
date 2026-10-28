@@ -13,6 +13,11 @@ const STORAGE_KEYS = {
   DUEL_BO: 'lop9_duel_stats_bo'
 };
 
+const CANDIDATES = {
+  Lam: { name: 'Lam', displayName: 'Lâm 👦', role: 'Chiến Binh Quyết Tâm' },
+  Bo: { name: 'Bo', displayName: 'Bơ 👧', role: 'Chiến Binh Thông Thái' }
+};
+
 // Âm thanh Web Audio API
 function playBeep(type = 'success') {
   try {
@@ -3745,7 +3750,10 @@ function scrollToQuestion(idx) {
 
 // Nộp bài thi và chấm điểm
 function submitLiveExam() {
-  if (currentExamState.timerInterval) clearInterval(currentExamState.timerInterval);
+  if (currentExamState.timerInterval) {
+    clearInterval(currentExamState.timerInterval);
+    currentExamState.timerInterval = null;
+  }
 
   let correctCount = 0;
   const total = currentExamState.questions.length;
@@ -3756,20 +3764,26 @@ function submitLiveExam() {
     }
   });
 
-  const rawScore = (correctCount / total) * 10;
+  const rawScore = total > 0 ? (correctCount / total) * 10 : 0;
   const finalScore = Math.round(rawScore * 10) / 10;
 
-  // Lưu vào lịch sử
-  const history = getExamHistory();
+  // Xác định thí sinh hiện tại
   const currentStudent = getActiveStudent();
+  const cand = CANDIDATES[currentStudent] || CANDIDATES.Lam;
+
+  // Cập nhật thống kê song mã đối đầu (Lâm vs Bơ)
+  saveStudentExam(currentStudent, finalScore, correctCount, total, currentExamState.subject);
+
+  // Lưu vào lịch sử chung
+  const history = getExamHistory();
   const examRecord = {
     student: currentStudent,
-    studentName: CANDIDATES[currentStudent]?.displayName || 'Lâm 👦',
+    studentName: cand.displayName || 'Lâm 👦',
     date: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
-    subject: currentExamState.subject === 'toan' ? 'Toán 9' : (currentExamState.subject === 'van' ? 'Ngữ văn 9' : 'Toán + Văn'),
+    subject: currentExamState.subject === 'toan' ? 'Toán 9' : (currentExamState.subject === 'van' ? 'Ngữ văn 9' : (currentExamState.subject === 'anh' ? 'Tiếng Anh 9' : 'Tổng Hợp')),
     score: finalScore,
     correctCount: `${correctCount}/${total}`,
-    percentage: Math.round((correctCount / total) * 100)
+    percentage: total > 0 ? Math.round((correctCount / total) * 100) : 0
   };
   history.unshift(examRecord);
   localStorage.setItem(STORAGE_KEYS.EXAM_HISTORY, JSON.stringify(history));
@@ -3790,89 +3804,124 @@ function getExamHistory() {
 
 function renderExamResultView(score, correct, total) {
   const livePanel = document.getElementById('examLivePanel');
-  if (!livePanel) return;
+  const genPanel = document.getElementById('examGeneratorPanel');
+  let resultPanel = document.getElementById('examResultPanel');
+  
+  if (genPanel) genPanel.style.display = 'none';
+  if (livePanel) livePanel.style.display = 'none';
+  
+  const targetPanel = resultPanel || livePanel;
+  if (!targetPanel) return;
+  targetPanel.style.display = 'block';
+
+  const currentStudent = getActiveStudent();
+  const cand = CANDIDATES[currentStudent] || CANDIDATES.Lam;
 
   let evaluation = '';
   let badgeColor = '#10b981';
 
   if (score >= 8.5) {
-    evaluation = '🌟 XUẤT SẮC! Đạt ngưỡng điểm an toàn đỗ Trường THPT Trần Phú (Vĩnh Yên)!';
+    evaluation = `🌟 XUẤT SẮC! Thí sinh ${cand.displayName} đạt ngưỡng điểm chuẩn an toàn đỗ vào THPT Chuyên & Trường Tốp 1 (Trần Phú / Lương Thế Vinh)!`;
     badgeColor = '#10b981';
   } else if (score >= 7.0) {
-    evaluation = '👍 KHÁ TỐT! Nền tảng vững chắc, cần rèn thêm tính cẩn thận ở các câu phân loại!';
+    evaluation = `👍 KHÁ TỐT! Nền tảng rất vững vàng, rèn luyện thêm tính cẩn thận ở các câu phân loại là chắc vé đỗ!`;
     badgeColor = '#2563eb';
   } else if (score >= 5.0) {
-    evaluation = '⚠️ ĐẠT MỨC TRUNG BÌNH. Cần lấp thêm các lỗ hổng kiến thức để bứt phá lên 8.0+!';
+    evaluation = `⚠️ ĐẠT MỨC TRUNG BÌNH. Cần lấp thêm các lỗ hổng kiến thức để bứt phá lên 8.0+!`;
     badgeColor = '#f59e0b';
   } else {
-    evaluation = '🚨 CẦN CỐ GẮNG! Hãy xem kỹ lại các câu sai dưới đây và lưu vào Sổ lỗi sai ngay.';
+    evaluation = `🚨 CẦN CỐ GẮNG! Hãy xem kỹ lại các câu sai dưới đây, bấm lưu vào Sổ lỗi sai và ôn tập thích ứng ngay.`;
     badgeColor = '#ef4444';
   }
 
-  livePanel.innerHTML = `
-    <div class="score-box">
-      <div class="score-circle" style="border-color: ${badgeColor};">
-        <div class="score-num" style="color: ${badgeColor};">${score}</div>
-        <div class="score-total">/ 10 ĐIỂM</div>
+  const subjectLabel = currentExamState.subject === 'toan' ? 'Toán 9' : (currentExamState.subject === 'van' ? 'Ngữ văn 9' : (currentExamState.subject === 'anh' ? 'Tiếng Anh 9' : 'Tổng hợp'));
+
+  targetPanel.innerHTML = `
+    <div class="score-box" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin-bottom: 2rem; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);">
+      <div style="margin-bottom: 0.75rem;">
+        <span class="badge" style="background: #3b82f6; color: white; font-size: 0.9rem; padding: 4px 12px; border-radius: 9999px;">
+          👤 Thí sinh: ${cand.displayName} • Môn: ${subjectLabel}
+        </span>
       </div>
-      <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">KẾT QUẢ BÀI THI THỬ</h3>
-      <p style="font-size: 1rem; color: #94a3b8; margin-bottom: 1rem;">Đúng ${correct}/${total} câu (${Math.round((correct/total)*100)}%)</p>
-      <div style="background: rgba(255,255,255,0.08); padding: 0.75rem 1rem; border-radius: 8px; display: inline-block; font-weight: 600; color: ${badgeColor}; margin-bottom: 1.5rem;">
+      <div class="score-circle" style="border-color: ${badgeColor}; width: 130px; height: 130px; border-radius: 50%; border: 6px solid ${badgeColor}; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; background: rgba(0,0,0,0.2);">
+        <div class="score-num" style="color: ${badgeColor}; font-size: 2.8rem; font-weight: 800; line-height: 1;">${score}</div>
+        <div class="score-total" style="font-size: 0.75rem; color: #94a3b8; font-weight: 600; margin-top: 4px;">/ 10 ĐIỂM</div>
+      </div>
+      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; font-family: 'Times New Roman', serif;">KẾT QUẢ BÀI THI THỬ VÀO 10</h3>
+      <p style="font-size: 1.05rem; color: #cbd5e1; margin-bottom: 1rem;">
+        Số câu làm đúng: <strong>${correct}/${total} câu</strong> (${total > 0 ? Math.round((correct/total)*100) : 0}%)
+      </p>
+      <div style="background: rgba(255,255,255,0.08); padding: 0.85rem 1.25rem; border-radius: 10px; display: inline-block; font-weight: 600; color: ${badgeColor}; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1); font-size: 1rem;">
         ${evaluation}
       </div>
-      <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
-        <button class="btn btn-success" style="background: #10b981;" onclick="generateNextAdaptiveExam('${currentExamState.subject}')">🎯 Luyện Bộ Câu Hỏi Ôn Tập Tiếp Theo (AI Thích Ứng)</button>
-        <button class="btn btn-primary" onclick="resetToGenerator()">⚡ Tự Động Tạo Đề Thi Khác</button>
-        <button class="btn btn-outline" style="color: white; border-color: #475569;" onclick="location.reload()">📊 Xem Thống Kê Dashboard</button>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-success" style="background: #10b981; font-weight: 700; padding: 0.75rem 1.25rem;" onclick="generateNextAdaptiveExam('${currentExamState.subject}')">
+          🎯 Luyện Bộ Câu Hỏi Ôn Tập Tiếp Theo (AI Thích Ứng)
+        </button>
+        <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;" onclick="resetToGenerator()">
+          ⚡ Tự Động Tạo Đề Thi Khác
+        </button>
+        <button class="btn btn-outline" style="color: white; border-color: #64748b; padding: 0.75rem 1.25rem;" onclick="resetToGenerator()">
+          📊 Xem Thống Kê Dashboard
+        </button>
       </div>
     </div>
 
-    <div class="card" style="margin-top: 1.5rem;">
-      <div class="card-header">
-        <span class="card-title">📖 CHI TIẾT ĐÁP ÁN & BÀI HỌC RÚT RA</span>
+    <div class="card" style="margin-top: 1.5rem; border: 1px solid var(--border);">
+      <div class="card-header" style="background: #f8fafc; border-bottom: 1px solid var(--border); padding: 1rem 1.25rem;">
+        <span class="card-title" style="font-family: 'Times New Roman', serif; font-size: 1.2rem; font-weight: 700; color: #1e293b;">
+          📖 BẢNG ĐÁP ÁN & LỜI GIẢI CHI TIẾT (BAREM CHUẨN SỞ GD&ĐT)
+        </span>
       </div>
-      ${currentExamState.questions.map((q, idx) => {
-        const userChoice = currentExamState.userAnswers[idx];
-        const isCorrect = userChoice === q.correct;
-        return `
-          <div class="quiz-card" style="border-left: 5px solid ${isCorrect ? '#10b981' : '#ef4444'};">
-            <div class="quiz-question">
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
-                <strong>Câu ${idx + 1}:</strong>
-                <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
-                  <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem;">${getSchoolName(q.school)}</span>
-                  <span class="badge" style="background: ${isCorrect ? '#ecfdf5' : '#fef2f2'}; color: ${isCorrect ? '#065f46' : '#991b1b'};">
-                    ${isCorrect ? '✓ Đúng' : '✗ Sai'}
-                  </span>
+      <div style="padding: 1.25rem;">
+        ${currentExamState.questions.map((q, idx) => {
+          const userChoice = currentExamState.userAnswers[idx];
+          const isCorrect = userChoice === q.correct;
+          const userChoiceText = userChoice !== undefined ? String.fromCharCode(65 + userChoice) + '. ' + escapeHtml(q.opts[userChoice]) : 'Chưa chọn';
+          const correctText = String.fromCharCode(65 + q.correct) + '. ' + escapeHtml(q.opts[q.correct]);
+          return `
+            <div class="quiz-card" style="border-left: 5px solid ${isCorrect ? '#10b981' : '#ef4444'}; margin-bottom: 1.25rem; background: #ffffff; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-top: 1px solid #f1f5f9; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+              <div class="quiz-question" style="margin-bottom: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <strong style="color: #0f172a; font-size: 1rem;">Câu ${idx + 1}:</strong>
+                  <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+                    <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem;">${getSchoolName(q.school)}</span>
+                    <span class="badge" style="background: #f1f5f9; color: #475569; font-size: 0.75rem;">${escapeHtml(q.topic)}</span>
+                    <span class="badge" style="background: ${isCorrect ? '#ecfdf5' : '#fef2f2'}; color: ${isCorrect ? '#065f46' : '#991b1b'}; font-weight: 700;">
+                      ${isCorrect ? '✓ Đúng' : '✗ Sai'}
+                    </span>
+                  </div>
                 </div>
+                <div style="font-size: 1rem; line-height: 1.5; color: #1e293b;">${escapeHtml(q.q)}</div>
               </div>
-              <div>${escapeHtml(q.q)}</div>
-            </div>
-            <div style="font-size: 0.9rem; margin-bottom: 0.5rem;">
-              • Đáp án của con: <strong>${userChoice !== undefined ? String.fromCharCode(65 + userChoice) + '. ' + escapeHtml(q.opts[userChoice]) : 'Chưa chọn'}</strong>
-              <br>• Đáp án đúng: <strong style="color: #10b981;">${String.fromCharCode(65 + q.correct)}. ${escapeHtml(q.opts[q.correct])}</strong>
-            </div>
-            <div style="background: #eff6ff; padding: 0.75rem; border-radius: 6px; font-size: 0.875rem; color: #1e40af;">
-              💡 <strong>Lời giải chi tiết:</strong> ${escapeHtml(q.exp)}
-            </div>
-            ${!isCorrect ? `
-              <div style="margin-top: 0.5rem; text-align: right;">
-                <button class="btn btn-outline" style="font-size: 0.75rem; padding: 3px 8px;" onclick="quickSaveMistake('${escapeJs(q.topic)}', '${escapeJs(q.q)}', '${escapeJs(q.exp)}')">
-                  ➕ Lưu vào Sổ lỗi sai
-                </button>
+              <div style="font-size: 0.925rem; margin-bottom: 0.65rem; line-height: 1.6;">
+                • Lựa chọn của thí sinh: <strong style="color: ${isCorrect ? '#10b981' : '#ef4444'};">${userChoiceText}</strong>
+                <br>• Đáp án đúng: <strong style="color: #10b981;">${correctText}</strong>
               </div>
-            ` : ''}
-          </div>
-        `;
-      }).join('')}
+              <div style="background: #eff6ff; padding: 0.85rem 1rem; border-radius: 6px; font-size: 0.9rem; color: #1e40af; border: 1px solid #dbeafe; line-height: 1.5;">
+                💡 <strong>Lời giải chi tiết & Barem:</strong> ${escapeHtml(q.exp)}
+              </div>
+              ${!isCorrect ? `
+                <div style="margin-top: 0.75rem; text-align: right;">
+                  <button class="btn btn-outline" style="font-size: 0.8rem; padding: 4px 10px; border-color: #cbd5e1;" onclick="quickSaveMistake('${escapeJs(q.topic)}', '${escapeJs(q.q)}', '${escapeJs(q.exp)}')">
+                    ➕ Lưu vào Sổ lỗi sai
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
     </div>
   `;
+
+  targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function quickSaveMistake(topic, qText, fixText) {
   const list = getMistakes();
   list.unshift({
-    subject: currentExamState.subject === 'van' ? 'Van' : 'Toan',
+    subject: currentExamState.subject === 'van' ? 'Van' : (currentExamState.subject === 'anh' ? 'Anh' : 'Toan'),
     topic: topic,
     mistake: qText,
     reason: 'Làm sai trong đề thi thử',
@@ -3885,9 +3934,37 @@ function quickSaveMistake(topic, qText, fixText) {
 }
 
 function resetToGenerator() {
-  document.getElementById('examLivePanel').style.display = 'none';
-  document.getElementById('examGeneratorPanel').style.display = 'block';
-  location.reload();
+  if (currentExamState && currentExamState.timerInterval) {
+    clearInterval(currentExamState.timerInterval);
+    currentExamState.timerInterval = null;
+  }
+  const livePanel = document.getElementById('examLivePanel');
+  const resultPanel = document.getElementById('examResultPanel');
+  const genPanel = document.getElementById('examGeneratorPanel');
+
+  if (livePanel) livePanel.style.display = 'none';
+  if (resultPanel) resultPanel.style.display = 'none';
+  if (genPanel) {
+    genPanel.style.display = 'block';
+    genPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  loadDashboardStats();
+  renderBattleScoreboard();
+}
+
+function updateStudentUI() {
+  const current = getActiveStudent();
+  const cand = CANDIDATES[current] || CANDIDATES.Lam;
+  const badge = document.getElementById('currentActiveStudentBadge');
+  if (badge) {
+    if (current === SIBLINGS.LAM) {
+      badge.textContent = 'Đang chọn: Lâm 👦 (Quyết tâm)';
+      badge.style.color = '#0284c7';
+    } else {
+      badge.textContent = 'Đang chọn: Bơ 👧 (Thông thái)';
+      badge.style.color = '#db2777';
+    }
+  }
 }
 
 // Tải số liệu Dashboard (KPI)
@@ -3983,17 +4060,27 @@ function escapeJs(str) {
 // Khởi chạy khi load trang
 
 // ------------------------------------------
-// 7. HỆ THỐNG TỰ ĐỘNG CẬP NHẬT CÂU HỎI ÔN TẬP TIẾP THEO (ADAPTIVE REVIEW)
+// 7. HỆ THỐNG TỰ ĐỘNG CẬP NHẬT CÂU HỎI ÔN TẬP TIẾP THEO (AI ADAPTIVE REVIEW)
 // ------------------------------------------
 function generateNextAdaptiveExam(forcedSubject = null) {
+  if (currentExamState && currentExamState.timerInterval) {
+    clearInterval(currentExamState.timerInterval);
+    currentExamState.timerInterval = null;
+  }
+
   // Lấy lịch sử làm bài gần nhất hoặc câu sai
   const mistakes = JSON.parse(localStorage.getItem(STORAGE_KEYS.MISTAKES) || '[]');
   const examHistory = JSON.parse(localStorage.getItem(STORAGE_KEYS.EXAM_HISTORY) || '[]');
   
   let targetSubject = forcedSubject;
-  if (!targetSubject) {
-    if (examHistory.length > 0) {
-      targetSubject = examHistory[0].subject || 'toan';
+  if (!targetSubject || targetSubject === 'undefined' || targetSubject === 'all') {
+    if (currentExamState && currentExamState.subject && currentExamState.subject !== 'adaptive' && currentExamState.subject !== 'all') {
+      targetSubject = currentExamState.subject;
+    } else if (examHistory.length > 0 && examHistory[0].subject) {
+      const s = examHistory[0].subject.toLowerCase();
+      if (s.includes('văn')) targetSubject = 'van';
+      else if (s.includes('anh')) targetSubject = 'anh';
+      else targetSubject = 'toan';
     } else {
       targetSubject = 'toan';
     }
@@ -4011,7 +4098,7 @@ function generateNextAdaptiveExam(forcedSubject = null) {
   let otherQuestions = [];
 
   pool.forEach(q => {
-    const isTopicMissed = wrongTopics.some(t => t && q.topic.toLowerCase().includes(t));
+    const isTopicMissed = wrongTopics.some(t => t && q.topic && q.topic.toLowerCase().includes(t));
     if (isTopicMissed) {
       priorityQuestions.push(q);
     } else {
@@ -4019,7 +4106,7 @@ function generateNextAdaptiveExam(forcedSubject = null) {
     }
   });
 
-  // Trộn đều
+  // Trộn đều (Fisher-Yates)
   for (let i = priorityQuestions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [priorityQuestions[i], priorityQuestions[j]] = [priorityQuestions[j], priorityQuestions[i]];
@@ -4029,33 +4116,39 @@ function generateNextAdaptiveExam(forcedSubject = null) {
     [otherQuestions[i], otherQuestions[j]] = [otherQuestions[j], otherQuestions[i]];
   }
 
-  // Lấy 10 câu ôn tập tiếp theo
+  // Lấy 10 câu ôn tập tiếp theo (kết hợp câu ưu tiên sửa sai và câu củng cố)
   const nextSet = [...priorityQuestions, ...otherQuestions].slice(0, 10);
 
-  currentExamSession = {
-    subject: targetSubject,
-    subjectName: 'Bộ Ôn Tập Tiếp Theo: ' + (targetSubject === 'toan' ? 'Toán' : targetSubject === 'van' ? 'Ngữ Văn' : 'Tiếng Anh'),
-    schoolName: 'Hệ Thống Tự Động Thích Ứng (AI Adaptive)',
-    totalQuestions: nextSet.length,
-    durationMinutes: 15,
+  currentExamState = {
     questions: nextSet,
     userAnswers: {},
-    startTime: Date.now()
+    timerInterval: null,
+    remainingSeconds: 15 * 60,
+    subject: targetSubject,
+    school: 'adaptive',
+    level: 'nangcao',
+    totalCount: nextSet.length,
+    startTime: new Date()
   };
 
-  examTimeRemaining = 15 * 60;
-  clearInterval(examTimerInterval);
-  examTimerInterval = setInterval(updateExamTimerTick, 1000);
+  // Ẩn bảng điều khiển và bảng kết quả, hiển thị phòng thi live
+  const genPanel = document.getElementById('examGeneratorPanel');
+  const resultPanel = document.getElementById('examResultPanel');
+  const livePanel = document.getElementById('examLivePanel');
+
+  if (genPanel) genPanel.style.display = 'none';
+  if (resultPanel) resultPanel.style.display = 'none';
+  if (livePanel) livePanel.style.display = 'block';
 
   renderLiveExam();
+  startExamCountdown();
+  playBeep('success');
 
-  // Scroll to exam box
-  const box = document.getElementById('examActiveBox');
-  if (box) {
-    box.scrollIntoView({ behavior: 'smooth' });
+  if (livePanel) {
+    livePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  alert('🎯 Đã tự động cập nhật Bộ câu hỏi ôn tập tiếp theo bám sát các dạng bài trọng tâm!');
+  alert('🎯 Đã tự động cập nhật Bộ câu hỏi ôn tập tiếp theo (AI Thích Ứng)! Thời gian: 15 phút. Chúc con làm bài thật tốt!');
 }
 
 
