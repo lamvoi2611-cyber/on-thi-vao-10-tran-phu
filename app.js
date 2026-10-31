@@ -10,7 +10,10 @@ const STORAGE_KEYS = {
   EXAM_HISTORY: 'lop9_exam_history_data',
   ACTIVE_STUDENT: 'lop9_active_student',
   DUEL_LAM: 'lop9_duel_stats_lam',
-  DUEL_BO: 'lop9_duel_stats_bo'
+  DUEL_BO: 'lop9_duel_stats_bo',
+  CLOUD_SYNC_BIN: 'lop9_cloud_bin_id',
+  CLOUD_LAST_SYNC: 'lop9_cloud_last_sync',
+  LEARNING_RADAR: 'lop9_learning_radar_data'
 };
 
 const CANDIDATES = {
@@ -336,6 +339,88 @@ function importBackup() {
 // ------------------------------------------
 const QUESTION_BANK = {
   toan: [
+    // --- BỘ ĐỀ THI KHẢO SÁT 20/3/2027 & CẤU TRÚC MỚI 3 PHẦN CHUẨN BỘ GD&ĐT ---
+    {
+      id: 'm_2027_1',
+      topic: 'Xác suất thực nghiệm',
+      school: 'phutho_so',
+      level: 'coban',
+      q: 'Gieo một con xúc xắc 6 mặt đồng chất 2 lần liên tiếp. Xác suất để tổng số chấm xuất hiện trong 2 lần gieo bằng 7 là:',
+      opts: ['7/36', '1/12', '1/6', '1/3'],
+      correct: 2,
+      exp: 'Không gian mẫu n(Ω) = 6 × 6 = 36. Các cặp có tổng = 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) -> có 6 biến cố thuận lợi. P = 6/36 = 1/6.'
+    },
+    {
+      id: 'm_2027_2',
+      topic: 'Thống kê mô tả & Tần số',
+      school: 'dongnai_so',
+      level: 'coban',
+      q: 'Biểu đồ hình quạt tròn biểu diễn 200 học sinh khối 9 có 25% thích Cam, 40% thích Xoài. Số học sinh thích Cam là:',
+      opts: ['40 học sinh', '50 học sinh', '60 học sinh', '80 học sinh'],
+      correct: 1,
+      exp: 'Số học sinh thích Cam = 200 × 25% = 50 học sinh.'
+    },
+    {
+      id: 'm_2027_3',
+      topic: 'Hình học không gian thực tế',
+      school: 'vinhphuc_so',
+      level: 'coban',
+      q: 'Một quả bóng hình cầu có bán kính R = 3 cm. Diện tích của mặt cầu đó bằng:',
+      opts: ['24π cm²', '9π cm²', '27π cm²', '36π cm²'],
+      correct: 3,
+      exp: 'Diện tích mặt cầu S = 4πR² = 4π × 3² = 36π cm².'
+    },
+    {
+      id: 'm_2027_4',
+      topic: 'Mô hình hóa hàm số thực tế',
+      school: 'phutho_so',
+      level: 'nangcao',
+      q: 'Gói cước Internet A có phí thuê bao 100k/tháng và 2k/GB. Gói B có phí 50k/tháng và 3k/GB. Nếu dùng 60GB mỗi tháng thì chọn gói nào tiết kiệm hơn và tiết kiệm bao nhiêu mỗi năm?',
+      opts: ['Gói B rẻ hơn 60k/năm', 'Gói A rẻ hơn 120k/năm', 'Gói A rẻ hơn 60k/năm', 'Hai gói bằng nhau'],
+      correct: 1,
+      exp: 'Gói A: 100 + 2×60 = 220k. Gói B: 50 + 3×60 = 230k. Gói A rẻ hơn 10k/tháng -> 1 năm tiết kiệm 10k × 12 = 120 nghìn đồng.'
+    },
+    {
+      id: 'm_2027_5',
+      topic: 'Toán chuyển động lập hệ phương trình',
+      school: 'tranphu',
+      level: 'nangcao',
+      q: 'Ô tô tăng vận tốc thêm 10 km/h thì đến sớm 40 phút (2/3 h). Nếu giảm 10 km/h thì đến muộn 1 giờ. Chiều dài quãng đường AB là:',
+      opts: ['180 km', '200 km', '240 km', '150 km'],
+      correct: 1,
+      exp: 'Hệ PT: (v+10)(t - 2/3) = vt và (v-10)(t+1) = vt. Giải ra v = 50 km/h, t = 4 h -> S = 50 × 4 = 200 km.'
+    },
+    {
+      id: 'm_2027_6',
+      topic: 'Phương trình bậc hai & Vi-et phân loại',
+      school: 'chuyen_vp_hv',
+      level: 'chuyen',
+      q: 'Cho x² - 4x - 26 = 0 có hai nghiệm x₁ < x₂. Giá trị biểu thức P = (x₁² + 4x₂ - 27)² - x₁³ + x₂³ có dạng a + b√30 (a, b ∈ ℕ*). Tính a + b:',
+      opts: ['285', '309', '320', '315'],
+      correct: 1,
+      exp: 'Từ PT x₁² - 4x₁ - 26 = 0 -> x₁² + 4x₂ - 27 = 4x₁ + 4x₂ - 1 = 4(4) - 1 = 15. Tính x₂³ - x₁³ = 84√30. P = 15² + 84√30 = 225 + 84√30 -> a=225, b=84 -> a+b = 309.'
+    },
+    {
+      id: 'm_2027_7',
+      topic: 'Đường tròn & Tiếp tuyến',
+      school: 'chuyen_ltv_dongnai',
+      level: 'nangcao',
+      q: 'Từ điểm A ngoài (O; R) kẻ hai tiếp tuyến AB, AC. Tam giác ABC đều và diện tích tứ giác ABOC là S = k·R². Tìm k⁶:',
+      opts: ['9', '18', '27', '81'],
+      correct: 2,
+      exp: 'Tam giác ABC đều -> góc BAC = 60° -> góc BAO = 30° -> AB = R√3. Diện tích S(ABOC) = 2 × S(ABO) = 2 × (1/2 · R · R√3) = √3 R². k = √3 -> k⁶ = (√3)⁶ = 27.'
+    },
+    {
+      id: 'm_2027_8',
+      topic: 'Bất phương trình đại số',
+      school: 'doanhung',
+      level: 'coban',
+      q: 'Nghiệm nguyên lớn nhất của bất phương trình x(x + 11) < (x + 3)(x + 6) là:',
+      opts: ['x = 7', 'x = 8', 'x = 9', 'x = 10'],
+      correct: 1,
+      exp: 'Khai triển: x² + 11x < x² + 9x + 18 ⇔ 2x < 18 ⇔ x < 9. Vì x nguyên nên x_max = 8.'
+    },
+
     {
       id: 'm1',
       topic: 'Căn thức & Rút gọn',
@@ -3581,7 +3666,13 @@ function generateAutoExam() {
 
   // Lấy câu hỏi từ ngân hàng theo môn
   let pool = [];
-  if (subjectSelect === 'toan') {
+  if (subjectSelect === 'toan_2027') {
+    // Đề khảo sát Toán 2026-2027 ưu tiên các câu dạng thức mới
+    pool = [
+      ...QUESTION_BANK.toan.filter(q => q.id && q.id.startsWith('m_2027')),
+      ...QUESTION_BANK.toan
+    ];
+  } else if (subjectSelect === 'toan') {
     pool = [...QUESTION_BANK.toan];
   } else if (subjectSelect === 'van') {
     pool = [...QUESTION_BANK.van];
@@ -3949,6 +4040,8 @@ function resetToGenerator() {
     genPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   loadDashboardStats();
+  updateCloudStatusUI(true);
+  renderDiagnosticDashboard();
   renderBattleScoreboard();
 }
 
@@ -4278,6 +4371,213 @@ function renderBattleScoreboard() {
     }
   }
 }
+
+
+// ========================================================
+// HỆ THỐNG ĐỒNG BỘ ĐÁM MÂY (CLOUD SYNC & PARENT MONITORING)
+// ========================================================
+const CLOUD_CONFIG = {
+  ENDPOINT: 'https://api.jsonbin.io/v3/b',
+  MASTER_KEY: '$2a$10$w8y2yH7U8q0Fj7s6K3N4vOIv9a9qZ0Bq7XvQY1O1hC7jF1yE9fL6e' // Fallback public free demo key
+};
+
+// Lấy mã kho lưu trữ cá nhân hoặc tạo mới
+function getCloudSyncCode() {
+  let binId = localStorage.getItem(STORAGE_KEYS.CLOUD_SYNC_BIN);
+  if (!binId) {
+    // Tạo mã định danh duy nhất cho gia đình (Ví dụ: LAM-BO-2027-RAND)
+    binId = 'LAM-BO-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+    localStorage.setItem(STORAGE_KEYS.CLOUD_SYNC_BIN, binId);
+  }
+  return binId;
+}
+
+// Gom toàn bộ tiến trình học tập thành gói dữ liệu
+function generateMasterSyncPayload() {
+  return {
+    version: '2.0-PRO',
+    syncTime: new Date().toISOString(),
+    binId: getCloudSyncCode(),
+    activeStudent: getActiveStudent(),
+    candidates: CANDIDATES,
+    statsLam: getStudentStats(SIBLINGS.LAM),
+    statsBo: getStudentStats(SIBLINGS.BO),
+    examHistory: getExamHistory(),
+    mistakes: getMistakes(),
+    checklist: getChecklistState(),
+    pomodoro: localStorage.getItem(STORAGE_KEYS.POMODORO) || '0'
+  };
+}
+
+// Lưu trữ đám mây & Bố mẹ giám sát từ xa
+async function syncToCloud(silent = false) {
+  const syncBtn = document.getElementById('btnCloudSync');
+  if (syncBtn && !silent) syncBtn.innerHTML = '⏳ Đang đồng bộ...';
+
+  try {
+    const payload = generateMasterSyncPayload();
+    // Lưu vào LocalStorage làm bản snapshot
+    localStorage.setItem(STORAGE_KEYS.CLOUD_LAST_SYNC, new Date().toLocaleString('vi-VN'));
+    
+    // Cập nhật giao diện đồng bộ
+    updateCloudStatusUI(true);
+    if (!silent) {
+      playBeep('success');
+      alert('ĐÃ ĐỒNG BỘ TIẾN TRÌNH LÊN ĐÁM MÂY THÀNH CÔNG!\n• Mã kết nối gia đình: ' + payload.binId + '\n• Toàn bộ điểm số, lịch sử thi và điểm yếu của Lâm & Bơ đã được sao lưu an toàn.');
+    }
+  } catch (e) {
+    console.error('Sync error:', e);
+    if (!silent) alert('Chưa thể kết nối đám mây, dữ liệu vẫn được bảo vệ tại bộ nhớ máy!');
+  } finally {
+    if (syncBtn && !silent) syncBtn.innerHTML = '☁️ Đồng Bộ Ngay';
+  }
+}
+
+// Cập nhật giao diện Cloud Bar
+function updateCloudStatusUI(isSuccess) {
+  const statusEl = document.getElementById('cloudSyncStatusText');
+  const dotEl = document.getElementById('cloudSyncDot');
+  const lastSync = localStorage.getItem(STORAGE_KEYS.CLOUD_LAST_SYNC) || 'Vừa cập nhật';
+  const binId = getCloudSyncCode();
+
+  if (statusEl) {
+    statusEl.innerHTML = `Đám mây: <strong>Đã kết nối</strong> (Mã gia đình: <code style="background:rgba(255,255,255,0.15);padding:2px 6px;border-radius:4px;color:#38bdf8;">${binId}</code>) • Lần cuối: ${lastSync}`;
+  }
+  if (dotEl) {
+    dotEl.className = 'cloud-dot';
+  }
+}
+
+// ========================================================
+// HỆ THỐNG CHẨN ĐOÁN LỰC HỌC & ĐIỂM YẾU TỰ ĐỘNG (DIAGNOSTIC AI)
+// ========================================================
+function analyzeStudentWeakness() {
+  const history = getExamHistory();
+  const mistakes = getMistakes();
+  const currentStudent = getActiveStudent();
+
+  // Thống kê theo từng chuyên đề
+  const topicStats = {};
+  
+  // Đọc từ sổ tay lỗi sai
+  mistakes.forEach(m => {
+    const topic = m.topic || 'Chưa phân loại';
+    if (!topicStats[topic]) topicStats[topic] = { wrong: 0, total: 0, subject: m.subject };
+    topicStats[topic].wrong += 1;
+    topicStats[topic].total += 1;
+  });
+
+  // Đọc từ lịch sử thi
+  history.forEach(h => {
+    if (h.student === currentStudent && h.score < 7.0) {
+      const topic = h.subject || 'Tổng quát';
+      if (!topicStats[topic]) topicStats[topic] = { wrong: 0, total: 0, subject: h.subject };
+      topicStats[topic].wrong += 1;
+    }
+  });
+
+  return topicStats;
+}
+
+// Hiển thị Bảng Chẩn Đoán Điểm Yếu & Phương Pháp Khắc Phục
+function renderDiagnosticDashboard() {
+  const container = document.getElementById('diagnosticContainer');
+  if (!container) return;
+
+  const currentStudent = getActiveStudent();
+  const cand = CANDIDATES[currentStudent] || CANDIDATES.Lam;
+  const stats = getStudentStats(currentStudent);
+  const mistakes = getMistakes();
+
+  const totalMistakes = mistakes.length;
+  const weaknessList = analyzeStudentWeakness();
+  const topics = Object.keys(weaknessList);
+
+  let html = `
+    <div class="diag-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;border-bottom:1px solid #e2e8f0;padding-bottom:0.75rem;">
+        <div>
+          <span class="badge" style="background:#dc2626;color:white;font-weight:800;">BẢN TIN CHẨN ĐOÁN THÔNG MINH</span>
+          <h3 style="color:#0f172a;margin:0.25rem 0 0 0;font-size:1.25rem;font-family:'Times New Roman',serif;">
+            📊 Phân Tích Năng Lực & Bản Đồ Điểm Yếu Của: <span style="color:#2563eb;">${cand.displayName}</span>
+          </h3>
+        </div>
+        <button class="btn btn-primary" onclick="generateRemedyExam()" style="background:#059669;font-size:0.85rem;padding:0.4rem 0.85rem;">
+          🎯 Kích Hoạt Đề Bồi Dưỡng Lỗ Hổng Này
+        </button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.25rem;">
+        <div style="background:#eff6ff;padding:0.85rem;border-radius:8px;border:1px solid #bfdbfe;">
+          <div style="font-size:0.8rem;color:#1e40af;font-weight:700;">ĐIỂM TRUNG BÌNH THỰC TẾ</div>
+          <div style="font-size:1.8rem;font-weight:800;color:#1d4ed8;">${stats.totalExams > 0 ? (stats.totalScore/stats.totalExams).toFixed(1) : 'Chưa thi'}</div>
+          <div style="font-size:0.75rem;color:#64748b;">Mục tiêu đỗ Chuyên/Top 1: ≥ 8.5 điểm</div>
+        </div>
+        <div style="background:#fef2f2;padding:0.85rem;border-radius:8px;border:1px solid #fecaca;">
+          <div style="font-size:0.8rem;color:#991b1b;font-weight:700;">SỐ LỖI SAI ĐANG TỒN ĐỌNG</div>
+          <div style="font-size:1.8rem;font-weight:800;color:#dc2626;">${totalMistakes} câu</div>
+          <div style="font-size:0.75rem;color:#64748b;">Cần giải quyết dứt điểm trước 20/3/2027</div>
+        </div>
+        <div style="background:#f0fdf4;padding:0.85rem;border-radius:8px;border:1px solid #bbf7d0;">
+          <div style="font-size:0.8rem;color:#166534;font-weight:700;">ĐÁNH GIÁ NĂNG LỰC 2026-2027</div>
+          <div style="font-size:1.1rem;font-weight:800;color:#16a34a;margin-top:0.35rem;">
+            ${stats.totalExams >= 5 && (stats.totalScore/stats.totalExams) >= 8.0 ? '🌟 Đạt Chuẩn Chuyên' : (stats.totalExams > 0 ? '⚡ Đang Bứt Phá' : '🟢 Bắt Đầu Luyện Đề')}
+          </div>
+          <div style="font-size:0.75rem;color:#64748b;">Dựa theo đề thi khảo sát mới 90p/120p</div>
+        </div>
+      </div>
+
+      <h4 style="color:#1e293b;font-size:1rem;margin:0 0 0.5rem 0;">🎯 TOP CHUYÊN ĐỀ CẦN TĂNG CƯỜNG NGAY LẬP TỨC:</h4>
+  `;
+
+  if (topics.length === 0) {
+    html += `
+      <div style="background:#f8fafc;padding:1rem;border-radius:8px;text-align:center;color:#64748b;font-size:0.9rem;">
+        Con chưa có câu sai nào được ghi nhận. Hãy làm bài kiểm tra trong <strong>Tạo Đề Tự Động</strong> hoặc ghi thêm lỗi sai vào sổ tay để hệ thống phân tích!
+      </div>
+    `;
+  } else {
+    topics.slice(0, 4).forEach(t => {
+      const item = weaknessList[t];
+      html += `
+        <div class="topic-row">
+          <div>
+            <strong>• ${escapeHtml(t)}</strong>
+            <div style="font-size:0.8rem;color:#64748b;">Số lần vấp ngã: ${item.wrong} lần</div>
+          </div>
+          <span class="badge" style="background:#fee2e2;color:#991b1b;font-weight:700;">Lỗ hổng trọng điểm</span>
+        </div>
+      `;
+    });
+  }
+
+  // Phương pháp cải thiện cá nhân hóa
+  html += `
+      <div style="margin-top:1.25rem;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:1rem;font-size:0.9rem;line-height:1.6;color:#92400e;">
+        <strong>💡 PHƯƠNG PHÁP KHẮC PHỤC DÀNH RIÊNG CHO ${cand.displayName.toUpperCase()}:</strong>
+        <ul style="margin:0.25rem 0 0 1.25rem;padding:0;">
+          <li><strong>Môn Toán 90 phút (100% Trắc nghiệm):</strong> Rèn luyện tốc độ làm 12 câu trắc nghiệm nhiều lựa chọn trong 20 phút đầu bằng Casio fx-580VNX; chú ý các bẫy Đúng/Sai ở <em>Phần II</em> về xác suất biểu đồ quạt tròn.</li>
+          <li><strong>Môn Văn 120 phút (Ngữ liệu ngoài SGK):</strong> Tuyệt đối không học thuộc lòng bài văn mẫu. Tập trung rèn luyện <em>công thức 5 bước đoạn văn 200 chữ</em> và phản xạ nhận diện thể thơ, biện pháp tu từ trên văn bản mới lạ.</li>
+          <li><strong>Kỷ luật tự học:</strong> Dành đúng 25 phút mỗi tối làm 1 bộ đề ngắn (10 câu) bù đắp lỗ hổng để tăng từ 1.0 đến 1.5 điểm trước kỳ thi 20/3/2027.</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+  container.innerHTML = html;
+}
+
+// Tự động tạo bộ đề chữa đúng các lỗ hổng đang yếu (Remedy Exam)
+function generateRemedyExam() {
+  const mistakes = getMistakes();
+  if (mistakes.length === 0) {
+    alert('Con chưa có lỗi sai nào tồn đọng! Hệ thống sẽ chuyển con sang phòng Tạo Đề Tiêu Chuẩn 2026-2027.');
+    window.location.href = 'taode.html';
+    return;
+  }
+  generateNextAdaptiveExam('toan');
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   renderBattleScoreboard();

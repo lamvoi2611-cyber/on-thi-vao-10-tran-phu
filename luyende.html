@@ -109,7 +109,8 @@
         <div class="exam-timer-num" id="examClock">120:00</div>
       </div>
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <button class="btn btn-primary" onclick="startExamTimer(120)">⏱ Bắt đầu 120 Phút (Toán/Văn)</button>
+        <button class="btn btn-danger" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); font-weight: 700; border: none; box-shadow: 0 2px 8px rgba(220,38,38,0.3);" onclick="startExamTimer(90)">⏱ Bắt đầu 90 Phút (Môn Toán Mới 2027)</button>
+        <button class="btn btn-primary" onclick="startExamTimer(120)">⏱ Bắt đầu 120 Phút (Ngữ Văn Tự Luận)</button>
         <button class="btn btn-success" onclick="startExamTimer(60)">⏱ Bắt đầu 60 Phút (Tiếng Anh)</button>
         <button class="btn btn-outline" style="color: white; border-color: #475569;" onclick="pauseExamTimer()">⏸ Tạm dừng</button>
         <button class="btn btn-danger" onclick="resetExamTimer()">↺ Đặt lại</button>
@@ -118,7 +119,9 @@
 
     <!-- Tabs chọn đề và tài liệu -->
     <div class="tab-buttons">
-      <button class="tab-btn active" onclick="switchExamTab('toanTab', this)">📐 Toán Đề 01 – VP 2024</button>
+      <button class="tab-btn active" onclick="switchExamTab('format2027ToanTab', this)" style="background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%); color: white; border: none; font-weight: 800; box-shadow: 0 4px 12px rgba(220,38,38,0.25);">⭐ TOÁN 2027: Chuẩn Mới 3 Phần (90p)</button>
+      <button class="tab-btn" onclick="switchExamTab('format2027VanTab', this)" style="background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%); color: white; border: none; font-weight: 800; box-shadow: 0 4px 12px rgba(234,88,12,0.25);">⭐ VĂN 2027: Ngữ Liệu Mới (120p)</button>
+      <button class="tab-btn" onclick="switchExamTab('toanTab', this)">📐 Toán Đề 01 – VP 2024</button>
       <button class="tab-btn" onclick="switchExamTab('toan2Tab', this)">📐 Toán Đề 02 – ĐN 2023</button>
       <button class="tab-btn" onclick="switchExamTab('toan3Tab', this)">📐 Toán Đề 03 – PT 2022</button>
       <button class="tab-btn" onclick="switchExamTab('vanTab', this)">📖 Văn Đề 01 – VP 2024</button>
@@ -130,8 +133,695 @@
       <button class="tab-btn" onclick="switchExamTab('phuongphapTab', this)" style="background: #f0fdf4; color: #15803d; border-color: #bbf7d0;">🧠 Phương Pháp Tự Học Tại Nhà</button>
     </div>
 
+
+    <!-- ============================================================ -->
+    <!-- TAB MỚI: ĐỀ MINH HỌA MÔN TOÁN 2026 - 2027 (CHUẨN BỘ GD&ĐT - MÃ ĐỀ: 230) -->
+    <!-- ============================================================ -->
+    <div id="format2027ToanTab" class="tab-content active">
+      <div class="card" style="margin-bottom: 1.5rem; border: 2px solid #dc2626; box-shadow: 0 10px 25px -5px rgba(220,38,38,0.15);">
+        
+        <div class="card-header" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border-bottom: 2px solid #fca5a5; padding: 1.25rem 1.5rem;">
+          <div>
+            <span class="badge" style="background: #dc2626; color: white; font-size: 0.85rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">
+              CHƯƠNG TRÌNH GDPT 2018 • NĂM HỌC 2026 - 2027
+            </span>
+            <h3 style="color: #991b1b; margin: 0.5rem 0 0.25rem 0; font-size: 1.4rem; font-family: 'Times New Roman', serif; font-weight: 800;">
+              📐 ĐỀ THI MẪU CHÍNH THỨC MÔN TOÁN – KỲ THI TUYỂN SINH VÀO LỚP 10 THPT
+            </h3>
+            <p style="margin: 0; color: #7f1d1d; font-size: 0.95rem;">
+              Cấu trúc trắc nghiệm 3 dạng thức mới: Nhiều lựa chọn (12 câu) • Đúng / Sai (4 câu 16 ý) • Trả lời ngắn điền số (6 câu) • Thời gian: 90 phút • Mã đề: 230
+            </p>
+          </div>
+        </div>
+
+        <div style="padding: 1.5rem;">
+
+          <!-- Thông báo hướng dẫn cấu trúc mới -->
+          <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: #92400e;">
+            <strong>📢 ĐẶC BIỆT LƯU Ý DÀNH CHO LÂM & BƠ (NĂM THI 2026 - 2027):</strong>
+            <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
+              <li><strong>Hình thức thi:</strong> 100% Trắc nghiệm khách quan với 3 phần (Thời gian rút ngắn còn <strong>90 phút</strong> thay vì 120 phút tự luận cũ).</li>
+              <li><strong>Phần I (3.0đ - 12 câu):</strong> Trắc nghiệm 4 lựa chọn (A, B, C, D), mỗi câu đúng được 0.25 điểm.</li>
+              <li><strong>Phần II (4.0đ - 4 câu 16 ý):</strong> Trắc nghiệm Đúng/Sai. Mỗi câu gồm 4 lệnh hỏi a, b, c, d: Đúng 1 ý = 0.1đ; Đúng 2 ý = 0.25đ; Đúng 3 ý = 0.5đ; Đúng cả 4 ý = 1.0đ.</li>
+              <li><strong>Phần III (3.0đ - 6 câu):</strong> Trắc nghiệm trả lời ngắn (học sinh tự tính toán và điền đáp số: số nguyên, phân số hoặc số thập phân vào ô trả lời). Mỗi câu đúng được 0.5 điểm.</li>
+            </ul>
+          </div>
+
+          <!-- Văn bản Header chuẩn Nghị định 30 -->
+          <div class="vb-header">
+            <div class="vb-coquan">
+              SỞ GIÁO DỤC VÀ ĐÀO TẠO<br>
+              <strong>THÀNH PHỐ HẢI PHÒNG</strong>
+              <div class="vb-line"></div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: #dc2626; margin-top: 4px;">ĐỀ CHÍNH THỨC</div>
+            </div>
+            <div class="vb-quochoai">
+              <div class="vb-ten-nuoc">KỲ THI TUYỂN SINH VÀO LỚP 10 THPT</div>
+              <div class="vb-tieu-ngu">NĂM HỌC: 2026 - 2027</div>
+              <div class="vb-line"></div>
+              <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">Môn thi: TOÁN • Ngày thi: 01/6/2026</div>
+            </div>
+          </div>
+
+          <div class="vb-title-block">
+            <div class="vb-doc-title">ĐỀ THI TUYỂN SINH VÀO LỚP 10 TRƯỜNG THPT</div>
+            <div class="vb-doc-subtitle">MÔN THI: TOÁN HỌC (THỜI GIAN: 90 PHÚT)</div>
+            <div style="font-size: 0.95rem; font-style: italic; margin-top: 4px;">(Đề thi gồm 04 trang • Mã đề: 230)</div>
+          </div>
+
+          <div style="font-size: 1.05rem; line-height: 1.7; color: #1e293b;">
+
+            <!-- ================= PHẦN I ================= -->
+            <div style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 0.85rem 1.25rem; margin: 1.5rem 0 1rem 0; border-radius: 0 8px 8px 0;">
+              <h4 style="color: #1e40af; margin: 0; font-size: 1.15rem; font-family: 'Times New Roman', serif;">
+                PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN (3.0 ĐIỂM)
+              </h4>
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.92rem; color: #64748b; font-style: italic;">
+                Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án trả lời đúng.
+              </p>
+            </div>
+
+            <!-- Câu 1 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 1:</strong> Cho tứ giác <em>ABCD</em> nội tiếp đường tròn. Nếu <span class="math"><em>BAD</em> = 70°</span> thì số đo <span class="math"><em>BCD</em></span> bằng:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 90°</div>
+                <div><strong>B.</strong> 70°</div>
+                <div><strong>C.</strong> 20°</div>
+                <div><strong style="color: #16a34a;">D. 110°</strong></div>
+              </div>
+            </div>
+
+            <!-- Câu 2 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 2:</strong> Nghiệm của phương trình <span class="math">2(<em>x</em> + 2) − 3 = 3<em>x</em> − 10</span> là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> <em>x</em> = 10</div>
+                <div><strong>B.</strong> <em>x</em> = −10</div>
+                <div><strong>C.</strong> <em>x</em> = 7</div>
+                <div><strong style="color: #16a34a;">D. <em>x</em> = 11</strong></div>
+              </div>
+            </div>
+
+            <!-- Câu 3 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                  <p><strong>Câu 3:</strong> Cho lục giác đều <em>ABCDEF</em> nội tiếp đường tròn tâm <em>O</em> (như hình vẽ bên). Số đo của góc <span class="math"><em>ABC</em></span> bằng:</p>
+                  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-top: 0.5rem;">
+                    <div><strong>A.</strong> 90°</div>
+                    <div><strong>B.</strong> 60°</div>
+                    <div><strong>C.</strong> 150°</div>
+                    <div><strong style="color: #16a34a;">D. 120°</strong></div>
+                  </div>
+                </div>
+                <!-- SVG Lục giác đều minh họa -->
+                <div style="text-align: center;">
+                  <svg width="150" height="150" viewBox="0 0 160 160" style="background: white; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <circle cx="80" cy="80" r="65" fill="none" stroke="#64748b" stroke-width="1.5" />
+                    <polygon points="80,15 136,47 136,113 80,145 24,113 24,47" fill="none" stroke="#2563eb" stroke-width="2" />
+                    <!-- Lines to center -->
+                    <line x1="80" y1="15" x2="80" y2="145" stroke="#cbd5e1" stroke-dasharray="2,2" />
+                    <line x1="136" y1="47" x2="24" y2="113" stroke="#cbd5e1" stroke-dasharray="2,2" />
+                    <line x1="136" y1="113" x2="24" y2="47" stroke="#cbd5e1" stroke-dasharray="2,2" />
+                    <circle cx="80" cy="80" r="3" fill="#dc2626" />
+                    <text x="83" y="78" font-size="11" font-weight="bold">O</text>
+                    <text x="76" y="12" font-size="11" font-weight="bold">D</text>
+                    <text x="140" y="47" font-size="11" font-weight="bold">C</text>
+                    <text x="140" y="117" font-size="11" font-weight="bold">B</text>
+                    <text x="76" y="157" font-size="11" font-weight="bold">A</text>
+                    <text x="10" y="117" font-size="11" font-weight="bold">F</text>
+                    <text x="10" y="47" font-size="11" font-weight="bold">E</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Câu 4 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 4:</strong> Với hai số thực <span class="math"><em>a</em> ≥ 0, <em>b</em> ≥ 0</span>, thì <span class="math">√(<em>a</em> · <em>b</em>)</span> bằng:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong style="color: #16a34a;">A. √<em>a</em> · √<em>b</em></strong></div>
+                <div><strong>B.</strong> <em>a</em> · <em>b</em></div>
+                <div><strong>C.</strong> <em>a</em> · √<em>b</em></div>
+                <div><strong>D.</strong> √<em>a</em> · <em>b</em></div>
+              </div>
+            </div>
+
+            <!-- Câu 5 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 5:</strong> Gọi <span class="math">(<em>x</em><sub>0</sub>; <em>y</em><sub>0</sub>)</span> là nghiệm của hệ phương trình <span class="math">{ <em>x</em> + 3<em>y</em> = 4 ; 2<em>x</em> − <em>y</em> = 1 }</span>. Giá trị của biểu thức <span class="math"><em>A</em> = 3<em>x</em><sub>0</sub> + 5<em>y</em><sub>0</sub></span> là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> −2</div>
+                <div><strong>B.</strong> 2</div>
+                <div><strong style="color: #16a34a;">C. 8</strong></div>
+                <div><strong>D.</strong> −8</div>
+              </div>
+            </div>
+
+            <!-- Câu 6 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 6:</strong> Tổng hai nghiệm của phương trình <span class="math">2<em>x</em><sup>2</sup> − 7<em>x</em> − 3 = 0</span> bằng:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 3/2</div>
+                <div><strong>B.</strong> −3/2</div>
+                <div><strong>C.</strong> −7/2</div>
+                <div><strong style="color: #16a34a;">D. 7/2</strong></div>
+              </div>
+            </div>
+
+            <!-- Câu 7 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 7:</strong> Điều kiện xác định của biểu thức <span class="math"><em>A</em> = 1 / √(<em>x</em> − 3)</span> là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong style="color: #16a34a;">A. <em>x</em> &gt; 3</strong></div>
+                <div><strong>B.</strong> <em>x</em> ≥ 3</div>
+                <div><strong>C.</strong> <em>x</em> ≠ 3</div>
+                <div><strong>D.</strong> <em>x</em> &lt; 3</div>
+              </div>
+            </div>
+
+            <!-- Câu 8 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 8:</strong> Cho đường tròn <span class="math">(<em>O</em>; 10 cm)</span> và dây cung <em>AB</em>. Biết khoảng cách từ <em>O</em> đến <em>AB</em> là 8 cm. Độ dài đoạn thẳng <em>AB</em> là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 8 cm</div>
+                <div><strong>B.</strong> 6 cm</div>
+                <div><strong style="color: #16a34a;">C. 12 cm</strong></div>
+                <div><strong>D.</strong> 10 cm</div>
+              </div>
+            </div>
+
+            <!-- Câu 9 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 9 (Chương trình mới - Xác suất):</strong> Gieo một con xúc xắc sáu mặt (số chấm ở các mặt khác nhau và là một số tự nhiên từ 1 đến 6) cân đối và đồng chất 2 lần liên tiếp. Xác suất để tổng số chấm xuất hiện trong 2 lần gieo bằng 7 là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 7/36</div>
+                <div><strong>B.</strong> 1/12</div>
+                <div><strong style="color: #16a34a;">C. 1/6</strong></div>
+                <div><strong>D.</strong> 1/3</div>
+              </div>
+            </div>
+
+            <!-- Câu 10 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 10 (Hình học không gian):</strong> Một hình cầu có bán kính là 3 cm. Diện tích của mặt cầu đó bằng:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 24π cm<sup>2</sup></div>
+                <div><strong>B.</strong> 9π cm<sup>2</sup></div>
+                <div><strong>C.</strong> 27π cm<sup>2</sup></div>
+                <div><strong style="color: #16a34a;">D. 36π cm<sup>2</sup></strong></div>
+              </div>
+            </div>
+
+            <!-- Câu 11 -->
+            <div style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 11 (Thống kê mới):</strong> Một nhóm gồm 8 học sinh được kiểm tra môn Toán đạt các điểm số sau: <span class="math">6; 7; 7; 8; 8; 8; 9; 10</span>. Tần số của dữ liệu điểm 8 là:</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> 8</div>
+                <div><strong>B.</strong> 2</div>
+                <div><strong style="color: #16a34a;">C. 3</strong></div>
+                <div><strong>D.</strong> 1</div>
+              </div>
+            </div>
+
+            <!-- Câu 12 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 12:</strong> Cho tam giác <em>ABC</em> vuông tại <em>A</em>, biết <span class="math"><em>AB</em> = 2 cm</span> và <span class="math"><em>ABC</em> = 60°</span>. Khẳng định nào sau đây là đúng?</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.35rem;">
+                <div><strong>A.</strong> <em>AC</em> = √3 cm</div>
+                <div><strong>B.</strong> <em>BC</em> = 2√3 cm</div>
+                <div><strong style="color: #16a34a;">C. <em>AC</em> = 2√3 cm</strong></div>
+                <div><strong>D.</strong> <em>BC</em> = 2√5 cm</div>
+              </div>
+            </div>
+
+
+            <!-- ================= PHẦN II ================= -->
+            <div style="background: #f8fafc; border-left: 5px solid #d97706; padding: 0.85rem 1.25rem; margin: 2rem 0 1rem 0; border-radius: 0 8px 8px 0;">
+              <h4 style="color: #b45309; margin: 0; font-size: 1.15rem; font-family: 'Times New Roman', serif;">
+                PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG SAI (4.0 ĐIỂM)
+              </h4>
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.92rem; color: #64748b; font-style: italic;">
+                Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.
+              </p>
+            </div>
+
+            <!-- Câu 1 Phần II -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <p><strong>Câu 1 (Thống kê mô tả & Xác suất thực nghiệm):</strong></p>
+              <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <p>Biểu đồ hình quạt tròn biểu diễn tỉ lệ phần trăm các loại trái cây được yêu thích nhất của 200 học sinh khối 9:</p>
+                  <p style="font-size: 0.92rem; color: #475569;">
+                    Trong đó: 40% học sinh thích Xoài, 25% học sinh thích Cam, 20% học sinh thích Táo và 15% học sinh thích Ổi; mỗi học sinh chỉ thích đúng một loại trái cây.
+                  </p>
+                </div>
+                <!-- SVG Quạt tròn -->
+                <div style="text-align: center;">
+                  <svg width="180" height="150" viewBox="0 0 200 160">
+                    <!-- Pie Chart segments -->
+                    <!-- 40% Xoài: 0 to 144 deg -->
+                    <path d="M 80 80 L 140 80 A 60 60 0 0 1 31.45 115.26 Z" fill="#3b82f6" />
+                    <!-- 25% Cam: 144 to 234 deg -->
+                    <path d="M 80 80 L 31.45 115.26 A 60 60 0 0 1 44.73 31.45 Z" fill="#f59e0b" />
+                    <!-- 20% Táo: 234 to 306 deg -->
+                    <path d="M 80 80 L 44.73 31.45 A 60 60 0 0 1 115.26 31.45 Z" fill="#10b981" />
+                    <!-- 15% Ổi: 306 to 360 deg -->
+                    <path d="M 80 80 L 115.26 31.45 A 60 60 0 0 1 140 80 Z" fill="#ec4899" />
+                    <!-- Legend -->
+                    <rect x="150" y="30" width="10" height="10" fill="#3b82f6" /><text x="165" y="40" font-size="11">Xoài 40%</text>
+                    <rect x="150" y="55" width="10" height="10" fill="#f59e0b" /><text x="165" y="65" font-size="11">Cam 25%</text>
+                    <rect x="150" y="80" width="10" height="10" fill="#10b981" /><text x="165" y="90" font-size="11">Táo 20%</text>
+                    <rect x="150" y="105" width="10" height="10" fill="#ec4899" /><text x="165" y="115" font-size="11">Ổi 15%</text>
+                  </svg>
+                </div>
+              </div>
+              <div style="margin-top: 0.75rem; background: #f8fafc; padding: 0.75rem 1rem; border-radius: 6px;">
+                <p style="margin: 0.35rem 0;">a) Loại trái cây được yêu thích nhất là Xoài. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span></p>
+                <p style="margin: 0.35rem 0;">b) Số học sinh thích Cam là 40 học sinh. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Đúng là 200 × 25% = 50 học sinh)</p>
+                <p style="margin: 0.35rem 0;">c) Số học sinh thích Xoài gấp đôi số học sinh thích Táo. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (40% gấp đôi 20%)</p>
+                <p style="margin: 0.35rem 0;">d) Chọn ngẫu nhiên một học sinh từ nhóm học sinh thích Cam và Ổi. Xác suất để chọn được một bạn thích Cam là 2/5. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Xác suất đúng là 50/(50+30) = 5/8 ≠ 2/5)</p>
+              </div>
+            </div>
+
+            <!-- Câu 2 Phần II -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <p><strong>Câu 2 (Hình học đường tròn & Tiếp tuyến):</strong> Cho tam giác <em>ABC</em> (<span class="math"><em>AC</em> &lt; <em>BC</em></span>) nội tiếp đường tròn <span class="math">(<em>O</em>)</span> có <em>AB</em> là đường kính. Từ tâm <em>O</em> vẽ đường thẳng vuông góc với <em>BC</em> tại điểm <em>H</em>. Vẽ tiếp tuyến của đường tròn <span class="math">(<em>O</em>)</span> tại <em>B</em>, tiếp tuyến này cắt đường thẳng <em>OH</em> tại <em>M</em>.</p>
+              <div style="background: #f8fafc; padding: 0.75rem 1rem; border-radius: 6px; margin-top: 0.5rem;">
+                <p style="margin: 0.35rem 0;">a) Đường thẳng <em>AC</em> song song với đường thẳng <em>OH</em>. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (Cùng vuông góc với cạnh <em>BC</em>)</p>
+                <p style="margin: 0.35rem 0;">b) <span class="math"><em>MCB</em> &lt; <em>MBC</em></span>. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Bằng nhau vì tam giác <em>MBC</em> cân tại <em>M</em>)</p>
+                <p style="margin: 0.35rem 0;">c) Tứ giác <em>MBOC</em> là tứ giác nội tiếp. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (Tổng 2 góc đối 90° + 90° = 180°)</p>
+                <p style="margin: 0.35rem 0;">d) Nếu cho <span class="math"><em>AB</em> = 5 cm</span> và <span class="math"><em>MO</em> = 8 cm</span> thì <span class="math"><em>MH</em> = 4,88 cm</span>. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Đúng là <em>MH</em> ≈ 7,22 cm)</p>
+              </div>
+            </div>
+
+            <!-- Câu 3 Phần II -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <p><strong>Câu 3 (Đại số - Rút gọn căn thức & Điều kiện nguyên):</strong> Cho biểu thức:</p>
+              <p style="text-align: center; font-size: 1.15rem; margin: 0.5rem 0;">
+                <span class="math"><em>A</em> = <span class="frac"><span class="num">3</span><span class="den">√<em>x</em> + 3</span></span> − <span class="frac"><span class="num">2√<em>x</em> − 12</span><span class="den"><em>x</em> − 9</span></span> + <span class="frac"><span class="num">4</span><span class="den">√<em>x</em> − 3</span></span></span>
+              </p>
+              <div style="background: #f8fafc; padding: 0.75rem 1rem; border-radius: 6px; margin-top: 0.5rem;">
+                <p style="margin: 0.35rem 0;">a) Điều kiện xác định của biểu thức <em>A</em> là <span class="math"><em>x</em> &gt; 0, <em>x</em> ≠ 9</span>. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (ĐKXĐ chuẩn là <em>x</em> ≥ 0, <em>x</em> ≠ 9)</p>
+                <p style="margin: 0.35rem 0;">b) Với điều kiện xác định, kết quả rút gọn biểu thức <em>A</em> là <span class="math">3 / (√<em>x</em> − 3)</span>. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Rút gọn đúng là 5 / (√<em>x</em> − 3))</p>
+                <p style="margin: 0.35rem 0;">c) Cho biểu thức <span class="math"><em>B</em> = 2 / (√<em>x</em> − 2)</span>. Gọi <span class="math"><em>x</em><sub>0</sub> = <em>a</em>/<em>b</em></span> (tối giản) sao cho <span class="math"><em>A</em> = <em>B</em></span>. Khi đó <span class="math"><em>a</em> + <em>b</em> = 25</span>. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (<em>x</em><sub>0</sub> = 16/9 ⟹ 16 + 9 = 25)</p>
+                <p style="margin: 0.35rem 0;">d) Có tất cả 7 giá trị nguyên của <em>x</em> để <span class="math"><em>A</em> ≥ 5</span>. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (<em>x</em> ∈ {10, 11, 12, 13, 14, 15, 16})</p>
+              </div>
+            </div>
+
+            <!-- Câu 4 Phần II -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <p><strong>Câu 4 (Ứng dụng thực tế hàm số bậc nhất - Gói cước Internet):</strong> Một nhà cung cấp dịch vụ Internet đưa ra hai gói cước (dung lượng tính bằng GB, giá tiền tính bằng nghìn đồng):</p>
+              <ul style="margin: 0.35rem 0; padding-left: 1.25rem;">
+                <li><strong>Gói cước A:</strong> Cước phí cố định hàng tháng là 100 nghìn đồng và mỗi GB dữ liệu đã sử dụng phải trả thêm 2 nghìn đồng.</li>
+                <li><strong>Gói cước B:</strong> Cước phí cố định hàng tháng là 50 nghìn đồng và mỗi GB dữ liệu đã sử dụng phải trả thêm 3 nghìn đồng.</li>
+              </ul>
+              <p style="font-size: 0.95rem; color: #475569;">Gọi <em>x</em> (<span class="math"><em>x</em> ≥ 0</span>) là số GB dữ liệu sử dụng trong một tháng và <em>y</em> (<span class="math"><em>y</em> ≥ 0</span>) là tổng số tiền khách hàng phải trả hàng tháng (đơn vị nghìn đồng).</p>
+              <div style="background: #f8fafc; padding: 0.75rem 1rem; border-radius: 6px; margin-top: 0.5rem;">
+                <p style="margin: 0.35rem 0;">a) Nếu dùng gói cước A, tổng số tiền khách hàng phải trả trong một tháng là <span class="math"><em>y</em> = 2<em>x</em> + 100</span> (nghìn đồng). ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span></p>
+                <p style="margin: 0.35rem 0;">b) Một gia đình có nhu cầu sử dụng cố định đúng 60GB mỗi tháng. Nếu gia đình này chọn gói rẻ hơn thì một năm tiết kiệm được 120 nghìn đồng. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (Gói A rẻ hơn 10k/tháng × 12 = 120k)</p>
+                <p style="margin: 0.35rem 0;">c) Nếu khách hàng dùng đúng 200 nghìn đồng mỗi tháng, dung lượng mua được từ gói A lớn hơn gói B. ➔ <span class="badge" style="background: #fef2f2; color: #991b1b; font-weight: 700;">SAI</span> (Cả 2 gói đều mua được đúng 50GB)</p>
+                <p style="margin: 0.35rem 0;">d) Nếu chỉ dùng đúng 40GB mỗi tháng thì chọn gói B tiết kiệm chi phí hơn gói A. ➔ <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 700;">ĐÚNG</span> (Gói B 170k &lt; Gói A 180k)</p>
+              </div>
+            </div>
+
+
+            <!-- ================= PHẦN III ================= -->
+            <div style="background: #f8fafc; border-left: 5px solid #16a34a; padding: 0.85rem 1.25rem; margin: 2rem 0 1rem 0; border-radius: 0 8px 8px 0;">
+              <h4 style="color: #166534; margin: 0; font-size: 1.15rem; font-family: 'Times New Roman', serif;">
+                PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN (3.0 ĐIỂM)
+              </h4>
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.92rem; color: #64748b; font-style: italic;">
+                Thí sinh trả lời từ câu 1 đến câu 6. Thí sinh tự tính toán và điền đáp số vào khung trả lời.
+              </p>
+            </div>
+
+            <!-- Câu 1 Phần III -->
+            <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 1 (Hình học đường tròn & Tiếp tuyến):</strong> Từ điểm <em>A</em> nằm ngoài đường tròn <span class="math">(<em>O</em>)</span> bán kính <em>R</em> (cm), kẻ hai tiếp tuyến <em>AB, AC</em> với đường tròn (<em>B, C</em> là các tiếp điểm). Biết tam giác <em>ABC</em> là tam giác đều và diện tích của tứ giác <em>ABOC</em> là <span class="math"><em>S</em> = <em>k</em> · <em>R</em><sup>2</sup> (cm<sup>2</sup>)</span>. Tìm <span class="math"><em>k</em><sup>6</sup></span>.</p>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+                🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">27</span> &nbsp; (Vì <em>k</em> = √3 ⟹ <em>k</em><sup>6</sup> = 27)
+              </div>
+            </div>
+
+            <!-- Câu 2 Phần III -->
+            <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 2 (Thống kê - Tần số tương đối):</strong> Lớp 9A có 40 học sinh. Bài kiểm tra thường xuyên môn Toán có 5 bạn đạt điểm 7, có 12 bạn đạt điểm 8, có 14 bạn đạt điểm 9, số còn lại đạt điểm 10. Tần số tương đối của dữ liệu điểm 10 là bao nhiêu phần trăm?</p>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+                🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">22,5%</span> &nbsp; (Số bạn đạt điểm 10 là 9 bạn ⟹ 9/40 = 22,5%)
+              </div>
+            </div>
+
+            <!-- Câu 3 Phần III -->
+            <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed #e2e8f0;">
+              <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <p><strong>Câu 3 (Hình học phân giác & Diện tích phần tô đậm):</strong> Cho tam giác <em>ABC</em> vuông tại <em>A</em>, biết <span class="math"><em>AB</em> = 9 cm, <em>BC</em> = 15 cm</span>. Đường phân giác trong góc <em>B</em> cắt cạnh <em>AC</em> tại <em>D</em>. Vẽ đường tròn tâm <em>I</em> nội tiếp tam giác <em>BCD</em>. Tổng diện tích phần hình phẳng tô đậm (giới hạn bởi 3 cạnh tam giác <em>BCD</em> và đường tròn nội tiếp) bằng bao nhiêu cm<sup>2</sup>? (Làm tròn đến hàng phần mười, lấy π = 3,14).</p>
+                  <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; margin-top: 0.5rem;">
+                    🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">20,3</span> &nbsp; (cm<sup>2</sup>)
+                  </div>
+                </div>
+                <!-- SVG Hình vẽ Câu 3 -->
+                <div style="text-align: center;">
+                  <svg width="180" height="150" viewBox="0 0 190 150" style="background: white; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <!-- Triangle ABC: A(20,130), B(20,20), C(170,130) -->
+                    <!-- D is on AC: A(20,130) to C(170,130), AD = 4.5, AC = 12 -> x = 20 + 150*4.5/12 = 76.25, y = 130 -->
+                    <!-- Shaded triangle BCD -->
+                    <polygon points="20,20 76,130 170,130" fill="#1e293b" />
+                    <!-- Inner circle of BCD: white -->
+                    <!-- Incenter approx: x=98, y=102, r=28 -->
+                    <circle cx="95" cy="100" r="27" fill="white" stroke="#64748b" />
+                    <!-- Points and labels -->
+                    <line x1="20" y1="20" x2="20" y2="130" stroke="#cbd5e1" stroke-width="1.5" />
+                    <line x1="20" y1="130" x2="76" y2="130" stroke="#cbd5e1" stroke-width="1.5" />
+                    <line x1="20" y1="20" x2="76" y2="130" stroke="#f59e0b" stroke-width="1.5" />
+                    <text x="10" y="140" font-size="11" font-weight="bold">A</text>
+                    <text x="12" y="16" font-size="11" font-weight="bold">B</text>
+                    <text x="175" y="135" font-size="11" font-weight="bold">C</text>
+                    <text x="73" y="145" font-size="11" font-weight="bold">D</text>
+                    <text x="92" y="104" font-size="10" font-weight="bold">I</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Câu 4 Phần III -->
+            <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 4 (Toán thực tế chuyển động lập hệ phương trình):</strong> Một ô tô dự định đi từ vị trí A đến vị trí B trong một thời gian nhất định với một vận tốc xác định. Nếu ô tô tăng vận tốc thêm 10 km/h thì sẽ đến B sớm hơn 40 phút so với dự định. Nếu ô tô giảm vận tốc đi 10 km/h thì sẽ đến B muộn 1 giờ so với dự định. Hỏi chiều dài quãng đường AB là bao nhiêu km?</p>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+                🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">200</span> &nbsp; (km)
+              </div>
+            </div>
+
+            <!-- Câu 5 Phần III -->
+            <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed #e2e8f0;">
+              <p><strong>Câu 5 (Hệ thức Vi-et phân loại học sinh giỏi):</strong> Cho phương trình <span class="math"><em>x</em><sup>2</sup> − 4<em>x</em> − 26 = 0</span> có hai nghiệm phân biệt <span class="math"><em>x</em><sub>1</sub>, <em>x</em><sub>2</sub></span> với <span class="math"><em>x</em><sub>1</sub> &lt; <em>x</em><sub>2</sub></span>. Giá trị của biểu thức <span class="math"><em>P</em> = (<em>x</em><sub>1</sub><sup>2</sup> + 4<em>x</em><sub>2</sub> − 27)<sup>2</sup> − <em>x</em><sub>1</sub><sup>3</sup> + <em>x</em><sub>2</sub><sup>3</sup></span> có dạng <span class="math"><em>a</em> + <em>b</em>√30</span> với <span class="math"><em>a</em>, <em>b</em> ∈ ℕ*</span>. Tính tổng <span class="math"><em>a</em> + <em>b</em></span>.</p>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+                🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">309</span> &nbsp; (Vì <em>P</em> = 225 + 84√30 ⟹ <em>a</em> + <em>b</em> = 225 + 84 = 309)
+              </div>
+            </div>
+
+            <!-- Câu 6 Phần III -->
+            <div style="margin-bottom: 1.5rem;">
+              <p><strong>Câu 6 (Bất phương trình đại số):</strong> Tìm nghiệm nguyên lớn nhất của bất phương trình: <span class="math"><em>x</em>(<em>x</em> + 11) &lt; (<em>x</em> + 3)(<em>x</em> + 6)</span>.</p>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+                🎯 <strong>Đáp số điền:</strong> <span style="font-size: 1.2rem; font-weight: 800; color: #16a34a;">8</span> &nbsp; (Rút gọn 2<em>x</em> &lt; 18 ⟹ <em>x</em> &lt; 9 ⟹ số nguyên lớn nhất là 8)
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Nút xem Barem chi tiết -->
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <button class="btn btn-primary" onclick="toggleAnswer('barem-format2027-toan')" style="font-size: 1rem; padding: 0.75rem 1.5rem; background: #dc2626; border: none; font-weight: 700; box-shadow: 0 4px 10px rgba(220,38,38,0.25);">
+              📋 Bấm Để Xem / Ẩn Barem Đáp Án & Hướng Dẫn Giải Chi Tiết (Mã Đề 230)
+            </button>
+          </div>
+
+          <!-- Bảng Barem Chi tiết -->
+          <div id="barem-format2027-toan" style="display: none; margin-top: 1.5rem; background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem;">
+            <h4 style="color: #991b1b; margin-top: 0; font-family: 'Times New Roman', serif; font-size: 1.2rem;">
+              📖 ĐÁP ÁN VÀ BẢNG THANG ĐIỂM CHUẨN KỲ THI TUYỂN SINH LỚP 10 (MÃ ĐỀ 230)
+            </h4>
+
+            <p><strong>1. Đáp án Phần I (3.0 điểm - Mỗi câu 0.25đ):</strong></p>
+            <table class="barem-table">
+              <thead>
+                <tr>
+                  <th>Câu</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="text-align: center; font-weight: bold; color: #16a34a;">
+                  <td>Đáp án</td><td>D</td><td>D</td><td>D</td><td>A</td><td>C</td><td>D</td><td>A</td><td>C</td><td>C</td><td>D</td><td>C</td><td>C</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p style="margin-top: 1rem;"><strong>2. Đáp án Phần II (4.0 điểm - Trắc nghiệm Đúng/Sai):</strong></p>
+            <table class="barem-table">
+              <thead>
+                <tr>
+                  <th>Câu</th><th>Lệnh a</th><th>Lệnh b</th><th>Lệnh c</th><th>Lệnh d</th><th>Tóm tắt phương pháp giải</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Câu 1</td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: red;">SAI</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: red;">SAI</strong></td><td>Đúng: Xoài 40% cao nhất; Cam 200×25%=50 bạn; Xoài 40% gấp đôi Táo 20%; XS Cam = 50/(50+30) = 5/8.</td></tr>
+                <tr><td>Câu 2</td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: red;">SAI</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: red;">SAI</strong></td><td>Đúng: <em>AC</em> // <em>OH</em> (cùng ⊥ <em>BC</em>); △<em>MBC</em> cân tại <em>M</em> ⟹ 2 góc đáy bằng nhau; <em>MBOC</em> tổng góc đối 180°; <em>MH</em> = 7,22 cm.</td></tr>
+                <tr><td>Câu 3</td><td><strong style="color: red;">SAI</strong></td><td><strong style="color: red;">SAI</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td>ĐKXĐ <em>x</em> ≥ 0, <em>x</em> ≠ 9; Rút gọn <em>A</em> = 5/(√<em>x</em> − 3); <em>A</em> = <em>B</em> ⟹ <em>x</em> = 16/9 ⟹ <em>a</em>+<em>b</em> = 25; <em>A</em> ≥ 5 ⟹ 9 &lt; <em>x</em> ≤ 16 có 7 nghiệm nguyên.</td></tr>
+                <tr><td>Câu 4</td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td><strong style="color: red;">SAI</strong></td><td><strong style="color: green;">ĐÚNG</strong></td><td>Gói A: <em>y</em> = 2<em>x</em>+100; 60GB thì Gói A rẻ hơn 10k/tháng ⟹ 120k/năm; 200k thì cả 2 gói đều mua được 50GB; 40GB thì gói B 170k &lt; gói A 180k.</td></tr>
+              </tbody>
+            </table>
+
+            <p style="margin-top: 1rem;"><strong>3. Đáp án Phần III (3.0 điểm - Mỗi câu 0.5đ):</strong></p>
+            <table class="barem-table">
+              <thead>
+                <tr>
+                  <th>Câu</th><th>Đáp số</th><th>Lời giải tóm tắt & Mẹo tính nhanh</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Câu 1</td><td><strong style="color: #2563eb; font-size: 1.1rem;">27</strong></td><td>△<em>ABC</em> đều ⟹ <em>BAO</em> = 30° ⟹ <em>AB</em> = <em>R</em>√3 ⟹ <em>S</em><sub>ABOC</sub> = √3 <em>R</em><sup>2</sup> ⟹ <em>k</em> = √3 ⟹ <em>k</em><sup>6</sup> = (√3)<sup>6</sup> = 27.</td></tr>
+                <tr><td>Câu 2</td><td><strong style="color: #2563eb; font-size: 1.1rem;">22,5%</strong></td><td>Số học sinh điểm 10 = 40 − (5 + 12 + 14) = 9 bạn. Tần số tương đối = 9/40 × 100% = 22,5%.</td></tr>
+                <tr><td>Câu 3</td><td><strong style="color: #2563eb; font-size: 1.1rem;">20,3</strong></td><td><em>AC</em> = 12 cm; <em>BD</em> phân giác ⟹ <em>CD</em> = 7,5 cm; <em>S</em><sub>BCD</sub> = 33,75 cm<sup>2</sup>; Bán kính <em>r</em> = 3(5−√5)/4 cm ⟹ <em>S</em><sub>tròn</sub> ≈ 13,48 cm<sup>2</sup> ⟹ <em>S</em><sub>đậm</sub> ≈ 20,3 cm<sup>2</sup>.</td></tr>
+                <tr><td>Câu 4</td><td><strong style="color: #2563eb; font-size: 1.1rem;">200</strong></td><td>Hệ PT: (<em>v</em>+10)(<em>t</em> − 2/3) = <em>vt</em> và (<em>v</em>−10)(<em>t</em>+1) = <em>vt</em> ⟹ <em>v</em> = 50 km/h, <em>t</em> = 4 h ⟹ <em>S</em> = 50 × 4 = 200 km.</td></tr>
+                <tr><td>Câu 5</td><td><strong style="color: #2563eb; font-size: 1.1rem;">309</strong></td><td>Vi-et: <em>x</em><sub>1</sub>+<em>x</em><sub>2</sub> = 4, <em>x</em><sub>1</sub><em>x</em><sub>2</sub> = −26. (<em>x</em><sub>1</sub><sup>2</sup>+4<em>x</em><sub>2</sub>−27) = 15; <em>x</em><sub>2</sub><sup>3</sup>−<em>x</em><sub>1</sub><sup>3</sup> = 84√30 ⟹ <em>P</em> = 225 + 84√30 ⟹ <em>a</em>+<em>b</em> = 309.</td></tr>
+                <tr><td>Câu 6</td><td><strong style="color: #2563eb; font-size: 1.1rem;">8</strong></td><td><em>x</em><sup>2</sup>+11<em>x</em> &lt; <em>x</em><sup>2</sup>+9<em>x</em>+18 ⟹ 2<em>x</em> &lt; 18 ⟹ <em>x</em> &lt; 9. Do <em>x</em> ∈ ℤ nên nghiệm nguyên lớn nhất là 8.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB MỚI: ĐỀ MINH HỌA MÔN NGỮ VĂN 2026 - 2027 (NGỮ LIỆU NGOÀI SGK - 120 PHÚT) -->
+    <!-- ============================================================ -->
+    <div id="format2027VanTab" class="tab-content">
+      <div class="card" style="margin-bottom: 1.5rem; border: 2px solid #ea580c; box-shadow: 0 10px 25px -5px rgba(234,88,12,0.15);">
+        
+        <div class="card-header" style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border-bottom: 2px solid #fdba74; padding: 1.25rem 1.5rem;">
+          <div>
+            <span class="badge" style="background: #ea580c; color: white; font-size: 0.85rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">
+              CHƯƠNG TRÌNH GDPT 2018 • NĂM HỌC 2026 - 2027
+            </span>
+            <h3 style="color: #9a3412; margin: 0.5rem 0 0.25rem 0; font-size: 1.4rem; font-family: 'Times New Roman', serif; font-weight: 800;">
+              📖 ĐỀ THI MẪU MÔN NGỮ VĂN – KỲ THI TUYỂN SINH VÀO LỚP 10 THPT
+            </h3>
+            <p style="margin: 0; color: #7c2d12; font-size: 0.95rem;">
+              Đổi mới căn bản: 100% Ngữ liệu Đọc hiểu và Nghị luận văn học NGOÀI SÁCH GIÁO KHOA • Thời gian làm bài: 120 phút
+            </p>
+          </div>
+        </div>
+
+        <div style="padding: 1.5rem;">
+
+          <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: #92400e;">
+            <strong>📢 ĐIỂM ĐỔI MỚI THEN CHỐT MÔN VĂN THEO BỘ GD&ĐT:</strong>
+            <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
+              <li><strong>Chấm dứt hoàn toàn học tủ, học vẹt, chép văn mẫu:</strong> Đề thi tuyển sinh lớp 10 từ năm học 2026-2027 sử dụng hoàn toàn ngữ liệu nằm <strong>NGOÀI SÁCH GIÁO KHOA</strong> (ngữ liệu thơ, truyện hiện đại hoặc văn bản nghị luận xã hội).</li>
+              <li><strong>Đánh giá năng lực thực chất:</strong> Đòi hỏi học sinh nắm chắc đặc trưng thể loại (thơ, truyện ngắn), phương thức biểu đạt, biện pháp tu từ, kỹ năng giải mã thông điệp và tạo lập văn bản độc lập.</li>
+            </ul>
+          </div>
+
+          <!-- Thể thức đề thi -->
+          <div class="vb-header">
+            <div class="vb-coquan">
+              SỞ GIÁO DỤC VÀ ĐÀO TẠO<br>
+              <strong>HỘI ĐỒNG TUYỂN SINH VÀO LỚP 10</strong>
+              <div class="vb-line"></div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: #c2410c; margin-top: 4px;">ĐỀ THI MINH HỌA</div>
+            </div>
+            <div class="vb-quochoai">
+              <div class="vb-ten-nuoc">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+              <div class="vb-tieu-ngu">Độc lập - Tự do - Hạnh phúc</div>
+              <div class="vb-line"></div>
+              <div style="font-size: 0.85rem; font-style: italic; margin-top: 4px;">Năm học: 2026 - 2027</div>
+            </div>
+          </div>
+
+          <div class="vb-title-block">
+            <div class="vb-doc-title">KỲ THI TUYỂN SINH VÀO LỚP 10 THPT</div>
+            <div class="vb-doc-subtitle">MÔN THI: NGỮ VĂN (THỜI GIAN: 120 PHÚT)</div>
+            <div style="font-size: 0.95rem; font-style: italic; margin-top: 4px;">(Không kể thời gian giao đề • Đề thi gồm 02 phần)</div>
+          </div>
+
+          <div style="font-size: 1.05rem; line-height: 1.75; color: #1e293b;">
+
+            <!-- PHẦN I ĐỌC HIỂU -->
+            <div style="background: #f8fafc; border-left: 5px solid #ea580c; padding: 0.85rem 1.25rem; margin: 1.5rem 0 1rem 0; border-radius: 0 8px 8px 0;">
+              <h4 style="color: #9a3412; margin: 0; font-size: 1.15rem; font-family: 'Times New Roman', serif;">
+                PHẦN I. ĐỌC HIỂU (4.0 ĐIỂM)
+              </h4>
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.92rem; color: #64748b; font-style: italic;">
+                Đọc văn bản sau và thực hiện các yêu cầu bên dưới:
+              </p>
+            </div>
+
+            <div style="background: #fff7ed; border-left: 4px solid #ea580c; padding: 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.25rem; font-family: 'Times New Roman', serif; font-size: 1.1rem; line-height: 1.8;">
+              <p style="text-align: center; font-weight: bold; margin-top: 0; font-size: 1.2rem; color: #7c2d12;">GỬI CON</p>
+              <p style="font-style: italic; text-align: center; margin-bottom: 1rem; color: #64748b;">(Trích thơ Bùi Minh Quốc – Ngữ liệu ngoài SGK)</p>
+              
+              <div style="padding-left: 1.5rem;">
+                <em>
+                  "Chưa chữ viết đã vẹn tròn tiếng nói<br>
+                  Vầng trăng cao đêm cá lặn sao mờ<br>
+                  Ôi tiếng Việt như bùn và như lụa<br>
+                  Óng tre ngà và mềm mại như tơ.<br><br>
+
+                  Con ơi con, hãy yêu lấy cuộc đời<br>
+                  Từ hạt lúa dầm mưa, từ ngọn khoai cằn cỗi<br>
+                  Dẫu mai này đường xa ngàn dặm lối<br>
+                  Vấp ngã rồi, hãy tự đứng lên con!<br><br>
+
+                  Sống chân thật giữa dòng đời vội vã<br>
+                  Biết sẻ chia, biết rơi lệ trước nỗi đau người<br>
+                  Trái tim con dù trải bao bão tố<br>
+                  Vẫn nồng nàn giữ vẹn một nụ cười..."
+                </em>
+              </div>
+            </div>
+
+            <p><strong>Câu 1 (0.5 điểm):</strong> Xác định thể thơ và phương thức biểu đạt chính của đoạn trích trên.</p>
+            <p><strong>Câu 2 (0.5 điểm):</strong> Chỉ ra những hình ảnh trong khổ thơ thứ hai gợi nhắc về sự nhọc nhằn, lam lũ của cuộc sống.</p>
+            <p><strong>Câu 3 (1.0 điểm):</strong> Nêu và phân tích tác dụng của biện pháp tu từ so sánh trong hai câu thơ:<br>
+            <em style="color: #9a3412; padding-left: 1rem; display: block;">"Ôi tiếng Việt như bùn và như lụa / Óng tre ngà và mềm mại như tơ."</em></p>
+            <p><strong>Câu 4 (1.0 điểm):</strong> Em hiểu như thế nào về lời dặn của người cha: <em>"Vấp ngã rồi, hãy tự đứng lên con!"</em>?</p>
+            <p><strong>Câu 5 (1.0 điểm):</strong> Thông điệp nào trong đoạn trích có ý nghĩa sâu sắc nhất đối với em trước ngưỡng cửa kỳ thi vào lớp 10 THPT? Hãy lí giải ngắn gọn trong khoảng 4 đến 6 câu.</p>
+
+            <!-- PHẦN II VIẾT -->
+            <div style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 0.85rem 1.25rem; margin: 2rem 0 1rem 0; border-radius: 0 8px 8px 0;">
+              <h4 style="color: #1e40af; margin: 0; font-size: 1.15rem; font-family: 'Times New Roman', serif;">
+                PHẦN II. TẠO LẬP VĂN BẢN (6.0 ĐIỂM)
+              </h4>
+            </div>
+
+            <!-- Câu 1 NLXH -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <h5 style="color: #2563eb; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                Câu 1. Nghị luận xã hội (2.0 điểm)
+              </h5>
+              <p style="margin: 0; line-height: 1.7;">
+                Từ lời dặn của người cha trong đoạn trích ở phần Đọc hiểu: <em>"Vấp ngã rồi, hãy tự đứng lên con!"</em>, hãy viết một đoạn văn (khoảng 200 chữ) trình bày suy nghĩ của em về <strong>bản lĩnh tự vượt qua nghịch cảnh của thế hệ trẻ hiện nay</strong>.
+              </p>
+              <div style="margin-top: 0.75rem; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.9rem; color: #1e40af;">
+                💡 <strong>Gợi ý barem 200 chữ:</strong> Đảm bảo cấu trúc đoạn văn (không xuống dòng), mở đoạn trực tiếp, giải thích thế nào là nghịch cảnh và bản lĩnh tự đứng dậy, bàn luận lý lẽ + dẫn chứng thực tế (tấm gương vươn lên trong học tập, thể thao), bài học hành động cho học sinh lớp 9.
+              </div>
+            </div>
+
+            <!-- Câu 2 NLVH -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+              <h5 style="color: #2563eb; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                Câu 2. Nghị luận văn học (4.0 điểm)
+              </h5>
+              <p style="margin: 0; line-height: 1.7;">
+                Cảm nhận của em về vẻ đẹp tình cha con ấm áp và những bài học nhân sinh cao đẹp được gửi gắm qua hai khổ thơ cuối của đoạn trích bài thơ <em>"Gửi con"</em>:
+              </p>
+              <blockquote style="margin: 0.75rem 0; padding: 0.75rem 1.25rem; background: #f8fafc; border-left: 3px solid #94a3b8; font-style: italic;">
+                "Con ơi con, hãy yêu lấy cuộc đời<br>
+                Từ hạt lúa dầm mưa, từ ngọn khoai cằn cỗi<br>
+                Dẫu mai này đường xa ngàn dặm lối<br>
+                Vấp ngã rồi, hãy tự đứng lên con!<br><br>
+                Sống chân thật giữa dòng đời vội vã<br>
+                Biết sẻ chia, biết rơi lệ trước nỗi đau người<br>
+                Trái tim con dù trải bao bão tố<br>
+                Vẫn nồng nàn giữ vẹn một nụ cười..."
+              </blockquote>
+            </div>
+
+          </div>
+
+          <!-- Nút xem Barem Ngữ Văn -->
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <button class="btn btn-primary" onclick="toggleAnswer('barem-format2027-van')" style="font-size: 1rem; padding: 0.75rem 1.5rem; background: #ea580c; border: none; font-weight: 700; box-shadow: 0 4px 10px rgba(234,88,12,0.25);">
+              📋 Bấm Để Xem / Ẩn Barem Chấm Điểm Ngữ Văn Chuẩn Bộ GD&ĐT 2026 - 2027
+            </button>
+          </div>
+
+          <!-- Bảng Barem Chi tiết Ngữ Văn -->
+          <div id="barem-format2027-van" style="display: none; margin-top: 1.5rem; background: #fafafa; border: 1px solid #fed7aa; border-radius: 8px; padding: 1.25rem;">
+            <h4 style="color: #9a3412; margin-top: 0; font-family: 'Times New Roman', serif; font-size: 1.2rem;">
+              📖 HƯỚNG DẪN CHẤM VÀ THANG ĐIỂM CHUẨN MÔN NGỮ VĂN (CT GDPT 2018)
+            </h4>
+
+            <table class="barem-table">
+              <thead>
+                <tr>
+                  <th style="width: 15%;">Phần / Câu</th>
+                  <th>Yêu cầu nội dung & Kỹ năng đạt chuẩn</th>
+                  <th style="width: 15%;">Điểm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>I. Câu 1</strong></td>
+                  <td>Thể thơ: Tự do (hoặc 8 chữ). Phương thức biểu đạt chính: Biểu cảm.</td>
+                  <td><span class="score-tag">0.50đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>I. Câu 2</strong></td>
+                  <td>Hình ảnh gợi sự nhọc nhằn, lam lũ: <em>"hạt lúa dầm mưa"</em>, <em>"ngọn khoai cằn cỗi"</em>.</td>
+                  <td><span class="score-tag">0.50đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>I. Câu 3</strong></td>
+                  <td>
+                    • Chỉ ra BPTT so sánh: Tiếng Việt được so sánh <em>"như bùn"</em>, <em>"như lụa"</em>, <em>"như tơ"</em> (0.25đ).<br>
+                    • Tác dụng: Làm nổi bật vẻ đẹp vừa mộc mạc, gần gũi, gắn bó với đất đai bùn lầy quê hương, vừa sang trọng, mềm mại, thanh cao của tiếng mẹ đẻ; khơi gợi lòng tự hào dân tộc và tình yêu tiếng Việt (0.75đ).
+                  </td>
+                  <td><span class="score-tag">1.00đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>I. Câu 4</strong></td>
+                  <td>
+                    Hiểu lời dặn: Trong hành trình cuộc sống, thất bại và vấp ngã là điều khó tránh khỏi. Điều quan trọng nhất là con người không được buông xuôi, sợ hãi hay dựa dẫm, mà phải có ý chí, lòng dũng cảm tự mình đứng lên vượt qua nghịch cảnh để trưởng thành.
+                  </td>
+                  <td><span class="score-tag">1.00đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>I. Câu 5</strong></td>
+                  <td>
+                    Học sinh chọn 1 thông điệp tâm đắc (lòng kiên cường, tình yêu cuộc đời, lòng trắc ẩn sẻ chia, hay sự chân thật). Viết đúng 4 - 6 câu, lập luận thuyết phục, có liên hệ thiết thực với việc ôn thi vượt vũ môn vào lớp 10.
+                  </td>
+                  <td><span class="score-tag">1.00đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>II. Câu 1 (NLXH)</strong></td>
+                  <td>
+                    • <strong>Hình thức (0.5đ):</strong> Đoạn văn khoảng 200 chữ, đúng quy cách (không ngắt dòng), diễn đạt lưu loát, không sai chính tả.<br>
+                    • <strong>Nội dung (1.5đ):</strong><br>
+                      - Mở đoạn: Dẫn dắt vấn đề bản lĩnh tự vượt qua nghịch cảnh của người trẻ.<br>
+                      - Giải thích: Bản lĩnh là ý chí kiên định, khả năng chịu đựng áp lực và tinh thần tự chủ đứng lên sau sai lầm, vấp ngã.<br>
+                      - Bàn luận: Nghịch cảnh là người thầy tôi luyện con người; người biết tự đứng dậy sẽ trở nên độc lập, tự tin; dẫn chứng người thật việc thật (Nick Vujicic, thầy giáo Nguyễn Ngọc Ký, các bạn học sinh vượt khó...). Phê phán lối sống ỷ lại, gục ngã trước thất bại nhỏ.<br>
+                      - Bài học: Rèn luyện tính tự lập, xem mỗi lần giải sai đề hay điểm thấp là bài học để hoàn thiện bản thân mỗi ngày.
+                  </td>
+                  <td><span class="score-tag">2.00đ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>II. Câu 2 (NLVH)</strong></td>
+                  <td>
+                    • <strong>Mở bài (0.5đ):</strong> Giới thiệu tác giả Bùi Minh Quốc, đoạn trích bài thơ <em>Gửi con</em> và vấn đề cần cảm nhận (tình cảm gia đình và bài học nhân sinh cao đẹp).<br>
+                    • <strong>Thân bài (3.0đ):</strong><br>
+                      - Luận điểm 1: Lời nhắc nhở con biết yêu thương cuộc sống từ những điều bình dị, nhọc nhằn nhất (1.0đ).<br>
+                      - Luận điểm 2: Lời động viên con tôi luyện bản lĩnh kiên cường, dám đương đầu và tự đứng dậy trước bão giông (1.0đ).<br>
+                      - Luận điểm 3: Định hướng con về lẽ sống đẹp: chân thật, biết yêu thương, sẻ chia nỗi đau và luôn lạc quan nồng nàn giữ trọn nụ cười (1.0đ).<br>
+                      - Đánh giá nghệ thuật: Giọng thơ tâm tình tha thiết, ngôn ngữ giản dị giàu sức gợi, hình ảnh chọn lọc, nhạc điệu trầm ấm (0.5đ).<br>
+                    • <strong>Kết bài (0.5đ):</strong> Khẳng định giá trị bài thơ và bài học nhận thức cho bản thân.
+                  </td>
+                  <td><span class="score-tag">4.00đ</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- TAB 1: MÔN TOÁN -->
-    <div id="toanTab" class="tab-content active">
+    <div id="toanTab" class="tab-content">
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <span class="card-title">📐 ĐỀ THI THỬ MÔN TOÁN SỐ 01 (SỞ GD&ĐT VĨNH PHÚC & PHÚ THỌ)</span>

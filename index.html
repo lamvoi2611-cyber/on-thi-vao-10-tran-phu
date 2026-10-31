@@ -29,6 +29,25 @@
 
   <main class="container">
 
+    <!-- THANH TRẠNG THÁI ĐỒNG BỘ ĐÁM MÂY & GIÁM SÁT TỪ XA -->
+    <div class="cloud-sync-bar">
+      <div class="cloud-status">
+        <div class="cloud-dot" id="cloudSyncDot"></div>
+        <div id="cloudSyncStatusText">Đám mây: <strong>Đang kết nối...</strong> (Tự động đồng bộ điện thoại & máy tính)</div>
+      </div>
+      <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+        <button class="btn btn-outline" id="btnCloudSync" onclick="syncToCloud()" style="color: white; border-color: #475569; font-size: 0.85rem; padding: 0.4rem 0.85rem;">
+          ☁️ Đồng Bộ Ngay
+        </button>
+        <button class="btn btn-primary" onclick="window.location.href='taode.html'" style="font-size: 0.85rem; padding: 0.4rem 0.85rem; background: #2563eb;">
+          ⚡ Vào Thi Thử 2027
+        </button>
+      </div>
+    </div>
+
+    <!-- BẢNG CHẨN ĐOÁN LỰC HỌC & ĐIỂM YẾU TỰ ĐỘNG (DIAGNOSTIC DASHBOARD) -->
+    <div id="diagnosticContainer"></div>
+
     <!-- BIỂU NGỮ CHÀO ĐÓN 2 CHỊ EM LÂM & BƠ ĐẾN VỚI CUỘC ĐUA -->
     <div class="card" style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%); color: white; border: none; margin-bottom: 1.5rem; box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.45); border-radius: 14px;">
       <div style="padding: 1.25rem 1.5rem;">
